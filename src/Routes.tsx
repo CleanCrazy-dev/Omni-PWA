@@ -1,6 +1,11 @@
-import React from "react";
 import { Route, Switch } from "react-router";
 import { HashRouter } from "react-router-dom";
+import React from 'react';
+
+
+// const Home = asyncComponent(() => {
+//   return import('./components/Home');
+// });
 
 const Home = React.lazy(() =>
   import("./components/Home").then(({ Home }) => ({
@@ -31,7 +36,6 @@ export const Routes = () => {
           <React.Fragment>
             <Route exact path="/" component={WrappedComponent(Home)} />
             <Route exact path="/lib/docs" component={WrappedComponent(Docs)} />
-            {/* <Route exact component={NotFound} /> */}
           </React.Fragment>
         </Switch>
       </React.Suspense>

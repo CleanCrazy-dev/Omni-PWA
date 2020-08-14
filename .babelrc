@@ -1,5 +1,0 @@
-{
-  "presets": ["react-app"],
-  "plugins": ["dynamic-import-webpack", "add-module-exports"],
-  "sourceType": "unambiguous"
-}
