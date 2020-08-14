@@ -7,6 +7,19 @@
   pointer-events: none;
 }
 
+body {
+  background: #f4f2e5 none top center repeat;
+  background-attachment: fixed;
+  color: #333;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 150%;
+  text-align: left;
+  text-decoration: none;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -32,6 +45,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

@@ -1,7 +1,7 @@
 import { Route, Switch } from "react-router";
 import { HashRouter } from "react-router-dom";
-import React from 'react';
-
+import React from "react";
+import { BasePage } from "./components/BasePage";
 
 // const Home = asyncComponent(() => {
 //   return import('./components/Home');
@@ -12,16 +12,20 @@ const Home = React.lazy(() =>
     default: Home,
   }))
 );
-const Docs = React.lazy(() =>
-  import("./components/docs").then(({ Docs }) => ({
-    default: Docs,
+const SideCarousel = React.lazy(() =>
+  import("./components/docs").then(({ SideCarousel }) => ({
+    default: SideCarousel,
   }))
 );
 
 const WrappedComponent = (Component: any) => {
   return class Wrapper extends React.Component {
     render() {
-      return <Component />;
+      return (
+        <BasePage>
+          <Component />
+        </BasePage>
+      );
     }
   };
 };
@@ -35,7 +39,7 @@ export const Routes = () => {
         <Switch>
           <React.Fragment>
             <Route exact path="/" component={WrappedComponent(Home)} />
-            <Route exact path="/lib/docs" component={WrappedComponent(Docs)} />
+            <Route exact path="/lib/docs" component={WrappedComponent(SideCarousel)} />
           </React.Fragment>
         </Switch>
       </React.Suspense>
