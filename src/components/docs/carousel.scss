@@ -15,6 +15,29 @@
     width: 75%;
 }
 
-.Side-Carousel{  
-    display:flex;
+.Side-Carousel {
+    display: flex;
+    padding: 30px;
+    min-height: 250px;
+    align-items: center;
+}
+
+.SlideImage {
+    max-width: 250px;
+    padding-bottom: 20px;
+    background: #f9f8f1;
+}
+
+.MiniSlideContent {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .h1-text {
+        font-size: 19px;
+    }
+}
+
+.font-50 {
+    font-size: 50px;
 }

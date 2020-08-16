@@ -7,3 +7,7 @@ export function dispacthAction<T extends IActionType>(action: T) {
   }
   return store.dispatch<{ type: string }>(action);
 }
+
+export const isMobile = () =>
+  navigator.appVersion.toString().toLowerCase().includes("iphone") ||
+  navigator.appVersion.toString().toLowerCase().includes("android");
