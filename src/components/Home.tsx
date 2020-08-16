@@ -1,7 +1,7 @@
 import axios from "axios";
 import * as React from "react";
 import { connect } from "react-redux";
-import { CarouselCaption, CarouselItem, Col, Row } from "reactstrap";
+import { CarouselItem, Col, Row } from "reactstrap";
 import { UserModel } from "../models/UserModel";
 import { Carousel } from "./Carousel";
 import { SideCarousel } from "./docs";
@@ -36,19 +36,22 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
     const res = await axios.get("https://api.github.com/users");
     new UserModel(res.data).$saveAll();
   }
-
-  slides = items.map((item) => {
+  slides = [1, 2, 3, 4, 5, 6, 7, 8].map((x) => {
     return (
       <CarouselItem
         onExiting={() => this.setState({ animating: true })}
         onExited={() => this.setState({ animating: false })}
-        key={item.src}
+        key={x}
       >
-        <img src={item.src} alt={item.altText} />
-        <CarouselCaption
-          captionText={item.caption}
-          captionHeader={item.caption}
-        />
+        <div className="">
+          <img
+            width="100%"
+            height="400px"
+            src={`https://source.unsplash.com/random/?sig={${x}}`}
+            alt=""
+            key={x}
+          />
+        </div>{" "}
       </CarouselItem>
     );
   });
@@ -56,10 +59,12 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
   render() {
     return (
       <div>
-        <Carousel items={items} slides={this.slides} />
+        <div className="CarouselContainer">
+          <Carousel items={items} slides={this.slides} />
+        </div>
         <SideCarousel />
-        <Row>
-          <Col xs={12} md={6} lg={6}>
+        <Row className="bg-wheat">
+          <Col xs={12} md={6} lg={6} className="flex j-center fd-col">
             <h1>Malhar Collection Rhythm of life!</h1>
             <div>
               Spread the joy with our celebratory wardrobe with splashes of
@@ -89,7 +94,7 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
               />
             </div>
           </Col>{" "}
-          <Col xs={12} md={6} lg={6}>
+          <Col xs={12} md={6} lg={6} className="flex j-center fd-col">
             <h1> The Home Edition!</h1>
             <div>
               It's good to be home Home is a place for Love and happiness. Make
@@ -97,6 +102,21 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
               soothing pastels and contrasting accents to make it your own. Sit
               back &amp; relax. Get those creative juices flowing..It's time for
               some TLC. #WFM #InThisTogether
+            </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} className="flex j-center fd-col HomeSignup">
+            <h2>Be the First to know!</h2>
+            <p>
+              Join our mailing list for exclusive access to the latest fashion
+              trends, tips, and more.
+            </p>
+            <div className="SignupInput">
+              <div className="Inner">
+                <input className="SearchInput" placeholder="Enter email here" />
+                <button className="SingupButton">Sign Me Up!</button>
+              </div>
             </div>
           </Col>
         </Row>

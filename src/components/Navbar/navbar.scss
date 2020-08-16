@@ -1,0 +1,93 @@
+.MyNavContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .navbar-collapse {
+        min-height: 100px;
+    }
+
+    .TreeNode {
+        width: 100%;
+
+        .rstm-tree-item--active {
+            padding-left: 2.5rem;
+            background: none;
+            box-shadow: none;
+            color: black
+        }
+
+        .rstm-toggle-icon-symbol {
+            font-size: 30px;
+        }
+        .rstm-tree-item{
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .navbar-nav {
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+
+        .SearchInp {
+            position: relative;
+
+            .fa-search {
+                position: absolute;
+                height: 100%;
+                padding: 7px;
+                right: 0;
+                color: gray;
+                font-size: 15px;
+            }
+        }
+
+        .SearchInput {
+            min-width: 300px;
+            border: none;
+            padding: 6px;
+        }
+    }
+}
+
+.MenuItemContainer {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+
+    .NavItem {
+        padding: 8px;
+        min-width: 70px;
+        text-align: center;
+        font-size: 14px;
+
+        .fa-chevron-down {
+            padding-left: 6px;
+            color: #888888;
+        }
+
+        &:hover {
+            margin-bottom: -4px;
+            border-bottom: 4px solid #b96f6f;
+
+        }
+    }
+}
+
+.HoverElement {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    position: absolute;
+    width: 100%;
+    left: -10%;
+    background: white;
+    min-height: 200px;
+    top: 40px;
+    padding: 10px;
+}
