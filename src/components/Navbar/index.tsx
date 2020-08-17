@@ -8,7 +8,7 @@ import {
   NavbarToggler,
   NavItem,
 } from "reactstrap";
-import Logo from "./LogoSmall.png";
+import Logo from "./fabLogo.png";
 import { map } from "ramda";
 import "./navbar.scss";
 import navConfig from "./config.json";
@@ -47,7 +47,7 @@ export const Navbar = () => {
   return (
     <RNav color="light" light fixed="top" expand="md">
       <NavbarBrand href="/">
-        <img src={Logo} alt="Logo" />
+        <img width="120px" src={Logo} alt="Logo" />
       </NavbarBrand>
       <NavbarToggler onClick={toggle} />
       <div className="MyNavContainer">
