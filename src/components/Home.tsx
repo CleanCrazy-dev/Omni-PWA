@@ -5,6 +5,11 @@ import { CarouselItem, Col, Row } from "reactstrap";
 import { UserModel } from "../models/UserModel";
 import { Carousel } from "./Carousel";
 import { SideCarousel } from "./docs";
+import img1 from "../resource/img/1.jpg";
+import img2 from "../resource/img/2.jpg";
+import img3 from "../resource/img/3.jpg";
+import { withRouter } from "react-router";
+import { IHistory } from "../interfaces";
 
 const items = [
   {
@@ -29,6 +34,7 @@ const items = [
 
 export interface IHomeProps {
   users: UserModel[];
+  history: IHistory;
 }
 
 class HomeImpl extends React.Component<IHomeProps, {}> {
@@ -36,7 +42,8 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
     const res = await axios.get("https://api.github.com/users");
     new UserModel(res.data).$saveAll();
   }
-  slides = [1, 2, 3, 4, 5, 6, 7, 8].map((x) => {
+  slides = [1, 2, 3, 4, 5, 6, 7, 8].map((x, i) => {
+    const imgs = [img1, img2, img3, img1, img2, img3, img1, img2, img3];
     return (
       <CarouselItem
         onExiting={() => this.setState({ animating: true })}
@@ -44,13 +51,7 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
         key={x}
       >
         <div className="">
-          <img
-            width="100%"
-            height="400px"
-            src={`https://source.unsplash.com/random/?sig={${x}}`}
-            alt=""
-            key={x}
-          />
+          <img width="100%" height="400px" src={imgs[i]} alt="" key={x} />
         </div>{" "}
       </CarouselItem>
     );
@@ -62,7 +63,9 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
         <div className="CarouselContainer">
           <Carousel items={items} slides={this.slides} />
         </div>
-        <SideCarousel />
+        <SideCarousel
+          onClickSlide={() => this.props.history.push("/product-list")}
+        />
         <Row className="bg-wheat">
           <Col xs={12} md={6} lg={6} className="flex j-center fd-col">
             <h1>Malhar Collection Rhythm of life!</h1>
@@ -127,4 +130,4 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
 
 const mapStateToProps = () => ({ users: UserModel.list() });
 
-export const Home = connect(mapStateToProps)(HomeImpl);
+export const Home = withRouter(connect(mapStateToProps)(HomeImpl));
