@@ -17,6 +17,11 @@ const SideCarousel = React.lazy(() =>
     default: SideCarousel,
   }))
 );
+const ProductList = React.lazy(() =>
+  import("./components/ProductList").then(({ ProductList }) => ({
+    default: ProductList,
+  }))
+);
 
 const WrappedComponent = (Component: any) => {
   return class Wrapper extends React.Component {
@@ -39,7 +44,16 @@ export const Routes = () => {
         <Switch>
           <React.Fragment>
             <Route exact path="/" component={WrappedComponent(Home)} />
-            <Route exact path="/lib/docs" component={WrappedComponent(SideCarousel)} />
+            <Route
+              exact
+              path="/lib/docs"
+              component={WrappedComponent(SideCarousel)}
+            />
+            <Route
+              exact
+              path="/product-list"
+              component={WrappedComponent(ProductList)}
+            />
           </React.Fragment>
         </Switch>
       </React.Suspense>
