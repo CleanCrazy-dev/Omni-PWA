@@ -37,7 +37,7 @@ const WrappedComponent = (Component: any) => {
 export const Routes = () => {
   return (
     <HashRouter>
-      <React.Suspense fallback={<h1>Loding...</h1>}>
+      <React.Suspense fallback={<h1>Loading...</h1>}>
         <Switch>
           <React.Fragment>
             <Route exact path="/" component={WrappedComponent(Home)} />
