@@ -58,7 +58,7 @@
 .MenuItemContainer {
     display: flex;
     position: relative;
-
+    justify-content: center;
     &:hover {
         cursor: pointer;
     }

@@ -18,7 +18,9 @@ import tdImg2 from "../resource/img/t2.jpg";
 import tdImg3 from "../resource/img/t3.jpg";
 import Slider from "react-slick";
 import { isMobile } from "../generalUtils";
-
+import p1 from "../resource/img/p1.jpg";
+import p2 from "../resource/img/p2.jpg";
+import p3 from "../resource/img/p3.jpg";
 const items = [
   {
     src:
@@ -46,10 +48,7 @@ export interface IHomeProps {
 }
 
 class HomeImpl extends React.Component<IHomeProps, {}> {
-  async componentDidMount() {
-    const res = await axios.get("https://api.github.com/users");
-    new UserModel(res.data).$saveAll();
-  }
+
   slides = [1, 2, 3, 4, 5, 6, 7, 8].map((x, i) => {
     const imgs = [img1, img2, img3, img1, img2, img3, img1, img2, img3];
     return (
@@ -112,12 +111,25 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
           </h2>
         </div>
         <SideCarousel
-          slideImages={[slideImg1, slideImg2, slideImg3,slideImg1, slideImg2, slideImg3,slideImg1, slideImg2, slideImg3]}
+          slideImages={[
+            slideImg1,
+            slideImg2,
+            slideImg3,
+            slideImg1,
+            slideImg2,
+            slideImg3,
+            slideImg1,
+            slideImg2,
+            slideImg3,
+          ]}
           onClickSlide={() => this.props.history.push("/product-list")}
         />
         <Row className="bg-wheat home-row">
           <Col xs={12} md={6} lg={6} className="flex j-center fd-col">
-            <h1>Malhar Collection Rhythm of life!</h1>
+            <div className="Hometext">
+              <h1>Malhar Collection</h1>
+              <span> Rhythm of life!</span>
+            </div>
             <div>
               Spread the joy with our celebratory wardrobe with splashes of
               colour, natural hues and gentle handcrafted motifs and patterns.
@@ -148,7 +160,10 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
             </div>
           </Col>{" "}
           <Col xs={12} md={6} lg={6} className="flex j-center fd-col">
-            <h1> The Home Edition!</h1>
+            <div className="Hometext">
+              <h1> The Home Edition!</h1>
+              <span>It's good to be home</span>
+            </div>
             <div>
               It's good to be home Home is a place for Love and happiness. Make
               it a beautiful space with our home furnishings. Experiment with
@@ -156,6 +171,53 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
               back &amp; relax. Get those creative juices flowing..It's time for
               some TLC. #WFM #InThisTogether
             </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} lg={12} md={12}>
+            <div className="promo-featured">
+              <h2>
+                <span>Promo Previews</span>
+                <div className="promo-text">
+                  A glimpse at all things new at Fabindia
+                </div>
+              </h2>
+            </div>
+          </Col>
+          <Col xs={12} md={12} lg={12}>
+            <Row className="MobileBlock ">
+              <Col lg={8} md={8} className="mb-20">
+                <img src={p1} width="100%" height="87%" />
+                <div className="VideoText">
+                  <h4>Malhar Collection</h4>
+                  <span>
+                    {" "}
+                    The rhythm of life, the wonder of colours, the passion of
+                    nature, all embodied in our new Malhar collection!
+                  </span>
+                </div>
+              </Col>
+              <Col lg={4} md={4}>
+                <div className="VideoRight">
+                  <img src={p2} width="100%" />
+                  <div className="VideoText">
+                    <h4>Chikankari Collection</h4>
+                    <span>
+                      Chikankari is the fine and intricate embroidery tr
+                    </span>
+                  </div>
+                </div>
+                <div>
+                  <img src={p3} width="100%" />
+                  <div className="VideoText">
+                    <h4>Rajwada Collection</h4>
+                    <span>
+                      Let the festivities begin with Rajwada: All that is opulen
+                    </span>
+                  </div>
+                </div>
+              </Col>
+            </Row>
           </Col>
         </Row>
         <Row>
@@ -174,7 +236,7 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
               {[1, 2, 3, 4, 5, 6, 7, 8].map((x, i) => {
                 return (
                   <div className="TradCarouselSlide">
-                    <img src={tImages[i]} alt="" className="SlideImageTrad" />;
+                    <img src={tImages[i]} alt="" className="SlideImageTrad" />
                     <div className="TradText">
                       <span>Bagru Print</span>
                       <p>The art of traditional hand block printingƒ</p>

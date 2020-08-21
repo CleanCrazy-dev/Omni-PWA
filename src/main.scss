@@ -39,6 +39,61 @@
         #f9f8f1;
 }
 
+.VideoText {
+    background: #f9f8f1;
+    padding: 20px;
+}
+
+.VideoRight {
+    margin-bottom: 20px;
+}
+
+.promo-featured {
+    position: relative;
+
+    h2 {
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        font-size: 54px;
+        font-family: 'Unna', serif;
+        font-weight: normal;
+        color: #000;
+        line-height: normal;
+        position: relative;
+        top: 0;
+        left: 0;
+        text-align: center;
+
+        .promo-text {
+            position: relative;
+            bottom: 16px;
+            font-size: 16px;
+            left: 30px;
+        }
+    }
+
+    span {
+        font-size: 39px;
+        top: 10px;
+        position: relative;
+        letter-spacing: .015em;
+        line-height: 96px;
+        left: 28px;
+    }
+
+    &::before {
+        content: "P";
+        font-size: 120px;
+        color: #ccc;
+        font-family: 'Unna', serif;
+        opacity: .6;
+        position: absolute;
+        top: 45%;
+        left: 40%;
+    }
+}
+
 .fab-featured {
     position: relative;
 
@@ -135,6 +190,25 @@
     .SlideImageTrad {
         max-width: 80%;
         margin: auto;
+    }
+}
+
+.Hometext {
+    text-align: center;
+    position: relative;
+    min-height: 70px;
+    font-family: fantasy;
+
+    h1 {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    span {
+        position: absolute;
+        font-size: 17px;
+        min-width: 167px;
+        bottom: 22px;
     }
 }
 
@@ -247,6 +321,14 @@
 }
 
 @media only screen and (max-width: 720px) {
+
+    .MobileBlock {
+        display: block;
+    }
+
+    .mb-20 {
+        margin-bottom: 20px;
+    }
 
     .FilterMobileContainer {
         display: flex;
