@@ -16,13 +16,13 @@ export class ProductListImpl extends React.PureComponent<
   {}
 > {
   async componentDidMount() {
-    console.log('>> process.env', process.env);
     const response = await Axios.get(
       "https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/products/list?categories=men_all&sortBy=stock&concepts=H%2526M%20MAN&country=us&lang=en&currentpage=0&pagesize=30",
       {
         headers: {
           "x-rapidapi-host": "apidojo-hm-hennes-mauritz-v1.p.rapidapi.com",
-          "x-rapidapi-key": process.env.RAPID_API,
+          "x-rapidapi-key":
+            "516a5ecdcemsh2b5192fad8db3b0p12badbjsn10762fa93820",
           useQueryString: true,
         },
       }
