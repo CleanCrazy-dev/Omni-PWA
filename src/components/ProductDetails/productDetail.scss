@@ -1,0 +1,96 @@
+.ProductName {
+    font-size: 30px;
+}
+
+.ProductDetails {
+    background: #f9f8f1;
+    padding: 27px 0;
+}
+
+.ProductImage {
+    text-align: center;
+
+    img {
+        min-width: 80%;
+        max-height: 500px;
+    }
+}
+
+.qty {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+    font-size: 12px;
+    border: 0;
+    float: left;
+    width: 46px;
+    text-align: center;
+    background-color: transparent;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    min-height: 29px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding: 4px;
+}
+
+.add {
+    padding: 10px;
+    border-radius: 3px;
+    width: 100%;
+    max-width: 170px;
+    font-weight: 800;
+    color: #000;
+    font-size: 13px;
+    background-color: #e5cc76;
+    border: none;
+    margin-left: 30px;
+
+}
+
+.check {
+    background-color: #000;
+    border-radius: 3px;
+    color: #fff;
+    padding: 8px 35px 10px;
+    width: auto;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: normal;
+    margin-left: 20px;
+    border: 0;
+    height: 34px;
+    min-width: 111px;
+}
+
+.input {
+    padding: 5px 2px 5px 18px;
+    height: 36px;
+    min-width: 210px;
+    background: transparent;
+    border: 1px solid #000;
+    font-size: 12px;
+    color: #7f7d75;
+    font-weight: 300;
+    border-radius: 3px;
+}
+
+.head {
+    font-size: 20px;
+    padding-bottom: 10px;
+    font-weight: 600;
+
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.pro-details {
+    padding-top: 10px;
+}
+
+.ProductPrice {
+    font-size: 30px;
+    padding: 20px 0;
+}
