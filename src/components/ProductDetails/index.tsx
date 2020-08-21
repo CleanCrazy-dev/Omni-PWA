@@ -50,7 +50,7 @@ export class ProductDetailsImpl extends React.PureComponent<
         headers: {
           "x-rapidapi-host": "apidojo-hm-hennes-mauritz-v1.p.rapidapi.com",
           "x-rapidapi-key":
-            "516a5ecdcemsh2b5192fad8db3b0p12badbjsn10762fa93820",
+            "",
           useQueryString: true,
         },
       }
