@@ -43,7 +43,6 @@ export const Navbar = () => {
   const [activeItem, setActiveItem] = useState("");
 
   const toggle = () => setIsOpen(!isOpen);
-  console.log(">> activeItem", activeItem);
   return (
     <RNav color="light" light fixed="top" expand="md">
       <NavbarBrand href="/">
@@ -63,42 +62,39 @@ export const Navbar = () => {
                 <i className="fa fa-search" aria-hidden="true"></i>
               </div>
             </NavItem>
-            {isMobile() && (
-              <div className="TreeNode">
-                <TreeMenu data={treeData} hasSearch={false} />
-              </div>
-            )}
+            <div className="TreeNode hidden-lg">
+              <TreeMenu data={treeData} hasSearch={false} />
+            </div>
           </Nav>
           <NavbarText>
             Sign In | Sign Up | Track Your Order | Store Locator
           </NavbarText>
         </Collapse>
-        {!isMobile() && (
-          <div className="MenuItemContainer">
-            {navConfig.items.map((itemData, index) => {
-              return (
-                <>
-                  <div
-                    onMouseEnter={() => setActiveItem(itemData.repositoryId)}
-                    className="NavItem"
-                    key={index}
-                  >
-                    {itemData.displayName}
-                    <i className="fa fa-chevron-down"></i>
-                    {activeItem === itemData.repositoryId && (
-                      <div
-                        onMouseLeave={() => setActiveItem("")}
-                        className="HoverElement"
-                      >
-                        <h1>Items Goes Here for {itemData.displayName}</h1>
-                      </div>
-                    )}
-                  </div>
-                </>
-              );
-            })}
-          </div>
-        )}
+
+        <div className="MenuItemContainer hidden-xs ">
+          {navConfig.items.map((itemData, index) => {
+            return (
+              <>
+                <div
+                  onMouseEnter={() => setActiveItem(itemData.repositoryId)}
+                  className="NavItem"
+                  key={index}
+                >
+                  {itemData.displayName}
+                  <i className="fa fa-chevron-down"></i>
+                  {activeItem === itemData.repositoryId && (
+                    <div
+                      onMouseLeave={() => setActiveItem("")}
+                      className="HoverElement"
+                    >
+                      <h1>Items Goes Here for {itemData.displayName}</h1>
+                    </div>
+                  )}
+                </div>
+              </>
+            );
+          })}
+        </div>
       </div>
     </RNav>
   );

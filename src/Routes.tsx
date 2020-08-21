@@ -2,10 +2,7 @@ import { Route, Switch } from "react-router";
 import { HashRouter } from "react-router-dom";
 import React from "react";
 import { BasePage } from "./components/BasePage";
-
-// const Home = asyncComponent(() => {
-//   return import('./components/Home');
-// });
+import { ProductDetails } from "./components/ProductDetails";
 
 const Home = React.lazy(() =>
   import("./components/Home").then(({ Home }) => ({
@@ -53,6 +50,11 @@ export const Routes = () => {
               exact
               path="/product-list"
               component={WrappedComponent(ProductList)}
+            />
+            <Route
+              exact
+              path="/product-detail/:id"
+              component={WrappedComponent(ProductDetails)}
             />
           </React.Fragment>
         </Switch>

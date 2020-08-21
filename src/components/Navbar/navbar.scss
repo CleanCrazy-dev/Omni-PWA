@@ -20,7 +20,8 @@
         .rstm-toggle-icon-symbol {
             font-size: 30px;
         }
-        .rstm-tree-item{
+
+        .rstm-tree-item {
             display: flex;
             align-items: center;
         }
@@ -31,25 +32,27 @@
         width: 100%;
         align-items: center;
 
-        .SearchInp {
-            position: relative;
 
-            .fa-search {
-                position: absolute;
-                height: 100%;
-                padding: 7px;
-                right: 0;
-                color: gray;
-                font-size: 15px;
-            }
-        }
-
-        .SearchInput {
-            min-width: 300px;
-            border: none;
-            padding: 6px;
-        }
     }
+}
+
+.SearchInp {
+    position: relative;
+
+    .fa-search {
+        position: absolute;
+        height: 100%;
+        padding: 7px;
+        right: 0;
+        color: gray;
+        font-size: 15px;
+    }
+}
+
+.SearchInput {
+    min-width: 300px;
+    border: none;
+    padding: 6px;
 }
 
 .MenuItemContainer {

@@ -58,3 +58,4508 @@ body {
     transform: rotate(360deg);
   }
 }
+
+body.sticky {
+  padding-top: 227px
+}
+
+body.sticky #cc-notifications {
+  top: 38px !important
+}
+
+#custom-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: .5;
+  z-index: 1040;
+  background-color: #000
+}
+
+@keyframes smoothScroll {
+  0% {
+    transform: translateY(-40px)
+  }
+
+  100% {
+    transform: translateY(0)
+  }
+}
+
+.typeahead {
+  display: none !important
+}
+
+#search-box-bar {
+  display: none;
+  position: absolute;
+  background-color: #f4f2e5;
+  padding: 12px !important
+}
+
+#search-box-bar #CC-headerWidget-Search,
+#search-box-bar #CC-headerWidget-Search-mobile {
+  width: 85%;
+  background: #f9f8f1 none repeat scroll 0 0;
+  border: 0 none;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  box-shadow: none;
+  height: 40px
+}
+
+#search-box-bar #searchSubmit,
+#search-box-bar #searchSubmit-mobile {
+  background: #f9f8f1 none repeat scroll 0 0;
+  border: 0 none;
+  box-shadow: none
+}
+
+#connect-store-mobile {
+  display: none;
+  position: absolute;
+  padding: 12px 12px 20px 12px !important
+}
+
+body.sticky header#headerBar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  width: 100%;
+  animation: smoothScroll .7s forwards;
+  top: -48px;
+  margin-top: 10px
+}
+
+@media only screen and (max-width : 767px) {
+  body.sticky header#headerBar {
+    top: -48px
+  }
+}
+
+@media only screen and (max-width :320px) {
+  body.sticky header#headerBar {
+    top: -70px
+  }
+}
+
+body.sticky header#headerBar .cc-welcome,
+body.sticky header#headerBar .store-locator {
+  display: none
+}
+
+body.sticky header#headerBar #header {
+  min-height: 110px
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  body.sticky header#headerBar #header {
+    padding-top: 38px;
+    min-height: 100px
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  body.sticky header#headerBar #header {
+    padding-top: 38px;
+    min-height: 88px
+  }
+}
+
+body.sticky header#headerBar img.col-xs-12.img.img-responsive {
+  max-width: 106px
+}
+
+@media only screen and (max-width : 767px) {
+  body.sticky header#headerBar img.col-xs-12.img.img-responsive {
+    max-width: 70px
+  }
+}
+
+body.sticky header#headerBar .header-wrapper {
+  margin: 10px auto 0;
+  padding-bottom: 10px
+}
+
+body.sticky header#headerBar .header-wrapper .content-left .logo {
+  margin-top: 10px
+}
+
+body.sticky header#headerBar .content-right {
+  margin-top: 0
+}
+
+body.sticky header#headerBar .search-icon {
+  display: block !important
+}
+
+body.sticky header#headerBar .search-icon img {
+  width: 15px !important;
+  margin-top: 2px;
+  display: inline-block
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 a[class*='btn-']:hover {
+  color: #fff
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 a[class='cc-button-primary']:hover {
+  color: #000
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 a[class='cc-button-secondary']:hover {
+  color: #3d3d3d
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #header {
+  min-height: 140px;
+  position: relative
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+  #FabindiaHeaderWidget_v1-wi4000001 #header {
+    min-height: 130px
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait),
+only screen and (max-width : 767px) {
+  #FabindiaHeaderWidget_v1-wi4000001 #header {
+    -webkit-box-shadow: 0 2px 2px #e2e1da;
+    -moz-box-shadow: 0 2px 2px #e2e1da;
+    box-shadow: 0 2px 2px #e2e1da
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaHeaderWidget_v1-wi4000001 #header {
+    min-height: 64px
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaHeaderWidget_v1-wi4000001 #header {
+    min-height: 49px
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #header .cc-welcome a {
+  margin: 0 1px 0 2px;
+  display: inline-block;
+  font-size: 12px;
+  color: #000
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #header .cc-welcome i {
+  font-size: 13px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .header-fixed {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 9999
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .header-fixed div#header {
+  padding: 0 30px
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaHeaderWidget_v1-wi4000001 .header-fixed .navbar {
+    min-height: 0
+  }
+
+  #FabindiaHeaderWidget_v1-wi4000001 .header-fixed .mega-menu {
+    min-height: 0
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .header-fixed .nav-right {
+  display: block !important
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .header-fixed .search {
+  padding-top: 0
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .header-fixed .content-bottom {
+  line-height: 21px;
+  position: absolute;
+  right: 5%;
+  bottom: 27%;
+  width: 12.3%
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+  #FabindiaHeaderWidget_v1-wi4000001 .header-fixed .content-bottom {
+    width: 16%
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaHeaderWidget_v1-wi4000001 .header-fixed .content-bottom {
+    width: 25%
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaHeaderWidget_v1-wi4000001 a {
+    display: block
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 img.col-xs-12.img.img-responsive {
+  width: 60%;
+  max-width: 145px;
+  padding: 0
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaHeaderWidget_v1-wi4000001 img.col-xs-12.img.img-responsive {
+    width: 100%;
+    max-width: 106px
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaHeaderWidget_v1-wi4000001 img.col-xs-12.img.img-responsive {
+    width: 100%;
+    max-width: 70px
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaHeaderWidget_v1-wi4000001 .logo_picker {
+    margin-left: 8%
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .ticker-heading {
+  width: 100%;
+  left: 0;
+  text-align: center;
+  background: #e5cc76;
+  color: #000;
+  z-index: 9;
+  padding: 4px 0;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: .4px
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaHeaderWidget_v1-wi4000001 .ticker-heading {
+    padding: 15px 15px 18px 15px !important
+  }
+}
+
+@media only screen and (max-width :479px) {
+  #FabindiaHeaderWidget_v1-wi4000001 .ticker-heading {
+    padding: 15px 15px 18px 15px !important
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .ticker-heading .connect-msg {
+  font-size: 13px;
+  float: none
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .ticker-heading .connect-msg a {
+  color: #000;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaHeaderWidget_v1-wi4000001 .ticker-heading .connect-msg {
+    float: left;
+    font-size: 11px;
+    line-height: 15px;
+    padding-left: 0;
+    padding-right: 10px
+  }
+}
+
+@media only screen and (max-width :479px) {
+  #FabindiaHeaderWidget_v1-wi4000001 .ticker-heading .connect-msg {
+    float: left;
+    font-size: 11px;
+    line-height: 15px;
+    padding-left: 0;
+    padding-right: 10px
+  }
+}
+
+@media only screen and (max-width:375px) {
+  #FabindiaHeaderWidget_v1-wi4000001 .ticker-heading .connect-msg {
+    width: 74% !important;
+    font-size: 10px !important
+  }
+}
+
+@media only screen and (max-width:360px) {
+  #FabindiaHeaderWidget_v1-wi4000001 .ticker-heading .connect-msg {
+    width: 72% !important;
+    font-size: 10px !important
+  }
+}
+
+@media only screen and (max-width:320px) {
+  #FabindiaHeaderWidget_v1-wi4000001 .ticker-heading .connect-msg {
+    width: 66% !important;
+    font-size: 8px !important
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .ticker-heading .connect-btn {
+  border: 1px solid #725c12;
+  padding: 3px 10px;
+  background-color: #e5cc76;
+  margin-left: 30px;
+  width: 220px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .ticker-heading .connect-btn .connect-img {
+  width: 25px;
+  height: 15px;
+  margin-bottom: 3px
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaHeaderWidget_v1-wi4000001 .ticker-heading .connect-btn .connect-img {
+    width: 15px;
+    height: 10px
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaHeaderWidget_v1-wi4000001 .ticker-heading .connect-btn {
+    width: auto;
+    margin: 0
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaHeaderWidget_v1-wi4000001 .ticker-heading .connect-btn {
+    width: auto;
+    padding: 0 10px 0 8px;
+    margin: 0;
+    margin-right: 0;
+    margin-top: 3px
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+  #FabindiaHeaderWidget_v1-wi4000001 .ticker-heading {
+    font-size: 10px;
+    padding: 4px 0
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaHeaderWidget_v1-wi4000001 .ticker-heading {
+    font-size: 10px;
+    padding: 14px 0
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #CC-loginHeader-logout {
+  text-align: center;
+  margin: 0 2%
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .CC-header-modal-subtitle {
+  display: none
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .form-control {
+  background-color: #f4f2e5;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  box-shadow: none;
+  height: 40px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #CC-userLogin label.control-label {
+  line-height: 12px;
+  margin: 11px 0;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 12px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #CC-userLogin .form-group {
+  margin-bottom: 12px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #CC-signup {
+  padding-top: 8%
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #CC-signup .cc-createAccount-link {
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .header-wrapper {
+  margin: 25px auto 10px
+}
+
+@media only screen and (min-width:1025px) {
+  #FabindiaHeaderWidget_v1-wi4000001 .header-wrapper {
+    width: 95%
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+  #FabindiaHeaderWidget_v1-wi4000001 .header-wrapper {
+    padding: 0
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaHeaderWidget_v1-wi4000001 .header-wrapper {
+    margin-top: 10px
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .header-wrapper .content-left {
+  padding: 0
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .header-wrapper .content-left .logo {
+  margin-top: 5px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .header-wrapper .content-left .logo a {
+  display: block
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .content-right {
+  text-align: right;
+  margin-top: 22px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .cc-header-firstName {
+  display: none
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .panel-1 {
+  display: inline-block
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .panel-1 a#CC-loginHeader-myAccount {
+  margin-right: 3px;
+  font-size: 12px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .panel-1 #CC-track-order {
+  margin-right: 4px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .panel-1 #CC-track-order-text {
+  margin: 0 2%
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .panel-2 {
+  display: inline-block;
+  text-align: left
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .panel-2 .store-locator {
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 5px
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaHeaderWidget_v1-wi4000001 .panel-2 .store-locator {
+    font-size: 11px
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .panel-2 .store-locator .CC-store-locator {
+  margin-left: 3%
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .panel-2 .store-locator a#CC-store-locator {
+  margin-left: 5px;
+  font-weight: 400
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .panel-3 {
+  display: inline-block;
+  width: 18%;
+  text-align: right
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+  #FabindiaHeaderWidget_v1-wi4000001 .panel-3 {
+    width: 22%
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaHeaderWidget_v1-wi4000001 .panel-3 {
+    width: 27%
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .panel-3 .track-order {
+  font-size: 12px
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaHeaderWidget_v1-wi4000001 .panel-3 .track-order {
+    font-size: 11px
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .panel-3 .track-order a#CC-track-order {
+  margin-left: 4%
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .content-bottom {
+  float: right;
+  line-height: 21px;
+  margin-top: 15px;
+  margin-right: 2%
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaHeaderWidget_v1-wi4000001 .content-bottom {
+    position: absolute;
+    right: 0;
+    top: 25%;
+    margin-top: 28px
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .header_left {
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-top: 3px;
+  font-size: 11px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .header_left #contact-icon img {
+  width: 11px;
+  vertical-align: text-top;
+  position: absolute;
+  right: 15px;
+  top: 3px
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+  #FabindiaHeaderWidget_v1-wi4000001 .header_left #contact-icon img {
+    top: 6px
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #headerCurrencyPicker {
+  font-size: 13px;
+  text-align: right;
+  position: relative
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #headerCurrencyPicker .heading a:hover,
+#FabindiaHeaderWidget_v1-wi4000001 #headerCurrencyPicker .content a:hover {
+  text-decoration: none
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #headerCurrencyPicker .content {
+  font-size: 10px;
+  text-align: right;
+  margin-right: 18px
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaHeaderWidget_v1-wi4000001 #headerCurrencyPicker .content {
+    position: absolute;
+    right: 0
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaHeaderWidget_v1-wi4000001 #headerCurrencyPicker .content {
+    position: absolute;
+    right: 0;
+    z-idex: 9
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #headerCurrencyPicker .content img {
+  vertical-align: top;
+  max-width: 100%;
+  position: relative;
+  top: -2px;
+  display: inline-block;
+  width: 24px;
+  height: 24px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #headerCurrencyPicker .content .paddingBottom a .currencyCodeWidth {
+  margin-right: 3px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #headerCurrencyPicker #CC-header-currency-link:hover,
+#FabindiaHeaderWidget_v1-wi4000001 #headerCurrencyPicker #CC-header-currency-link:focus {
+  text-decoration: none
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #headerCurrencyPicker #CC-header-currency-link img {
+  vertical-align: top;
+  max-width: 100%;
+  position: relative;
+  top: -2px;
+  display: inline-block;
+  width: 24px;
+  height: 24px
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+  #FabindiaHeaderWidget_v1-wi4000001 #headerCurrencyPicker #CC-header-currency-link img {
+    margin-left: -4px
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #headerCurrencyPicker #CC-header-currency-link .caret {
+  width: 0;
+  height: 0;
+  display: inline-block;
+  padding: 2px;
+  margin-left: 4px;
+  vertical-align: middle;
+  border: solid #000;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  border-width: 0 1px 1px 0;
+  margin-top: -4px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #headerCurrencyPicker #CC-header-currency-link span {
+  margin-right: 5px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #headerCurrencyPicker #CC-currencyConversionPopup {
+  background: #f9f8f1;
+  position: absolute;
+  width: 336px;
+  padding: 35px 38px 28px 40px;
+  z-index: 9;
+  right: -40%;
+  top: 45px;
+  text-align: left;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+  #FabindiaHeaderWidget_v1-wi4000001 #headerCurrencyPicker #CC-currencyConversionPopup {
+    padding: 30px 40px
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaHeaderWidget_v1-wi4000001 #headerCurrencyPicker #CC-currencyConversionPopup {
+    right: -52px
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaHeaderWidget_v1-wi4000001 #headerCurrencyPicker #CC-currencyConversionPopup {
+    right: -94%
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #headerCurrencyPicker #CC-currencyConversionPopup p {
+  font-size: 13px;
+  line-height: 22px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #headerCurrencyPicker #CC-currencyConversionPopup .currency-close {
+  position: absolute;
+  top: 12px;
+  right: 12px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #headerCurrencyPicker #CC-currencyConversionPopup .currency-close a {
+  background: url(/file/general/round-delete-button.svg) no-repeat 0 0;
+  background-size: 20px;
+  width: 20px;
+  height: 20px;
+  display: block;
+  cursor: pointer
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+  #FabindiaHeaderWidget_v1-wi4000001 #headerCurrencyPicker {
+    margin-top: 3px
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaHeaderWidget_v1-wi4000001 #headerCurrencyPicker {
+    margin-top: 3px
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .heading {
+  position: relative;
+  font-size: 10px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .heading .shopping-cart {
+  height: 16px;
+  width: 16px;
+  color: #000
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaHeaderWidget_v1-wi4000001 .heading .shopping-cart {
+    margin-top: 3px
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .heading .shopping-cart a span {
+  font-size: 11px;
+  font-weight: normal;
+  background: #e5cc76;
+  color: #000;
+  border-radius: 20px;
+  width: 18px;
+  height: 18px;
+  line-height: 17px;
+  text-align: center;
+  position: absolute;
+  bottom: 54%;
+  left: 44%
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaHeaderWidget_v1-wi4000001 .heading .shopping-cart a span {
+    bottom: 7px
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .heading .shopping-cart a img {
+  vertical-align: unset
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaHeaderWidget_v1-wi4000001 .content {
+    text-align: center
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .search-picker {
+  width: 89%;
+  margin: 0 auto
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+  #FabindiaHeaderWidget_v1-wi4000001 .search-picker {
+    width: 100%;
+    margin-bottom: 20px
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .search-picker input#CC-headerWidget-Search {
+  background: #f9f8f1 none repeat scroll 0 0;
+  border: 0 none;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  height: 38px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .search-picker .search_icon {
+  display: block;
+  line-height: 16px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .search-picker .search_icon img {
+  width: 18px;
+  height: 18px;
+  margin-top: -4px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .search-picker .input-group.search {
+  padding-top: 10px;
+  padding-bottom: 10px
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+  #FabindiaHeaderWidget_v1-wi4000001 .search-picker .input-group.search {
+    padding: 10px 0 0;
+    width: 100%
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaHeaderWidget_v1-wi4000001 .search-picker .input-group.search {
+    margin-top: 20px
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .search-picker .input-group.search .input-group-btn {
+  background: #f9f8f1
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .search-picker .typeahead {
+  margin-left: 0 !important;
+  z-index: 9;
+  width: 100% !important;
+  display: none !important
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .search-picker .typeahead li.typeaheadAllProducts,
+#FabindiaHeaderWidget_v1-wi4000001 .search-picker .typeahead li.typeaheadClose {
+  display: none !important
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .search-picker .typeaheadProductThumbnail {
+  padding: 0 10px 0 0
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .search-picker .typeaheadProductName {
+  font-size: 12px;
+  margin: 0;
+  padding: 0 5px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .search-picker .typeaheadProductPrice {
+  font-size: 14px;
+  font-family: 'Unna', serif;
+  padding: 0 5px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .search-picker #searchSubmit {
+  background: #f9f8f1 none repeat scroll 0 0;
+  border: 0 none;
+  font-size: 21px;
+  padding: 0;
+  height: 38px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .contact_picker {
+  text-align: right;
+  position: relative
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .contact_picker .contact-icon {
+  font-size: 13px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .contact_picker .contact-content {
+  position: absolute;
+  right: 25px;
+  bottom: 0;
+  top: 7px;
+  line-height: 20px;
+  text-transform: inherit;
+  font-size: 11px;
+  color: #8f2c34;
+  font-weight: 300
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #CC-loginHeader-logout {
+  text-align: center;
+  margin: 0 2%
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .CC-header-modal-subtitle {
+  display: none
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .form-control {
+  background-color: #f4f2e5;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  box-shadow: none
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #CC-userLogin label.control-label {
+  float: left;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: normal
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #CC-signup {
+  padding-top: 8%
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #CC-signup .cc-createAccount-link {
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #currencyChange {
+  background: rgba(255, 255, 255, 0.5)
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #currencyChange .modal-dialog {
+  width: 400px;
+  top: 25%
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #currencyChange .modal-dialog .modal-content {
+  text-align: center;
+  padding: 8% 15%;
+  box-shadow: none;
+  border: 0 none;
+  border-radius: 0
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #currencyChange .modal-dialog .modal-content .close-btn {
+  background: url(/file/general/round-delete-button.svg) no-repeat 0 0;
+  position: absolute;
+  top: 14px;
+  right: 5%;
+  border: 0;
+  width: auto;
+  padding: 10px;
+  background-size: 20px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #currencyChange .modal-dialog .modal-content p.content {
+  width: 45%;
+  margin: 10px auto;
+  font-weight: bold;
+  letter-spacing: .5px;
+  font-size: 13px;
+  line-height: 20px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #currencyChange .modal-dialog .modal-content .button {
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  color: #000
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #currencyChange .modal-dialog .modal-content button {
+  width: 100%;
+  margin: 8px 0 12px 0;
+  height: 35px;
+  background: transparent;
+  border: 1px solid #b7b6ae
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #currencyChange .modal-dialog .modal-content button:hover {
+  text-decoration: none
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #currencyChange .modal-dialog .modal-content .button:hover,
+#FabindiaHeaderWidget_v1-wi4000001 #currencyChange .modal-dialog .modal-content .button:active {
+  background: #e5cc76;
+  border: 0 none
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #currencyChange .modal-dialog .modal-content a.cancel-btn {
+  text-decoration: underline;
+  text-transform: capitalize;
+  color: #000;
+  font-weight: bold;
+  font-size: 13px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .row.header-mobile-ipadP {
+  padding-top: 12px;
+  padding-bottom: 8px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .row.header-mobile-ipadP .content-left .logo {
+  margin-top: 8px
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaHeaderWidget_v1-wi4000001 .row.header-mobile-ipadP .content-left .logo {
+    margin-left: 28px;
+    margin-top: 0
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaHeaderWidget_v1-wi4000001 .row.header-mobile-ipadP .content-left .logo {
+    margin-left: 38px;
+    margin-top: 0
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaHeaderWidget_v1-wi4000001 .row.header-mobile-ipadP .content-right {
+    margin-left: -22px;
+    margin-top: 10px
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaHeaderWidget_v1-wi4000001 .row.header-mobile-ipadP .content-right {
+    margin-top: 0
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait),
+only screen and (max-width : 767px) {
+  #FabindiaHeaderWidget_v1-wi4000001 .row.header-mobile-ipadP .content-right #headerCurrencyPicker .content {
+    margin-right: 19px;
+    text-align: right
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .row.header-mobile-ipadP .content-right #headerCurrencyPicker .heading {
+  text-align: right
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart {
+  z-index: 99;
+  padding: 0
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .content .product_image {
+  min-height: 100px;
+  padding: 0
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .content .product_details {
+  padding: 0 10px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .content .product_details .product_title {
+  text-align: left;
+  font-size: 11px;
+  line-height: 14px;
+  margin-top: 4px;
+  text-transform: capitalize
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .content .product_qty {
+  text-align: left;
+  padding: 0 10px;
+  line-height: normal
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .content .product_qty label {
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  width: 54px;
+  font-size: 11px;
+  margin-bottom: 2px;
+  line-height: 13px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .content .product_qty span {
+  font-size: 11px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .content .product_price {
+  text-align: left;
+  padding: 0 10px;
+  line-height: normal
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .content .product_price label {
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  width: 54px;
+  font-size: 11px;
+  margin-bottom: 2px;
+  line-height: 13px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .content .product_price span {
+  font-size: 11px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .heading {
+  margin: 0;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  line-height: 1.4;
+  text-align: right;
+  font-size: 12px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart h4 {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-weight: normal;
+  height: auto
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .firstColumn {
+  text-align: left !important
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .heading a {
+  text-decoration: none
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .heading a:hover {
+  text-decoration: underline
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart #cart-total {
+  background: transparent url('/img/arrow_down_dark.png') 100% 50% no-repeat;
+  cursor: pointer
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #cart-total>span {
+  padding-right: 12px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 15px;
+  min-height: 140px;
+  min-width: 360px;
+  padding: 16px 24px;
+  border: 1px solid #b7b6ae;
+  background: #f6f5ea;
+  width: 100%
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .content>h4 {
+  font-family: 'Unna', serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  border-bottom: 1px solid #b7b6ae;
+  height: auto;
+  padding-bottom: 3px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .content>ul {
+  margin-top: 20px;
+  max-height: 340px;
+  overflow-y: auto;
+  margin-bottom: 15px
+}
+
+@media (min-width:981px) {
+  #FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .content {
+    width: 100%
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .cc-text-overflow {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .table th {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  padding: 2px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .table td {
+  text-align: left;
+  padding: 10px 3px;
+  word-break: break-word;
+  font-size: 11px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .table {
+  margin-bottom: 20px;
+  width: 100%;
+  border-top: 1px solid #b7b6ae
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .table tbody {
+  border-bottom: 1px solid #f00;
+  height: 80px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .dropdowncartItems {
+  padding-top: 2px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .scroll {
+  background-color: #e3e3e3;
+  border: 1px solid #999
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .linkTag {
+  display: block
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .scrollActive {
+  color: #000
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .scrollInactive {
+  color: #a9a8a8
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .scrollDivActive {
+  background-color: #fff
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .fa {
+  font-size: 2.5em
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .shiftRight {
+  right: 10px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .item .imageSize {
+  max-height: 75px;
+  width: 78px;
+  height: 99px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .item {
+  border-bottom: 1px solid #e3e3e3;
+  height: 80px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart.active .content {
+  display: block !important;
+  display: none
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart.active .heading {
+  border-bottom: 0;
+  margin-bottom: 0;
+  display: inline-block;
+  position: relative;
+  z-index: 1
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .total {
+  border-collapse: collapse;
+  padding: 5px;
+  float: right;
+  clear: left;
+  margin-bottom: 8px;
+  text-align: right;
+  width: 100%;
+  border-top: 1px solid #b7b6ae
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .total tbody tr th b span {
+  font-family: 'Unna', serif;
+  font-size: 18px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-weight: bold
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .total tbody tr td {
+  text-align: left;
+  padding-top: 10px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .total tbody tr td span {
+  color: #8f2c34;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .total td.labels {
+  padding-right: 10px;
+  padding-top: 10px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .total th {
+  padding-right: 6px;
+  padding-top: 10px;
+  min-width: 175px;
+  text-align: right
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .content .checkout {
+  text-align: right;
+  clear: both
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .content .checkout a#CC-headerShoppingCart-Edit,
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .content .checkout a#CC-headerShoppingCart-Checkout {
+  width: 100%;
+  margin: 10px 0 0 0;
+  padding: 10px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .content .checkout a#CC-headerShoppingCart-Edit span,
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .content .checkout a#CC-headerShoppingCart-Checkout span {
+  font-weight: bold;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .content .checkout a#CC-headerShoppingCart-Edit span {
+  border: 0;
+  position: relative;
+  font-size: 14px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  text-decoration: none;
+  border-radius: 0;
+  color: #000;
+  width: auto;
+  height: auto
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .content .checkout a#CC-headerShoppingCart-Edit:hover {
+  text-decoration: none
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .empty {
+  padding-top: 50px;
+  text-align: center
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #closecart {
+  float: left;
+  position: absolute;
+  top: 0;
+  right: 8px;
+  opacity: 1;
+  width: 40px;
+  padding: 10px;
+  -moz-opacity: 1;
+  filter: alpha(opacity=1)
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #closecart img {
+  width: 100%
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .removeFromCartIcon {
+  cursor: pointer;
+  background: #e2e1da;
+  vertical-align: text-bottom;
+  border: 0;
+  -webkit-appearance: none;
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+  padding: 3px 8px;
+  font-weight: bold;
+  top: 0;
+  text-transform: uppercase;
+  font-size: 11px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .removeFromCartIcon:hover {
+  text-decoration: none !important;
+  color: #000
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .cart_item {
+  position: relative;
+  margin-bottom: 12px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .product_title {
+  padding-top: 0;
+  border: none;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .product_image img {
+  width: 100%
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart label::after {
+  content: ":";
+  float: right
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .product_varient {
+  margin-top: 7px;
+  text-align: left;
+  line-height: normal
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .product_varient .optionsText label {
+  font-size: 11px;
+  width: 54px;
+  margin-bottom: 2px;
+  line-height: 13px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #dropdowncart .product_varient .optionsText .cc-text-overflow {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 14px;
+  font-size: 11px;
+  margin-top: 2px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #languagedropdown {
+  z-index: 999;
+  position: relative
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #languagedropdown .heading {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  line-height: 0;
+  text-align: right;
+  height: 25px;
+  display: inline-block
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #languagedropdown h4 {
+  font-size: 11.9px;
+  margin: 0
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #languagedropdown .heading a {
+  text-decoration: none
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #languagedropdown .heading a:hover {
+  text-decoration: underline
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #languagedropdown .content {
+  display: none;
+  position: absolute;
+  right: 0;
+  min-height: 60px;
+  min-width: 160px;
+  margin-top: -1px;
+  margin-right: 0;
+  padding: 16px;
+  border: 1px solid #e3e3e3;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  overflow: scroll;
+  max-height: 450px;
+  width: 100%;
+  overflow: auto
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #languagedropdown.active .content {
+  display: block !important;
+  display: none
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #languagedropdown.active .heading {
+  background: #fff;
+  border: 1px solid #e3e3e3;
+  border-bottom: 0;
+  margin-bottom: 0;
+  display: inline-block;
+  position: relative;
+  z-index: 1
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #languagedropdown .empty {
+  padding-top: 50px;
+  text-align: center
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .login_block {
+  position: absolute;
+  right: 0;
+  max-width: 550px;
+  width: 100%;
+  margin-top: 25px;
+  font-weight: 400
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+  #FabindiaHeaderWidget_v1-wi4000001 .login_block {
+    max-width: 470px
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .ticker_link {
+  font-weight: 800;
+  font-style: normal;
+  text-decoration: underline;
+  letter-spacing: .2px
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .search-icon img {
+  width: 15px !important;
+  margin-top: 2px;
+  display: inline-block
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .profile-pts {
+  display: inline-block
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 .profile-pts a span {
+  color: #000;
+  cursor: pointer;
+  text-transform: capitalize
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaHeaderWidget_v1-wi4000001 #CC-linkForgotPasswd {
+    color: #902c34
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #CC-loginHeader-wishlist-anonymous {
+  position: relative;
+  padding: 0 27%;
+  cursor: pointer;
+  color: #000
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaHeaderWidget_v1-wi4000001 #CC-loginHeader-wishlist-anonymous {
+    bottom: -3px
+  }
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #CC-loginHeader-wishlist-anonymous i {
+  font-size: 17px;
+  cursor: pointer
+}
+
+#FabindiaHeaderWidget_v1-wi4000001 #CC-loginHeader-wishlist-anonymous span {
+  font-size: 11px;
+  font-weight: normal;
+  background: #e5cc76;
+  color: #000;
+  border-radius: 20px;
+  width: 18px;
+  height: 17px;
+  line-height: 17px;
+  text-align: center;
+  position: absolute;
+  bottom: 64%;
+  left: 51%;
+  cursor: pointer
+}
+
+@media (min-width:768px) {
+  .cc-modal-dialog {
+    width: 800px
+  }
+
+  .cc-modal-dialog .form-control {
+    background-color: #f4f2e5
+  }
+
+  .cc-modal-dialog .modal-header {
+    background-color: #f4f2e5
+  }
+
+  .cc-modal-dialog .modal-header h3 {
+    font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    width: 50%;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc
+  }
+
+  .cc-modal-dialog .CC-header-modal-footer {
+    background-color: #f4f2e5;
+    padding: 10px 20px 40px 20px
+  }
+
+  .cc-modal-dialog .CC-header-modal-footer #CC-userLoginSubmit,
+  .cc-modal-dialog .CC-header-modal-footer #CC-userRegistrationSubmit {
+    border-radius: 4px;
+    width: 315px;
+    font-weight: 600;
+    font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    height: 40px;
+    letter-spacing: .4px
+  }
+
+  .cc-modal-dialog .CC-header-modal-footer #CC-userLoginCancel,
+  .cc-modal-dialog .CC-header-modal-footer #CC-userRegistrationCancel {
+    display: none
+  }
+
+  .cc-modal-dialog #CC-linkForgotPasswd {
+    font-size: 12px !important;
+    color: #902c34;
+    font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    display: block;
+    line-height: 15px;
+    margin: 0;
+    width: auto
+  }
+
+  .cc-modal-dialog .modal-content {
+    background-color: #f4f2e5
+  }
+
+  .cc-modal-dialog .modal-content .controls {
+    margin: 10px 0
+  }
+}
+
+@media (max-width:767px) {
+  .cc-message-box {
+    margin-left: -15px;
+    margin-right: -15px
+  }
+}
+
+@media (max-width:979px) {
+  .storefront-modal-controls {
+    width: 90%
+  }
+
+  .storefront-modal-controls input.span5 {
+    width: 100%
+  }
+
+  .storefront-modal-controls div.span5 {
+    width: 97%;
+    margin-left: 6%
+  }
+}
+
+@media (min-width:980px) {
+  .storefront-modal-controls {
+    width: 90%
+  }
+
+  .storefront-modal-controls input.span5 {
+    width: 100%
+  }
+
+  .storefront-modal-controls div.span5 {
+    width: 97%;
+    margin-left: 6%
+  }
+}
+
+@media (max-width:480px) {
+  .storefront-modal-controls {
+    width: 90%
+  }
+
+  .storefront-modal-controls input.span5 {
+    width: 100%
+  }
+
+  .storefront-modal-controls div.span5 {
+    width: 97%;
+    margin-left: 6%
+  }
+}
+
+#CC-headermodalpane .lg_pop_style .modal-header.CC-header-modal-heading {
+  position: relative;
+  border-radius: 0;
+  background-color: #f4f2e5
+}
+
+#CC-headermodalpane .lg_pop_style .modal-header.CC-header-modal-heading h3 {
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 21px !important;
+  margin: 0 auto;
+  font-weight: 600;
+  border-bottom: 1px solid #b7b6ae !important;
+  max-width: 430px;
+  width: 100% !important;
+  padding-bottom: 4px
+}
+
+#CC-headermodalpane .lg_pop_style .modal-header.CC-header-modal-heading button {
+  font-size: 0;
+  border: 0;
+  background: url(/file/general/round-delete-button.svg) no-repeat 0 0;
+  background-size: 20px;
+  position: absolute;
+  right: 18px;
+  width: 20px;
+  height: 20px;
+  top: 15px
+}
+
+#CC-headermodalpane .lg_pop_style .modal-header.CC-header-modal-heading .notify_user {
+  color: #8f2c34;
+  margin-bottom: 0;
+  font-size: 10px;
+  display: block;
+  line-height: normal;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  text-align: left;
+  max-width: 430px;
+  margin: 10px auto 0
+}
+
+#CC-headermodalpane .lg_pop_style .modal-header.CC-header-modal-heading .notify_user a {
+  color: #8f2c34;
+  cursor: pointer
+}
+
+#CC-headermodalpane .lg_pop_style .modal-body.cc-modal-body {
+  padding: 10px 20px 0
+}
+
+#CC-headermodalpane .lg_pop_style .modal-body.cc-modal-body .text-danger.cc-error-message {
+  padding: 0 0 8px;
+  max-width: 428px;
+  margin: 0 auto
+}
+
+#CC-headermodalpane .lg_pop_style .modal-body.cc-modal-body .alert.alert-success,
+#CC-headermodalpane .lg_pop_style .modal-body.cc-modal-body .alert.alert-error {
+  text-align: center;
+  max-width: 422px;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 10px
+}
+
+#CC-headermodalpane .lg_pop_style .form_div label.control-label {
+  line-height: 12px;
+  margin: 11px 0;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  float: left;
+  text-align: left
+}
+
+@media only screen and (max-width : 767px),
+only screen and (max-width :360px) {
+  #CC-headermodalpane .lg_pop_style .form_div label.control-label {
+    margin: 11px 16px;
+    font-size: 14px
+  }
+}
+
+#CC-headermodalpane .lg_pop_style .form_div label.control-label.confirm_pwd:after {
+  right: 3px
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #CC-headermodalpane .lg_pop_style .form_div label.control-label.confirm_pwd:after {
+    right: -7px
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #CC-headermodalpane .lg_pop_style .form_div label.control-label.confirm_pwd:after {
+    right: -7px
+  }
+}
+
+#CC-headermodalpane .lg_pop_style .form_div .form-group {
+  margin-bottom: 12px
+}
+
+#CC-headermodalpane .lg_pop_style .form_div .checkbox {
+  text-align: left;
+  margin: 0 74px
+}
+
+@media only screen and (max-width : 767px) {
+  #CC-headermodalpane .lg_pop_style .form_div .checkbox {
+    margin: 0
+  }
+}
+
+#CC-headermodalpane .lg_pop_style .form_div .checkbox label {
+  font-size: 11px;
+  color: #000;
+  line-height: 11px
+}
+
+#CC-headermodalpane .lg_pop_style .form_div .checkbox label span {
+  display: inline-block;
+  width: 100%
+}
+
+#CC-headermodalpane .lg_pop_style .form_div .checkbox .create_check {
+  display: block;
+  position: relative;
+  padding-left: 62px;
+  margin-bottom: 0;
+  cursor: pointer;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+@media only screen and (max-width : 767px) {
+  #CC-headermodalpane .lg_pop_style .form_div .checkbox .create_check {
+    padding-left: 25px
+  }
+}
+
+#CC-headermodalpane .lg_pop_style .form_div .checkbox .create_check input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  margin: 0 0 0 -25px
+}
+
+#CC-headermodalpane .lg_pop_style .form_div .checkbox .checkmarkbox {
+  position: absolute;
+  top: -2px;
+  left: 38px;
+  height: 15px;
+  width: 15px;
+  background-color: #000;
+  border: 0 none;
+  border-radius: 50%
+}
+
+@media only screen and (max-width : 767px) {
+  #CC-headermodalpane .lg_pop_style .form_div .checkbox .checkmarkbox {
+    left: 0
+  }
+}
+
+#CC-headermodalpane .lg_pop_style .form_div .checkbox .create_check input[type="checkbox"]:checked~.checkmarkbox {
+  background-color: #000
+}
+
+#CC-headermodalpane .lg_pop_style .form_div .checkbox .checkmarkbox:after {
+  content: "";
+  position: absolute;
+  display: none
+}
+
+#CC-headermodalpane .lg_pop_style .form_div .checkbox .create_check input[type="checkbox"]:checked~.checkmarkbox:after {
+  display: block
+}
+
+#CC-headermodalpane .lg_pop_style .form_div .checkbox .create_check .checkmarkbox:after {
+  left: 6px;
+  top: 3px;
+  width: 4px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg)
+}
+
+#CC-headermodalpane .lg_pop_style .CC-header-modal-footer {
+  padding: 5px 0 0;
+  border-radius: 0;
+  background-color: #f4f2e5
+}
+
+#CC-headermodalpane .lg_pop_style .CC-header-modal-footer .center-block {
+  max-width: 430px;
+  margin: 0 auto
+}
+
+#CC-headermodalpane .lg_pop_style .CC-header-modal-footer .center-block button {
+  float: right;
+  width: 314px;
+  letter-spacing: 0;
+  font-weight: 700;
+  font-size: 12px;
+  border: 0 none;
+  line-height: 28px
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+  #CC-headermodalpane .lg_pop_style .CC-header-modal-footer .center-block button {
+    width: 303px
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #CC-headermodalpane .lg_pop_style .CC-header-modal-footer .center-block button {
+    float: none;
+    width: 88%;
+    margin: 0 auto
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+  #CC-headermodalpane .lg_pop_style .CC-header-modal-footer .center-block {
+    width: 403px
+  }
+}
+
+#CC-headermodalpane .lg_pop_style .CC-header-modal-footer .privacy-policy-text {
+  font-size: 11px;
+  font-style: italic;
+  color: #000;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  width: 260px;
+  margin: 0 36%;
+  line-height: 14px;
+  padding: 14px 0;
+  text-align: left
+}
+
+@media only screen and (max-width : 767px) {
+  #CC-headermodalpane .lg_pop_style .CC-header-modal-footer .privacy-policy-text {
+    margin: 0 auto
+  }
+}
+
+#CC-headermodalpane .lg_pop_style .CC-header-modal-footer .privacy-policy-text a {
+  color: #8f2c34;
+  text-transform: lowercase
+}
+
+#CC-headermodalpane .lg_pop_style .CC-header-modal-footer .already-have-account {
+  border-top: 1px solid #b7b6ae;
+  padding: 20px 25px;
+  max-width: 430px;
+  margin: 0 auto
+}
+
+#CC-headermodalpane .lg_pop_style .CC-header-modal-footer .already-have-account span {
+  margin-bottom: 12px;
+  display: block;
+  font-size: 15px;
+  color: #000;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 600
+}
+
+#CC-headermodalpane .lg_pop_style .CC-header-modal-footer .already-have-account button {
+  background: none;
+  border: 1px solid #5c5c5c;
+  font-size: 14px;
+  color: #000;
+  max-width: 242px;
+  margin: 0 auto
+}
+
+#CC-headermodalpane .lg_pop_style .CC-header-modal-footer button {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 33px;
+  border: 0 none;
+  height: 40px;
+  width: 100%
+}
+
+#CC-headermodalpane .lg_pop_style #CC-header-forgotPasswd {
+  float: left;
+  text-align: right;
+  margin: 16px 0 0
+}
+
+@media only screen and (max-width : 767px) {
+  #CC-headermodalpane .lg_pop_style #CC-header-forgotPasswd {
+    float: none;
+    width: 100%;
+    text-align: center
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #CC-headermodalpane .lg_pop_style #CC-header-forgotPasswd a {
+    font-size: 12px
+  }
+}
+
+#CC-headermodalpane .lg_pop_style #CC-signup {
+  padding: 0;
+  text-align: right;
+  display: inline-block;
+  width: 62%;
+  float: right;
+  margin-top: 14px
+}
+
+@media only screen and (max-width : 767px) {
+  #CC-headermodalpane .lg_pop_style #CC-signup {
+    padding: 0;
+    text-align: center;
+    display: block;
+    width: auto;
+    float: none;
+    margin: 14px auto
+  }
+}
+
+#CC-headermodalpane .lg_pop_style #CC-signup .CC-createAccount-div {
+  padding: 0;
+  float: right
+}
+
+@media only screen and (max-width : 767px) {
+  #CC-headermodalpane .lg_pop_style #CC-signup .CC-createAccount-div {
+    float: none;
+    text-align: center;
+    max-width: 190px;
+    margin: 0 auto
+  }
+}
+
+#CC-headermodalpane .lg_pop_style #CC-signup .CC-createAccount-div h4 {
+  font-size: 12px;
+  font-weight: normal;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  float: left;
+  margin: 0
+}
+
+#CC-headermodalpane .lg_pop_style #CC-signup .CC-createAccount-div a {
+  float: left;
+  margin: 0 0 0 2px;
+  font-size: 12px;
+  color: #902c34;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  line-height: 18px;
+  cursor: pointer
+}
+
+#CC-headermodalpane .lg_pop_style .text-danger {
+  text-align: left
+}
+
+@media only screen and (max-width : 767px) {
+  #CC-headermodalpane .lg_pop_style .text-danger {
+    margin-left: 16px
+  }
+}
+
+@media only screen and (max-width :360px) {
+  #CC-headermodalpane .lg_pop_style .text-danger {
+    margin-left: 13px
+  }
+}
+
+#CC-headermodalpane .lg_pop_style .text-muted {
+  color: #999;
+  margin-bottom: 0;
+  font-size: 11px;
+  display: block;
+  line-height: normal;
+  margin-top: 3px;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  text-align: left
+}
+
+#CC-headermodalpane .lg_pop_style .cc_forgot_message {
+  font-size: 12px;
+  line-height: 15px;
+  color: #000;
+  margin: 0 0 10px 30px;
+  text-align: left;
+  max-width: 410px
+}
+
+@media only screen and (max-width : 767px) {
+  #CC-headermodalpane .lg_pop_style .cc_forgot_message {
+    margin: 0 0 10px
+  }
+}
+
+#CC-headermodalpane #CC-LoginRegistrationModal {
+  width: 694px;
+  top: 15%
+}
+
+@media only screen and (max-width : 767px) {
+  #CC-headermodalpane #CC-LoginRegistrationModal {
+    width: auto
+  }
+}
+
+#CC-headermodalpane #CC-LoginRegistrationModal .modal-content {
+  border-radius: 0;
+  padding: 5px 0 34px;
+  background-color: #f4f2e5
+}
+
+#CC-headermodalpane #CC-LoginRegistrationModal .modal-content .form-group input.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #ccc;
+  height: 40px
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+  #CC-headermodalpane #CC-LoginRegistrationModal .modal-content .form-group input.form-control {
+    width: 96%
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #CC-headermodalpane #CC-LoginRegistrationModal .modal-content .form-group input.form-control {
+    float: none;
+    width: 90%;
+    margin: 0 auto
+  }
+}
+
+#CC-headermodalpane #CC-registerUserPane .modal-footer.CC-header-modal-footer .center-block {
+  position: relative;
+  margin-top: -10px
+}
+
+#CC-headermodalpane .popUpShow {
+  display: block
+}
+
+#CC-headermodalpane .popUpHide {
+  display: none
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #CC-headermodalpane .iti__flag-container {
+    left: 6% !important
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #CC-headermodalpane .iti__flag-container {
+    left: 6% !important
+  }
+}
+
+.pdp-wishlist-forgot-password-form-group,
+#CC-forgotPasswordSection.form_div {
+  max-width: 490px;
+  margin: 0 auto
+}
+
+#CC-forgotPassword-messagePart1+.form-group {
+  max-width: 490px;
+  margin: 0 auto 12px
+}
+
+#CC-login-modal-footer+.form_div {
+  max-width: 490px;
+  margin: 0 auto
+}
+
+.form_div.pdp-wishlist-form-div {
+  max-width: 460px !important;
+  margin: 0 auto
+}
+
+#CC-userRegistration.form_div,
+#CC-userLogin.form_div {
+  max-width: 490px;
+  margin: 0 auto
+}
+
+.form_div.pdp-wishlist {
+  max-width: 460px !important
+}
+
+@media only screen and (max-width : 767px) {
+  #CC-forgotPasswordSection label.control-label {
+    margin: 11px 0 !important
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #CC-forgotPasswordSection input.form-control {
+    width: 100% !important
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #CC-forgotPasswordSection input.form-control+.text-danger {
+    margin-left: 0
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  .forget-singup .forgotPasswd a {
+    color: #902c34;
+    margin-left: -20px
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  .forget-singup .signup #CC-signup {
+    margin-top: 18px !important;
+    margin-left: -50px !important
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  .content-left.content-left-covid {
+    margin-top: 0
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  .content-left.content-left-covid {
+    margin-top: 0
+  }
+}
+
+.content-left.content-left-covid .search-picker {
+  width: 110% !important
+}
+
+.content-left.content-left-covid .connect-to-store {
+  margin-top: 22px;
+  position: relative
+}
+
+.content-left.content-left-covid .connect-to-store .connect-to-store-input {
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  padding: 0 0 0 15px;
+  width: 120px;
+  background-color: transparent
+}
+
+@media (max-width:1300px) and (min-width:1200px) {
+  .content-left.content-left-covid .connect-to-store .connect-to-store-input {
+    width: 130px;
+    font-size: 12px
+  }
+}
+
+@media (max-width:1200px) and (min-width:1000px) {
+  .content-left.content-left-covid .connect-to-store .connect-to-store-input {
+    width: 90px !important;
+    font-size: 10px !important
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  .content-left.content-left-covid .connect-to-store .connect-to-store-input {
+    width: 45%
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  .content-left.content-left-covid .connect-to-store .connect-to-store-input {
+    width: 45%
+  }
+}
+
+.content-left.content-left-covid .connect-to-store .text-danger {
+  position: absolute
+}
+
+.content-left.content-left-covid .connect-to-store .connect-to-store-btn {
+  border: 0;
+  border-bottom: 2px solid #8f2c5b;
+  background-color: transparent;
+  font-size: 14px;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  margin-left: -4px;
+  padding: 0 20px
+}
+
+@media (max-width:1300px) and (min-width:1200px) {
+  .content-left.content-left-covid .connect-to-store .connect-to-store-btn {
+    width: 160px;
+    font-size: 12px
+  }
+}
+
+@media (max-width:1200px) and (min-width:1000px) {
+  .content-left.content-left-covid .connect-to-store .connect-to-store-btn {
+    width: 140px !important;
+    font-size: 10px !important
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  .content-left.content-left-covid .connect-to-store .connect-to-store-btn {
+    width: 55%
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  .content-left.content-left-covid .connect-to-store .connect-to-store-btn {
+    width: 55%
+  }
+}
+
+body.active {
+  transform: translateX(80%);
+  transition: transform .5s ease 0s;
+  position: fixed
+}
+
+body.sticky header#headerBar .mega-menu {
+  -webkit-box-shadow: 0 2px 2px #e2e1da;
+  -moz-box-shadow: 0 2px 2px #e2e1da;
+  box-shadow: 0 2px 2px #e2e1da;
+  border-radius: 0
+}
+
+#mobile-menu {
+  display: none
+}
+
+#mobile-menu.active {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-top: 1px solid transparent;
+  box-shadow: inset -2px 1px 0 #e2e1da;
+  transition: transform .5s ease 0s;
+  background: #f4f2e5;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  right: 20%;
+  top: 0;
+  bottom: 0;
+  padding-bottom: 80px;
+  height: 100vh !important
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait),
+only screen and (max-width : 767px) {
+  .overlay.show {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 99
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu {
+    min-height: 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu {
+    background: transparent !important
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu li a {
+    margin: 0;
+    padding: 15px 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav>li {
+    padding: 0 !important
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav>li a {
+    margin: 0;
+    padding: 15px 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu li a:before {
+    font-size: 15px;
+    font-weight: normal;
+    content: "\002b";
+    position: absolute;
+    right: 68px;
+    margin-top: 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu li.open a:before {
+    content: "\002d"
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu li.open ul li a:before {
+    content: "\002b"
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu li.open ul li ul li.Level3 a:before {
+    content: ''
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu li.open ul li.open a:before {
+    content: "\002d"
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu li.open ul li.open ul li.Level3.open a:before {
+    content: ''
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .cc-welcome {
+    font-size: 13px;
+    text-align: center;
+    margin: 14px 0 9px 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    color: #000
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .cc-welcome a#CC-loginHeader-login {
+    font-size: 14px;
+    padding: 0 0 0 23px;
+    background: url(/file/general/user.svg) no-repeat 0 50%;
+    background-size: contain;
+    display: inline-block
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .cc-welcome a#CC-loginHeader-registration {
+    font-size: 14px;
+    margin-left: 23px;
+    background: url(/file/general/sign_up.svg) no-repeat 32% 50%;
+    background-size: contain;
+    display: inline-block
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .cc-welcome a#CC-loginHeader-registration:before {
+    content: '';
+    margin-right: 50px;
+    border-right: 1px solid #000
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .cc-welcome a#CC-loginHeader-myAccount,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .cc-welcome a#CC-loginHeader-logout {
+    color: #000
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu li.sale-mega-menu a {
+    color: #7b262c
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu li.sale-mega-menu .sale-flyout.dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu li.sale-mega-menu .sale-flyout.dropdown-menu a.style4 {
+    margin: 10px 15px 10px 40px;
+    padding: 10px 20px
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu li.sale-mega-menu:before {
+    color: #7b262c
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav .open>a,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav .open>a:hover,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav .open>a:focus {
+    background-color: transparent !important;
+    color: #000
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .dropdown-menu {
+    padding: 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar {
+    min-height: 20px;
+    margin-bottom: 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar-nav .open .dropdown-menu li a {
+    margin: 5px 29px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #b7b6ae;
+    font-size: 12px;
+    text-align: left
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar-nav .open .dropdown-menu li a.Level3 {
+    margin: 0;
+    font-size: 12px;
+    padding: 15px 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar-nav li.level3-parent {
+    line-height: 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar-nav li.level3-parent:before {
+    margin-top: 6%
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar-nav li>a {
+    line-height: 20px;
+    border-bottom: 1px solid #ccc;
+    margin: 10px 15px;
+    font-size: 12px
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav>li {
+    padding: 0 15px
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav>li a:hover,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav>li a:focus {
+    background-color: transparent;
+    color: #000;
+    font-weight: normal
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .dropdown-submenu-fab {
+    position: relative
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .dropdown-submenu-fab .dropdown-menu-fab {
+    top: 0;
+    left: 100%;
+    margin-top: -1px
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu button.btn-navbar.btn-inverse {
+    background: transparent;
+    border: 0 none;
+    z-index: 999
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu button.btn-navbar.btn-inverse span.icon-bar {
+    width: 21px;
+    height: 3px;
+    background-color: #000;
+    margin: 4px 0;
+    display: block
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu button.btn-navbar.btn-inverse:focus {
+    outline-color: transparent
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .fabFamily_align {
+    display: block;
+    border-bottom: 1px solid #b7b6ae;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+    font-weight: 800;
+    color: #000
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) and only screen and (max-width :479px) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .content-right {
+    margin-top: 2%
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu {
+    min-height: 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu {
+    background: transparent !important
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu li a {
+    margin: 0;
+    padding: 15px 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu li a:before {
+    font-size: 15px;
+    font-weight: normal;
+    content: "\002b";
+    position: absolute;
+    right: 68px;
+    margin-top: 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu li.open a:before {
+    content: "\002d"
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu li.open ul li a:before {
+    content: "\002b"
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu li.open ul li ul li.Level3 a:before {
+    content: ''
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu li.open ul li.open a:before {
+    content: "\002d"
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu li.open ul li.open ul li.Level3.open a:before {
+    content: ''
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .cc-welcome {
+    font-size: 13px;
+    text-align: center;
+    margin: 5% 0 0 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    color: #000
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .cc-welcome .fabFamily_align {
+    display: block;
+    border-bottom: 1px solid #b7b6ae;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+    font-weight: 800;
+    color: #000
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .cc-welcome a#CC-loginHeader-login {
+    font-size: 14px;
+    padding: 0 0 0 25px;
+    background: url(/file/general/user.svg) no-repeat 0 50%;
+    background-size: contain;
+    display: inline-block
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .cc-welcome a#CC-loginHeader-registration {
+    font-size: 14px;
+    margin-left: 23px;
+    background: url(/file/general/sign_up.svg) no-repeat 32% 50%;
+    background-size: contain;
+    display: inline-block
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .cc-welcome a#CC-loginHeader-registration:before {
+    content: '';
+    margin-right: 55px;
+    border-right: 1px solid #000
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .cc-welcome a#CC-loginHeader-myAccount,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .cc-welcome a#CC-loginHeader-logout {
+    color: #000
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu li.sale-mega-menu a {
+    color: #7b262c
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu li.sale-mega-menu .sale-flyout.dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu li.sale-mega-menu .sale-flyout.dropdown-menu a.style4 {
+    margin: 10px 15px 10px 40px;
+    padding: 10px 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu li.sale-mega-menu:before {
+    color: #7b262c
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav .open>a,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav .open>a:hover,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav .open>a:focus {
+    background-color: transparent !important;
+    color: #000
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .dropdown-menu {
+    padding: 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar {
+    min-height: 20px;
+    margin-bottom: 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar-nav .open .dropdown-menu li a {
+    margin: 5px 29px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #b7b6ae;
+    font-size: 12px;
+    text-align: left
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar-nav .open .dropdown-menu li a.Level3 {
+    margin: 0;
+    font-size: 12px;
+    padding: 15px 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar-nav li.level3-parent {
+    line-height: 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar-nav li.level3-parent:before {
+    margin-top: 6%
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar-nav li>a {
+    line-height: 20px;
+    border-bottom: 1px solid #ccc;
+    margin: 10px 15px;
+    font-size: 12px
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav>li {
+    padding: 0 15px
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav>li a:hover,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav>li a:focus {
+    background-color: transparent;
+    color: #000;
+    font-weight: normal
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .dropdown-submenu-fab {
+    position: relative
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .dropdown-submenu-fab .dropdown-menu-fab {
+    top: 0;
+    left: 100%;
+    margin-top: -1px
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu button.btn-navbar.btn-inverse {
+    background: transparent;
+    border: 0 none;
+    z-index: 999
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu button.btn-navbar.btn-inverse span.icon-bar {
+    width: 16px;
+    height: 2px;
+    background-color: #000;
+    margin: 4px 0;
+    display: block
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu button.btn-navbar.btn-inverse:focus {
+    outline-color: transparent
+  }
+}
+
+@media only screen and (max-width : 767px) and only screen and (max-width :479px) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .content-right {
+    margin-top: 2%
+  }
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu #justIn_mobile_menu ul li.open a.lastLevel:before {
+  content: ""
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu #collection_mobile_submenu li a.lastLevel:before {
+  content: ""
+}
+
+#FabindiaMegaMenu_v1-wi4000002 a.arrow-dropdown:before {
+  border: solid;
+  border-width: 0 .5px .5px 0;
+  display: inline-block;
+  padding: 2px;
+  content: '';
+  float: right;
+  margin: 6px 5px 0 6px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg)
+}
+
+@media only screen and (max-width :360px) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu {
+    padding: 0
+  }
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .fa.fa-angle-down {
+  padding: 0 2px
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .left-content {
+  width: 66%;
+  float: left;
+  margin: 0 0 0 40px
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .left-content {
+    width: 65%
+  }
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .right-content {
+  width: 30%;
+  float: left;
+  margin-top: 13px
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .right-content {
+    margin-top: 5px
+  }
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .right-content img {
+  max-width: 280px;
+  width: 100%
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar {
+  margin: 0;
+  background: transparent;
+  border: 0 none
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar {
+    min-height: 0
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar {
+    min-height: 0;
+    position: relative
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar .navbar-header {
+    position: absolute;
+    top: -45px;
+    left: 10px;
+    z-index: 999
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu div.mega-menu {
+    min-height: 0
+  }
+}
+
+@media only screen and (max-width :479px) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .cc-welcome {
+    font-size: 13px;
+    text-align: center;
+    margin: 5% 0 3% 0;
+    margin: 14px 0 9px 0;
+    border-bottom: 1px solid #b7b6ae;
+    padding-bottom: 10px;
+    color: #000
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .cc-welcome {
+    font-size: 13px;
+    text-align: center;
+    margin: 3% 0 0 0;
+    border-bottom: 1px solid #b7b6ae;
+    padding-bottom: 10px;
+    color: #000
+  }
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu {
+  background: #f4f2e5;
+  min-height: 42px;
+  -webkit-box-shadow: 0 2px 2px #e2e1da;
+  -moz-box-shadow: 0 2px 2px #e2e1da;
+  box-shadow: 0 2px 2px #e2e1da;
+  border-radius: 0
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu {
+    padding: 0 16px;
+    margin-bottom: 0
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu {
+    min-height: 0;
+    margin-bottom: 0
+  }
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav {
+  float: none;
+  display: inline-block;
+  max-width: 100%;
+  margin: 0 auto;
+  position: static
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropup,
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown {
+  position: static
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .navbar-collapse,
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .container {
+  position: relative
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .navbar-collapse {
+  border: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  overflow-x: hidden;
+  background: #fff
+}
+
+@media (min-width:768px) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .navbar-collapse {
+    height: 42px !important
+  }
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .mega-menu-fullwidth-collapse {
+  padding-left: 0;
+  padding-right: 0;
+  background: transparent;
+  text-align: left;
+  margin: 0 auto;
+  width: 94%;
+  text-align: center
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown-menu {
+  left: auto;
+  z-index: 1;
+  top: 40px !important;
+  border: 0 none;
+  background: #f9f8f1
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .sale-flyout {
+  display: none
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .sale-mega-menu:hover {
+  position: static
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .sale-mega-menu:hover .sale-flyout {
+  display: block;
+  width: 100%;
+  left: 0
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .category-submenu-wrapper {
+  padding: 22px 93px 5px
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .style4 span {
+  text-align: center;
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 13px 0;
+  display: block;
+  margin: 3px auto 15px;
+  color: #333;
+  font-weight: bold;
+  max-width: 96%;
+  font-size: 12px;
+  line-height: 14px
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .style4 img {
+  max-width: 96%;
+  width: 100%
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown-menu>li {
+  display: block
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown-menu>li {
+    margin-left: 16px
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown-menu>li {
+    margin-left: 16px
+  }
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav.pull-right .dropdown-menu {
+  right: 0
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .mega-menu-content {
+  padding: 20px 30px;
+  *zoom: 1
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .mega-menu-content:before,
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .mega-menu-content:after {
+  display: table;
+  content: "";
+  line-height: 0
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .mega-menu-content:after {
+  clear: both
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav>li>a {
+  float: none;
+  padding: 10px 15px 10px 15px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 300;
+  text-transform: capitalize;
+  text-shadow: none;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  text-align: left
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav>li>a {
+    padding: 10px 8px 10px 8px
+  }
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav>li>a:focus {
+  background-color: transparent;
+  border-bottom: 0 none
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav>li>a:focus {
+    border-bottom: 1px solid #ccc
+  }
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav>li>a:hover {
+  background-color: transparent;
+  color: #000
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav>li>a:hover:after,
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav>li>a:active:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin-left: 0;
+  width: 100%;
+  border-bottom: 3px solid #7b262c;
+  background-color: transparent
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait),
+only screen and (max-width :479px) {
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav>li>a:hover:after,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav>li>a:active:after {
+    display: none
+  }
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav>li:last-child a {
+  color: #8f2c34;
+  font-weight: 600
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav>li:last-child a:hover:after {
+  border: 0
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu #sale_mobile:before,
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu #mobileMenCustomKurta:before {
+  content: ""
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu li.cc-desktop-dropdown:hover>ul.dropdown-menu {
+  display: block;
+  top: auto
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav li.dropdown.open>.dropdown-toggle {
+  background: transparent;
+  color: #000;
+  text-align: left;
+  font-weight: 600
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav li.dropdown>.dropdown-toggle .caret {
+  border-top-color: #000;
+  border-bottom-color: #000
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav li.dropdown.open>.dropdown-toggle .caret {
+  border-top-color: #8f2c34;
+  border-bottom-color: #8f2c34;
+  color: #fff
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav li.dropdown>a:hover .caret,
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav li.dropdown>a:focus .caret {
+  border-top-color: #8f2c34;
+  border-bottom-color: #8f2c34
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav>li>.dropdown-menu:after,
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav>li>.dropdown-menu:before {
+  display: none
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu {
+  background: #f9f8f1;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  margin: 0 auto;
+  min-height: 350px;
+  padding: 22px 0 20px 10px;
+  left: 0;
+  right: 0;
+  border-top: 0 none;
+  z-index: 99
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu {
+    min-height: 300px
+  }
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu a {
+  color: #3d3d3d;
+  font-size: 12px;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu a:hover {
+  color: #8f2c34;
+  text-decoration: none
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu a:hover {
+    font-weight: 600
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu a:hover {
+    font-weight: 600
+  }
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu .category-header {
+  font-weight: 700;
+  display: block;
+  height: 100%;
+  text-transform: none;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 18px;
+  color: #8f2c34;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: left;
+  cursor: pointer
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu .child-category-container {
+  margin-top: 5px
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu .child-category-container ul {
+  margin-left: 0;
+  padding-left: 0
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu .child-category-container ul li {
+  padding-top: 0;
+  color: #8f2c34;
+  padding-left: 0;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  line-height: 10px
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu .child-category-container ul li:first-child {
+  padding-top: 5px
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu .child-category-container ul ul {
+  margin-left: 0
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu .child-category-container ul ul li {
+  padding-top: 5px;
+  color: #8f2c34;
+  padding-left: 0;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu .child-category-container a:hover {
+  background-color: transparent
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu .child-category-container:nth-child(7),
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu .child-category-container:nth-child(13),
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu .child-category-container:nth-child(19) {
+  clear: both
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu .dropdown-menu .last {
+  margin-left: 0
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu #CC-megaMenu .mega-menu .nav>li {
+    padding-left: 30px !important
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu {
+    width: auto
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .mega-menu-content {
+    padding-left: 0;
+    padding-right: 0
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu div.navbar-inner {
+    background: none;
+    background-image: none;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar {
+    margin: 0;
+    background: transparent;
+    position: relative
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar .navbar-toggle {
+    display: block
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar .icon-bar {
+    background-image: none;
+    color: #181812;
+    background-color: #000
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar .btn-navbar:hover .icon-bar {
+    background-image: none;
+    color: #181812;
+    background-color: #000
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar .navbar-header {
+    position: absolute;
+    width: 24px;
+    top: -37px;
+    z-index: 999;
+    left: 8px
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu #mobile-menu.collapse {
+    display: none !important
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu #mobile-menu.collapse.in {
+    display: block !important
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar-nav {
+    float: none !important;
+    width: 100%
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    border: 0;
+    box-shadow: none
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar-nav .open .dropdown-menu>li>a {
+    line-height: 20px
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav>li {
+    float: none;
+    display: block;
+    padding: 0;
+    margin-left: 30px
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav>li>a {
+    border-top: 0 none;
+    padding: 15px 0;
+    margin: 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav>li>a:hover {
+    color: #000;
+    background-color: transparent;
+    text-decoration: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    border: 0;
+    box-shadow: none
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar-nav .open .dropdown-menu>li>a {
+    line-height: 20px
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar-nav .open .dropdown-menu>li>a,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 10px 15px 5px 25px;
+    text-align: left
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar-collapse {
+    max-height: none
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav-collapse .nav {
+    float: none;
+    margin: 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav-collapse .dropdown-menu a {
+    padding-left: 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav-collapse .dropdown-menu li+li a {
+    margin-bottom: 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav-collapse .nav>li>a:hover,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav-collapse .nav>li>a:focus,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav-collapse .dropdown-menu a:hover,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav-collapse .dropdown-menu a:focus {
+    background-color: transparent
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu {
+    min-height: 20px;
+    padding: 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav-collapse .nav>li>a:hover,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav-collapse .nav>li>a:focus,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav-collapse .dropdown-menu a:hover,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav-collapse .dropdown-menu a:focus {
+    background-color: #fff
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav-collapse .nav>li>a:hover.Level2,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav-collapse .nav>li>a:focus.Level2,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav-collapse .dropdown-menu a:hover.Level2,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav-collapse .dropdown-menu a:focus.Level2 {
+    background-color: #fff
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav-collapse .nav>li>a:hover.Level3,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav-collapse .nav>li>a:focus.Level3,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav-collapse .dropdown-menu a:hover.Level3,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .nav-collapse .dropdown-menu a:focus.Level3 {
+    background-color: #fff
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu .first {
+    margin-left: 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu .category-header {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border: none;
+    font-weight: bold;
+    padding: 0 10px 0 0;
+    height: 100%
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu .caret {
+    border-top-color: #8f2c34;
+    border-bottom-color: #8f2c34
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu .child-category-container {
+    float: left;
+    margin-left: 0;
+    min-height: 20px;
+    padding-bottom: 20px
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .dropdown-menu>li>a:hover,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .dropdown-menu>li>a:focus,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .dropdown-submenu:hover>a,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .dropdown-submenu:focus>a {
+    background-image: none;
+    background: transparent
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu {
+    background: #fff;
+    color: #181812
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .submenu>li a {
+    padding-left: 20px
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown-menu .open>a:after {
+    border: none;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: top;
+    content: "";
+    color: #8f2c34
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu .child-category-container a:hover {
+    background-color: #fff
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu a.Level3:after {
+    display: none
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu li.dropdown-menu.submenu.closed ul {
+    display: none
+  }
+}
+
+@media only screen and (max-width :479px) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu .child-category-container {
+    float: none;
+    margin-left: 10px
+  }
+}
+
+@media only screen and (max-width :320px) {
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .navbar .navbar-header {
+    top: -44px
+  }
+}
+
+#FabindiaMegaMenu_v1-wi4000002 .menu-fixed {
+  position: fixed;
+  top: 130px;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  text-align: center;
+  padding: 0;
+  background: #f4f2e5 url(/file/v7272026183656673042/general/site_bg.png) center center repeat
+}
+
+#FabindiaMegaMenu_v1-wi4000002 .menu-fixed .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu {
+  width: 97%
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+  #FabindiaMegaMenu_v1-wi4000002 .menu-fixed .mega-menu .nav {
+    padding: 0 50px
+  }
+}
+
+#FabindiaMegaMenu_v1-wi4000002 ul.nav.navbar-nav li.dropdown.mega-menu-fullwidth.menu-item.cc-desktop-dropdown a {
+  font-size: 13px
+}
+
+#FabindiaMegaMenu_v1-wi4000002 ul.nav.navbar-nav li.dropdown.mega-menu-fullwidth.menu-item.cc-desktop-dropdown a span {
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  text-transform: capitalize;
+  font-weight: 300
+}
+
+#FabindiaMegaMenu_v1-wi4000002 ul.nav.navbar-nav li.sale-mega-menu a {
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  text-transform: capitalize;
+  font-weight: normal;
+  color: #8f2c34
+}
+
+#FabindiaMegaMenu_v1-wi4000002 ul.nav.navbar-nav li.sale-mega-menu a:hover {
+  text-decoration: none;
+  color: #8f2c34
+}
+
+#FabindiaMegaMenu_v1-wi4000002 ul.nav.navbar-nav li.sale-mega-menu a:hover span {
+  color: #8f2c34
+}
+
+#FabindiaMegaMenu_v1-wi4000002 ul.nav.navbar-nav li.sale-mega-menu.collection a {
+  color: #000
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #FabindiaMegaMenu_v1-wi4000002 button.btn-navbar.btn-inverse {
+    background: transparent;
+    border: 0 none;
+    left: 10px;
+    z-index: 9999
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 button.btn-navbar.btn-inverse span.icon-bar {
+    width: 21px;
+    height: 3px;
+    background-color: #000;
+    margin: 4px 0;
+    display: block
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 button.btn-navbar.btn-inverse:focus {
+    outline-color: transparent
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .sale-flyout {
+    padding: 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .sale-flyout li.Level1 {
+    margin: 10px 0 10px 35px
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .sale-flyout li.Level1 .style4 {
+    color: #333;
+    font-weight: bold
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav>li {
+    width: 100%;
+    padding: 0;
+    padding-left: 32px !important
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav>li a {
+    line-height: 16px;
+    border-bottom: 1px solid #b7b6ae;
+    margin: 0;
+    padding: 15px 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav>li a:active,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav>li a:hover,
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav>li a:focus {
+    border-bottom: 1px solid #b7b6ae
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .nav li.dropdown.open .dropdown-toggle {
+    line-height: 16px;
+    border-bottom: 1px solid #ccc;
+    margin: 0
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu {
+    background: transparent;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    margin: 0 auto;
+    min-height: 50px;
+    padding: 0;
+    left: 0;
+    right: 0;
+    border-top: 0 none
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 #CC-megaMenu .mega-menu .dropdown.mega-menu-fullwidth .dropdown-menu a {
+    line-height: 16px
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 .dropdown-menu li a:hover {
+    background-color: transparent
+  }
+
+  #FabindiaMegaMenu_v1-wi4000002 .nav .open>a,
+  #FabindiaMegaMenu_v1-wi4000002 .nav .open>a:hover,
+  #FabindiaMegaMenu_v1-wi4000002 .nav .open>a:focus {
+    background-color: transparent !important;
+    color: #000
+  }
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #justIn_mobile,
+#FabindiaMegaMenu_v1-wi4000002 #sale_mobile {
+  color: #8f2c34
+}
+
+#FabindiaMegaMenu_v1-wi4000002 .lastCategory a:before {
+  content: ''
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #mobile-menu .cc-myAccount strong {
+  display: block;
+  border-bottom: 1px solid #b7b6ae;
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+  font-weight: 800;
+  color: #000
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #mobile-menu .cc-myAccount a#CC-loginHeader-myAccount,
+#FabindiaMegaMenu_v1-wi4000002 #mobile-menu .cc-myAccount a#CC-loginHeader-logout {
+  font-size: 14px;
+  display: inline-block;
+  font-weight: 300;
+  color: #000
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #mobile-menu .cc-myAccount a#CC-loginHeader-myAccount {
+  padding: 0
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #mobile-menu .cc-myAccount a#CC-loginHeader-logout {
+  margin-left: 32px
+}
+
+#FabindiaMegaMenu_v1-wi4000002 #mobile-menu .cc-myAccount a#CC-loginHeader-logout:before {
+  content: '';
+  margin-right: 38px;
+  border-right: 1px solid #000
+}
+
+@media only screen and (min-width:1025px) {
+  #FabindiaMegaMenu_v1-wi4000002 .navbar-nav>li {
+    display: inline-flex
+  }
+}
+
+footer {
+  background-color: #dbd9cd;
+  padding: 30px 0;
+  margin: -30px;
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+    {
+    padding: 0 20px
+  }
+}
+
+.footer-width {
+  width: 20%;
+  float: left
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  .footer-width {
+    width: 20%;
+    float: left;
+    padding: 0 8px
+  }
+}
+
+footer ul {
+  list-style: none;
+  padding: 0
+}
+
+.floatblcok h4 {
+  font-size: 16px;
+  font-family: 'Unna', serif;
+  text-transform: none;
+  color: #000;
+  letter-spacing: 1px
+}
+
+.floatblcok ul li a {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 13px;
+  line-height: 25px;
+  font-weight: 300;
+  color: #000
+}
+
+.floatblcok ul li a:hover {
+  color: #8f2c34
+}
+
+.floatblcok ul li a.social_nicon {
+  font-size: 19px
+}
+
+.social_nicon {
+  width: 32px;
+  height: 32px;
+  display: inline-block
+}
+
+#footer p {
+  font-family: 'Unna', serif;
+  color: #000;
+  font-size: 18px;
+  margin-top: 20px
+}
+
+.copyright {
+  margin-top: 30px;
+  font-family: 'Unna', serif;
+  font-size: 16px;
+  color: #000
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  .copyright {
+    font-size: 15px
+  }
+}
+
+.cards {
+  position: inherit;
+  float: right !important;
+  margin-top: 15px
+}
+
+.f_bootom_section {
+  margin-top: 40px;
+  margin-right: 40px
+}
+
+.floatblcok ul li .social_bottom a.fa,
+.floatblcok ul li .social_top a.fa {
+  font-family: FontAwesome
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait),
+only screen and (max-width : 767px) {
+  footer {
+    background-color: #dbd9cd;
+    padding: 30px 0;
+    margin: 2px 0 0
+  }
+
+  footer .container .col-sm-2 {
+    width: 20%
+  }
+
+  .footer-section1 {
+    overflow: auto;
+    border-bottom: 1px solid #000;
+    padding-bottom: 7%
+  }
+
+  .floatblcok.stay-intouch {
+    text-align: center
+  }
+
+  .floatblcok.stay-intouch .stay-intouch-text {
+    border-bottom: 1px solid #000;
+    padding-bottom: 1px;
+    display: inline-block;
+    margin-top: 6%
+  }
+
+  .floatblcok.stay-intouch .border_footer {
+    border-top: 1px solid #b7b6ae;
+    margin: 0 auto;
+    width: 195px
+  }
+
+  footer ul {
+    list-style: none;
+    padding: 0
+  }
+
+  .floatblcok h4,
+  .floatblcok a {
+    font-size: 16px;
+    font-family: 'Unna', serif;
+    text-transform: capitalize;
+    margin: 8px 0;
+    display: block;
+    color: #000;
+    font-weight: 600
+  }
+
+  .floatblcok a:hover,
+  .floatblcok a:focus {
+    text-decoration: none;
+    outline: 0 none
+  }
+
+  .floatblcok ul li a {
+    color: #000;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 13px;
+    line-height: 20px;
+    font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    display: inline-block;
+    font-weight: normal;
+    margin: 4px 0
+  }
+
+  .floatblcok ul li a.social_nicon {
+    font-size: 22px;
+    margin: 20px 0 0 0
+  }
+
+  .social_nicon {
+    width: 40px;
+    height: 40px;
+    display: inline-block
+  }
+
+  #footer p {
+    font-family: 'Unna', serif;
+    font-size: 18px;
+    margin-top: 20px;
+    color: #000
+  }
+
+  .copyright {
+    margin-top: 20px;
+    font-family: 'Unna', serif;
+    font-size: 14px;
+    text-align: center;
+    color: #000
+  }
+
+  .cards {
+    position: inherit;
+    float: right !important;
+    margin-top: 15px
+  }
+
+  .f_bootom_section {
+    padding-bottom: 1px;
+    display: inline-block;
+    width: 100%;
+    border-top: 0;
+    margin: 5px 0 0
+  }
+
+  .floatblcok ul li .social_bottom a.fa,
+  .floatblcok ul li .social_top a.fa {
+    font-family: FontAwesome
+  }
+
+  .footer_collapse {
+    background: url(/file/general/refine-minus.png) 100% 50% no-repeat;
+    background-size: 8px
+  }
+
+  .footer_collapse.collapsed {
+    background: url(/file/general/refine-plus.png) 100% 50% no-repeat
+  }
+
+  .last-one .social_top {
+    font-size: 24px;
+    margin: 0 25px
+  }
+}
+
+#footerBar div[id^=region-] {
+  padding: 0 !important
+}
+
+.app-links {
+  margin-top: 15px
+}
+
+.app-links a.link {
+  display: block
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  .app-links a.link {
+    display: inline-block !important
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  .app-links a.link {
+    display: inline-block !important
+  }
+}
+
+.app-links .app-links-img {
+  width: 122px;
+  height: 36px;
+  margin-bottom: 7px
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  .app-links .app-links-img {
+    margin-bottom: 0;
+    margin-right: 5px
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  .app-links .app-links-img {
+    margin-bottom: 0;
+    margin-right: 5px
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  .app-links {
+    margin-bottom: 0;
+    margin-right: 5px
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  .app-links {
+    margin-top: 0
+  }
+}
+
+#connect-store-header {
+  top: 23%;
+  overflow: hidden
+}
+
+#connect-store-header .modal-dialog {
+  width: 700px
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #connect-store-header .modal-dialog {
+    width: 525px;
+    margin: 7vh auto 55vh !important
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #connect-store-header .modal-dialog {
+    width: auto;
+    margin: 7vh auto 55vh !important;
+    margin-left: 20px !important
+  }
+}
+
+#connect-store-header .modal-content {
+  padding: 30px 50px 33px 50px;
+  border-radius: 0;
+  background-color: #f4f2e5
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #connect-store-header .modal-content {
+    padding: 30px 30px 28px 30px
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #connect-store-header .modal-content {
+    padding: 20px 20px 29px 15px;
+    width: 94%
+  }
+}
+
+#connect-store-header .store-service {
+  text-align: center;
+  padding: 0;
+  max-width: 458px;
+  margin: 0 auto
+}
+
+#connect-store-header .store-service h2 {
+  font-family: 'Unna', serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 0;
+  line-height: 30px;
+  font-style: italic
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+  #connect-store-header .store-service h2 {
+    font-size: 26px
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #connect-store-header .store-service h2 {
+    font-size: 26px
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #connect-store-header .store-service h2 {
+    line-height: 25px;
+    font-size: 23px;
+    margin-top: 40px
+  }
+}
+
+#connect-store-header .store-service p {
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #000;
+  font-weight: 300;
+  margin: 10px 0 20px;
+  font-size: 14px
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #connect-store-header .store-service p {
+    margin: 10px 20px 20px
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #connect-store-header .store-service p {
+    font-size: 14px;
+    padding: 0 15px
+  }
+}
+
+#connect-store-header .store-service #store-service-pincode-input {
+  background-color: #f4f2e5;
+  width: 100%;
+  padding: 18px 25px;
+  border: 1px solid #ccc;
+  -webkit-appearance: none;
+  font-size: 13px;
+  height: 40px
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #connect-store-header .store-service #store-service-pincode-input {
+    font-size: 16px
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #connect-store-header .store-service #store-service-pincode-input {
+    text-align: center;
+    font-size: 16px
+  }
+}
+
+@media only screen and (max-width :479px) {
+  #connect-store-header .store-service #store-service-pincode-input {
+    text-align: center;
+    font-size: 16px
+  }
+}
+
+#connect-store-header .store-service .error-msg {
+  text-align: left
+}
+
+#connect-store-header .store-service .submit-btn {
+  width: 100%;
+  text-transform: capitalize;
+  padding: 0 5px;
+  border: 0;
+  color: #000;
+  background-color: #e5cc76;
+  font-weight: 800;
+  font-size: 13px;
+  height: 40px
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #connect-store-header .store-service .submit-btn {
+    margin-top: 20px
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #connect-store-header .store-service .submit-btn {
+    margin-top: 20px
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #connect-store-header .store-service {
+    height: 260px
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #connect-store-header .store-service {
+    padding: 0
+  }
+}
+
+#connect-store-header .if-storedetails-present {
+  text-align: center;
+  color: #000
+}
+
+#connect-store-header .if-storedetails-present .connect-heading {
+  font-family: 'Unna', serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: #000;
+  line-height: 30px;
+  font-style: italic;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+  margin-bottom: 25px;
+  display: inline-block
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+  #connect-store-header .if-storedetails-present .connect-heading {
+    font-size: 28px
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #connect-store-header .if-storedetails-present .connect-heading {
+    font-size: 26px
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #connect-store-header .if-storedetails-present .connect-heading {
+    font-size: 23px
+  }
+}
+
+#connect-store-header .if-storedetails-present .contact-details {
+  text-align: left
+}
+
+#connect-store-header .if-storedetails-present .contact-details .manager-name {
+  font-size: 19px;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  margin-right: 5px
+}
+
+@media only screen and (max-width : 767px) {
+  #connect-store-header .if-storedetails-present .contact-details .manager-name {
+    font-size: 14px
+  }
+}
+
+#connect-store-header .if-storedetails-present .contact-details .store-manager {
+  text-transform: capitalize;
+  font-size: 13px;
+  display: inline-block;
+  vertical-align: text-bottom
+}
+
+#connect-store-header .if-storedetails-present .contact-details .contact {
+  margin-top: 5px
+}
+
+#connect-store-header .if-storedetails-present .contact-details .contact .contact-number {
+  font-size: 13px;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  text-transform: capitalize;
+  margin-right: 5px
+}
+
+#connect-store-header .if-storedetails-present .contact-details .contact .contact-number-data {
+  font-size: 13px;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300
+}
+
+#connect-store-header .if-storedetails-present .contact-details .store-name {
+  font-size: 14px;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin: 20px 0 10px;
+  border-bottom: 1px solid #ccc;
+  width: 70%
+}
+
+@media only screen and (max-width : 767px) {
+  #connect-store-header .if-storedetails-present .contact-details .store-name {
+    font-size: 13px
+  }
+}
+
+#connect-store-header .if-storedetails-present .contact-details .store-name-data {
+  font-size: 14px;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif
+}
+
+@media only screen and (max-width : 767px) {
+  #connect-store-header .if-storedetails-present .contact-details .store-name-data {
+    font-size: 12px
+  }
+}
+
+#connect-store-header .if-storedetails-present .contact-details .store-name-p {
+  font-size: 14px;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-bottom: 30px
+}
+
+@media only screen and (max-width : 767px) {
+  #connect-store-header .if-storedetails-present .contact-details .store-name-p {
+    font-size: 12px
+  }
+}
+
+#connect-store-header .if-storedetails-present .contact-details i {
+  color: #8f2c34;
+  margin-right: 5px
+}
+
+#connect-store-header .if-storedetails-present .contact-details a {
+  color: #8f2c34;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+  padding-left: 25px;
+  background: url(/file/general/left-arrow.svg) left center no-repeat;
+  background-size: 20px 12px
+}
+
+#connect-store-header .delivery-store {
+  text-align: center
+}
+
+#connect-store-header .delivery-store h2 {
+  font-family: 'Unna', serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 0;
+  line-height: 30px;
+  font-style: italic
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #connect-store-header .delivery-store h2 {
+    font-size: 26px
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #connect-store-header .delivery-store h2 {
+    line-height: 25px;
+    font-size: 23px
+  }
+}
+
+#connect-store-header .delivery-store .delivering-stores {
+  height: 240px;
+  overflow-y: auto;
+  margin-top: 30px;
+  padding-bottom: 15px
+}
+
+#connect-store-header .delivery-store .delivering-stores a {
+  display: block;
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 40px auto;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+  padding-bottom: 4px
+}
+
+#connect-store-header .delivery-store .delivering-stores a .fa {
+  float: right;
+  margin-right: 20px
+}
+
+@media only screen and (max-width : 767px) {
+  #connect-store-header .delivery-store .delivering-stores a .fa {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 5px;
+    height: 12px;
+    margin: auto
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #connect-store-header .delivery-store .delivering-stores a {
+    position: relative;
+    margin: 25px auto
+  }
+}
+
+#connect-store-header .delivery-store .delivering-stores a:first-child {
+  margin-top: 10px
+}
+
+#connect-store-header .delivery-store .delivering-stores a:last-child {
+  margin-bottom: 0
+}
+
+#connect-store-header .delivery-store .delivering-stores span {
+  font-size: 13px
+}
+
+#connect-store-header .delivery-store .delivering-stores .delivery-store-name {
+  font-size: 14px;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-right: 5px
+}
+
+@media only screen and (max-width : 767px) {
+  #connect-store-header .delivery-store .delivering-stores {
+    height: 200px;
+    margin-top: 20px
+  }
+}
+
+#connect-store-header .if-storedetails-not-present h2 {
+  font-size: 18px;
+  font-family: 'Unna', serif;
+  font-weight: 800;
+  color: #000;
+  border-bottom: 1px solid #ccc;
+  text-transform: uppercase;
+  width: 70%;
+  font-style: italic
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #connect-store-header .if-storedetails-not-present h2 {
+    font-size: 15px
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #connect-store-header .if-storedetails-not-present h2 {
+    font-size: 15px
+  }
+}
+
+#connect-store-header .if-storedetails-not-present p {
+  font-size: 13px;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #connect-store-header .if-storedetails-not-present p {
+    font-size: 12px;
+    margin: 20px 0
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #connect-store-header .if-storedetails-not-present p {
+    font-size: 12px;
+    margin: 20px 0
+  }
+}
+
+#connect-store-header .if-storedetails-not-present p a {
+  font-size: 13px;
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: underline;
+  color: #000;
+  cursor: pointer
+}
+
+#connect-store-header .if-storedetails-not-present p a:hover {
+  color: #000
+}
+
+#connect-store-header .pin-detail-cross {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 0;
+  background-color: transparent;
+  outline: none
+}
+
+@media only screen and (max-width : 767px) {
+  #connect-store-header .pin-detail-cross {
+    top: 5px;
+    right: 3px
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+  #connect-store-header {
+    position: fixed;
+    right: unset;
+    top: 16%;
+    width: 100%
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  #connect-store-header {
+    position: fixed;
+    right: unset;
+    top: 16%;
+    width: 100%
+  }
+}

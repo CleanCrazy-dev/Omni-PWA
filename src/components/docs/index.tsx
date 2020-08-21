@@ -5,11 +5,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./carousel.scss";
 import { isMobile } from "../../generalUtils";
-import img1 from "../../resource/img/f1.jpg";
-import img2 from "../../resource/img/f2.jpg";
-import img3 from "../../resource/img/f3.jpg";
 export class SideCarousel extends React.Component<{
   onClickSlide: () => void;
+  slideImages: any[];
 }> {
   state = {
     activeSlide: 1,
@@ -21,12 +19,13 @@ export class SideCarousel extends React.Component<{
   }
   render() {
     var settings = {
-      dots: true,
+      dots: isMobile() && true,
       infinite: true,
       speed: 500,
       slidesToShow: isMobile() ? 1 : 3,
       slidesToScroll: 1,
     };
+    const { slideImages } = this.props;
     return (
       <div className="Side-Carousel">
         {!isMobile() && (
@@ -63,24 +62,13 @@ export class SideCarousel extends React.Component<{
         <div className="Carousel-Items">
           <Slider ref={this.carRef1} {...settings}>
             {[1, 2, 3, 4, 5, 6, 7, 8].map((x, i) => {
-              const imgs = [
-                img1,
-                img2,
-                img3,
-                img1,
-                img2,
-                img3,
-                img1,
-                img2,
-                img3,
-              ];
               return (
-                <div className="SlideImage" onClick={this.props.onClickSlide} >
+                <div className="SlideImage" onClick={this.props.onClickSlide}>
                   <div>
                     <img
-                      width="208px"
-                      height="260px"
-                      src={imgs[i]}
+                      width=""
+                      height=""
+                      src={slideImages[i]}
                       alt=""
                       key={x}
                       className="SideImage"

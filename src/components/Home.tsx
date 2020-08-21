@@ -10,6 +10,14 @@ import img2 from "../resource/img/2.jpg";
 import img3 from "../resource/img/3.jpg";
 import { withRouter } from "react-router";
 import { IHistory } from "../interfaces";
+import slideImg1 from "../resource/img/f1.jpg";
+import slideImg2 from "../resource/img/f2.jpg";
+import slideImg3 from "../resource/img/f3.jpg";
+import tdImg1 from "../resource/img/t1.jpg";
+import tdImg2 from "../resource/img/t2.jpg";
+import tdImg3 from "../resource/img/t3.jpg";
+import Slider from "react-slick";
+import { isMobile } from "../generalUtils";
 
 const items = [
   {
@@ -51,22 +59,63 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
         key={x}
       >
         <div className="">
-          <img width="100%" height="400px" src={imgs[i]} alt="" key={x} />
+          <img
+            width="100%"
+            className="HomeSlideImage"
+            height=""
+            src={imgs[i]}
+            alt=""
+            key={x}
+          />
         </div>{" "}
       </CarouselItem>
     );
   });
 
   render() {
+    var settings = {
+      infinite: true,
+      speed: 500,
+      slidesToShow: isMobile() ? 1 : 3,
+      slidesToScroll: 1,
+    };
+    const tImages = [
+      tdImg1,
+      tdImg2,
+      tdImg3,
+      tdImg1,
+      tdImg2,
+      tdImg3,
+      tdImg1,
+      tdImg2,
+      tdImg3,
+    ];
     return (
       <div>
+        {isMobile() && (
+          <div className="SearchInp">
+            {" "}
+            <input
+              className="SearchInput"
+              placeholder="Enter your search text here..."
+            />
+            <i className="fa fa-search" aria-hidden="true"></i>
+          </div>
+        )}
         <div className="CarouselContainer">
           <Carousel items={items} slides={this.slides} />
         </div>
+        <div className="fab-featured">
+          <h2>
+            <span>Featured</span>
+            <div className="f_products">Products</div>
+          </h2>
+        </div>
         <SideCarousel
+          slideImages={[slideImg1, slideImg2, slideImg3,slideImg1, slideImg2, slideImg3,slideImg1, slideImg2, slideImg3]}
           onClickSlide={() => this.props.history.push("/product-list")}
         />
-        <Row className="bg-wheat">
+        <Row className="bg-wheat home-row">
           <Col xs={12} md={6} lg={6} className="flex j-center fd-col">
             <h1>Malhar Collection Rhythm of life!</h1>
             <div>
@@ -80,16 +129,17 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
           <Col xs={12} md={6} lg={6}>
             <div className="image">
               <img
-                alt=" col-1"
+                className="home-img"
+                alt="col-1"
                 width="100%"
                 src="https://www.fabindia.com/file/general/look-front-30-07.jpg"
               />
             </div>
           </Col>
         </Row>
-        <Row>
+        <Row className="home-row home-bottom">
           <Col xs={12} md={6} lg={6}>
-            <div className="image">
+            <div className="image home-img">
               <img
                 alt=" col-1"
                 width="100%"
@@ -106,6 +156,33 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
               back &amp; relax. Get those creative juices flowing..It's time for
               some TLC. #WFM #InThisTogether
             </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} md={12} lg={12}>
+            <div className="traditionalTitle">
+              <h2>
+                <span>Traditional Crafts</span>
+                <div className="traditional-product">
+                  Take a quick peek into all things Fabindia
+                </div>
+              </h2>
+            </div>
+          </Col>
+          <Col xs={12} md={9} lg={10} className="SliderCol">
+            <Slider {...settings}>
+              {[1, 2, 3, 4, 5, 6, 7, 8].map((x, i) => {
+                return (
+                  <div className="TradCarouselSlide">
+                    <img src={tImages[i]} alt="" className="SlideImageTrad" />;
+                    <div className="TradText">
+                      <span>Bagru Print</span>
+                      <p>The art of traditional hand block printingƒ</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </Slider>
           </Col>
         </Row>
         <Row>
