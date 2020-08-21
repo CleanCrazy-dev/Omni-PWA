@@ -9,7 +9,7 @@
 /coverage
 
 # production
- /build
+/build
 /Omni
 # misc
 .DS_Store

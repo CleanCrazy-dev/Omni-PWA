@@ -2,13 +2,18 @@
 @import url('../node_modules/react-simple-tree-menu/dist/main.css');
 
 .BasePage {
-    margin-top: 150px;
+    margin-top: 70px;
     padding: 30px;
+}
+
+.hidden-lg {
+    display: none;
 }
 
 .flex {
     display: flex;
 }
+
 
 .j-center {
     justify-content: center;
@@ -18,9 +23,164 @@
     flex-direction: column;
 }
 
+.padding-20 {
+
+    padding-bottom: 20px;
+}
+
+.navbar-text {
+    color: rgba(0, 0, 0, .5);
+    min-width: 300px;
+    font-weight: 800;
+}
+
 .bg-wheat {
     background-color:
         #f9f8f1;
+}
+
+.fab-featured {
+    position: relative;
+
+    h2 {
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        font-size: 54px;
+        font-family: 'Unna', serif;
+        font-weight: normal;
+        color: #000;
+        line-height: normal;
+        position: relative;
+        top: 0;
+        left: 0;
+        text-align: center;
+
+        .f_products {
+            position: relative;
+            bottom: 30px;
+            font-size: 36px;
+        }
+    }
+
+    span {
+        font-size: 22px;
+        top: 10px;
+        position: relative;
+        letter-spacing: .015em;
+        line-height: 96px;
+    }
+
+    &::before {
+        content: "F";
+        font-size: 120px;
+        color: #ccc;
+        font-family: 'Unna', serif;
+        opacity: .6;
+        position: absolute;
+        top: 45%;
+        left: 40%;
+    }
+}
+
+.row {
+    padding: 30px 0px;
+}
+
+.home-img {
+    margin-top: -55px;
+}
+
+.SliderCol {
+    padding: 30px;
+    margin: auto;
+
+    .slick-center {
+        transform: scale(1, 1);
+        transition: all 1s;
+
+        .SlideImageTrad {
+            max-width: 100%;
+            margin: auto;
+        }
+    }
+
+}
+
+.TradCarouselSlide {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    .TradText {
+        span {
+            font-size: 28px;
+            font-family: 'Unna', serif;
+            line-height: 28px;
+            display: block;
+            margin: 20px 0 0;
+        }
+
+        p {
+            font-size: 12px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            height: 18px;
+            font-weight: 300;
+        }
+    }
+
+    .SlideImageTrad {
+        max-width: 80%;
+        margin: auto;
+    }
+}
+
+.traditionalTitle {
+    max-width: 348px;
+    margin: 18px auto 0;
+    position: relative;
+
+    &::before {
+        content: "T";
+        font-size: 120px;
+        color: #e2e1da;
+        font-family: 'Unna', serif;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    h2 {
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        font-size: 15px;
+        text-align: left;
+        font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: normal;
+        color: #000;
+        top: -12px;
+        line-height: normal;
+        left: 44px;
+        position: absolute;
+
+        span {
+            display: block;
+            font-size: 40px;
+            top: 0;
+            position: relative;
+            letter-spacing: .015em;
+            line-height: 44px;
+            font-family: 'Unna', serif;
+        }
+    }
+
+    .traditional-product {
+        font-weight: 300;
+    }
 }
 
 .HomeSignup {
@@ -86,12 +246,176 @@
     background: white;
 }
 
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 720px) {
+
+    .FilterMobileContainer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 18px;
+
+        .Category {
+            padding: 10px;
+            background-color: gray;
+            color: white;
+            font-weight: bold;
+            min-width: 45%;
+            position: relative;
+            font-size: 15px;
+
+            .fa-plus {
+                position: absolute;
+                right: 10px;
+                top: 12px;
+            }
+        }
+    }
+
+    .hidden-lg {
+        display: flex;
+    }
+
+    .Product {
+        padding: 5px !important;
+    }
+
+    .CarouselContainer {
+        padding: 0;
+    }
+
+    .HomeSlideImage {
+        min-height: 250px;
+
+    }
+
+    .hidden-xs {
+        display: none !important;
+    }
+
+    .traditionalTitle {
+        margin-bottom: 30px;
+
+    }
+
+    .SideImage {
+        width: 100%;
+    }
+
+    .HomeSignup {
+        padding-top: 0;
+        margin-top: -50px;
+        ;
+
+        .Inner {
+            flex-direction: column;
+
+            width: 100%;
+        }
+
+        .SingupButton {
+            margin-top: 30px;
+
+            min-width: 100%;
+        }
+    }
+
+    .home-img {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .home-bottom {
+        flex-direction: column-reverse;
+
+
+    }
+
+    .Side-Carousel {
+        justify-content: center;
+
+        button {
+            display: none !important;
+        }
+
+        .Carousel-Items {
+            width: 90%;
+        }
+
+        .slick-slide {}
+    }
+
+    .SearchInp {
+        margin-bottom: 30px;
+
+        // margin-top: 24px;
+        .SearchInput {
+            min-width: 100%;
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
+
+    .ProductImage {
+        text-align: center;
+
+        img {
+            width: 90%;
+            margin-bottom: 20px;
+        }
+    }
+
+    .ProductCode {
+        text-align: center;
+    }
+
+    .ProductName {
+        font-size: 24px;
+    }
+
+    .ProductDetails {
+        padding: 0 10px;
+
+        .head {
+            font-size: 14px;
+        }
+
+        .add,
+        .check {
+            margin: 10px 0;
+        }
+    }
+
+    .padding-20 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
 
 @media only screen and (min-width: 720px) {
     .Filters {
         min-width: 400px;
     }
+
+    .BasePage {
+        margin-top: 150px;
+        padding: 30px;
+    }
+
+    .home-row {
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 50px;
+    }
+
+    .SideImage {
+        height: 260px;
+        width: 208px;
+    }
+
 
     .M-Full-Width {
         display: flex;
