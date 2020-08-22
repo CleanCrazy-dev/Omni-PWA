@@ -11,3 +11,6 @@ export function dispacthAction<T extends IActionType>(action: T) {
 export const isMobile = () =>
   navigator.appVersion.toString().toLowerCase().includes("iphone") ||
   navigator.appVersion.toString().toLowerCase().includes("android");
+
+export const isIPad = () =>
+  navigator.appVersion.toString().toLowerCase().includes("ipad");

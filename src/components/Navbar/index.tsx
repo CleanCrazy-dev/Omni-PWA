@@ -14,6 +14,7 @@ import "./navbar.scss";
 import navConfig from "./config.json";
 import { isMobile } from "../../generalUtils";
 import TreeMenu from "react-simple-tree-menu";
+import { CurrencySwitch } from "../CurrencySwitch";
 // as an array
 const treeData = [
   {
@@ -40,14 +41,34 @@ const treeData = [
 ];
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isOpenBurger, setIsOpenBurger] = useState(false);
   const [activeItem, setActiveItem] = useState("");
 
   const toggle = () => setIsOpen(!isOpen);
   return (
     <RNav color="light" light fixed="top" expand="md">
-      <NavbarBrand href="/">
+      <NavbarBrand>
+        <i
+          className="fa fa-bars"
+          aria-hidden="true"
+          onClick={() => setIsOpenBurger(true)}
+        >
+          {" "}
+        </i>
         <img width="120px" src={Logo} alt="Logo" />
       </NavbarBrand>
+      <div
+        className={`HambburgerSideMenu ${
+          isOpenBurger ? "HM-open" : "HM-close"
+        }`}
+      >
+        <h1>Close</h1>
+        <i
+          onClick={() => setIsOpenBurger(false)}
+          className="fa fa-times"
+          aria-hidden="true"
+        ></i>
+      </div>
       <NavbarToggler onClick={toggle} />
       <div className="MyNavContainer">
         <Collapse isOpen={isOpen} navbar>
@@ -66,12 +87,13 @@ export const Navbar = () => {
               <TreeMenu data={treeData} hasSearch={false} />
             </div>
           </Nav>
-          <NavbarText>
+          <CurrencySwitch />
+          {/* <NavbarText>
             Sign In | Sign Up | Track Your Order | Store Locator
-          </NavbarText>
+          </NavbarText> */}
         </Collapse>
 
-        <div className="MenuItemContainer hidden-xs ">
+        {/* <div className="MenuItemContainer hidden-xs ">
           {navConfig.items.map((itemData, index) => {
             return (
               <>
@@ -94,7 +116,7 @@ export const Navbar = () => {
               </>
             );
           })}
-        </div>
+        </div> */}
       </div>
     </RNav>
   );
