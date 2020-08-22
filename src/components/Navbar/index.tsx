@@ -13,7 +13,7 @@ import { map } from "ramda";
 import "./navbar.scss";
 import navConfig from "./config.json";
 import { isMobile } from "../../generalUtils";
-import TreeMenu from "react-simple-tree-menu";
+import { NavSideBar } from "./NavSlider";
 // as an array
 const treeData = [
   {
@@ -45,6 +45,7 @@ export const Navbar = () => {
   const toggle = () => setIsOpen(!isOpen);
   return (
     <RNav color="light" light fixed="top" expand="md">
+     
       <NavbarBrand href="/">
         <img width="120px" src={Logo} alt="Logo" />
       </NavbarBrand>
@@ -62,15 +63,11 @@ export const Navbar = () => {
                 <i className="fa fa-search" aria-hidden="true"></i>
               </div>
             </NavItem>
-            <div className="TreeNode hidden-lg">
-              <TreeMenu data={treeData} hasSearch={false} />
-            </div>
           </Nav>
           <NavbarText>
             Sign In | Sign Up | Track Your Order | Store Locator
           </NavbarText>
         </Collapse>
-
         <div className="MenuItemContainer hidden-xs ">
           {navConfig.items.map((itemData, index) => {
             return (
