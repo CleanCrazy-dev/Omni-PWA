@@ -320,6 +320,107 @@
     background: white;
 }
 
+.slick-arrow {
+    display: none !important;
+}
+
+.visible-ipad {
+    display: none;
+}
+
+
+@mixin ipadMixin() {
+    .Carousel-Items {
+        width: 80% !important;
+        text-align: right;
+    }
+
+    .hidden-ipad {
+        display: none;
+        padding-top: 0;
+    }
+
+    .visible-ipad {
+        display: flex;
+    }
+
+    .SlideImagePromo {
+        width: 100%;
+    }
+
+    .Controls {
+        margin-left: 0 !important;
+    }
+
+    .M-Full-Width {
+        flex-direction: column;
+    }
+
+    .hidden-xs {
+        display: none !important;
+    }
+
+    .hidden-lg {
+        display: none;
+    }
+
+    .FilterMobileContainer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 18px;
+
+        .Category {
+            padding: 10px;
+            background-color: gray;
+            color: white;
+            font-weight: bold;
+            min-width: 45%;
+            position: relative;
+            font-size: 15px;
+
+            .fa-plus {
+                position: absolute;
+                right: 10px;
+                top: 12px;
+            }
+        }
+    }
+
+    .padding-20 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .add,
+    .check {
+        margin: 10px 0;
+    }
+
+    .Details {
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .ProductConfig {
+        .ProductName {
+            text-align: center !important;
+        }
+
+        text-align: center;
+    }
+}
+
+@media only screen and (width: 1024px) {
+    @include ipadMixin();
+}
+
+@media only screen and (width: 768px) {
+    @include ipadMixin();
+}
+
 @media only screen and (max-width: 720px) {
 
     .MobileBlock {

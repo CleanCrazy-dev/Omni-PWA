@@ -11,7 +11,7 @@ export class BasePageImpl extends React.PureComponent<IBasePageProps, {}> {
       <div className="BasePage">
         <Navbar />
         {this.props.children}
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }

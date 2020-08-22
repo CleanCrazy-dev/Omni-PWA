@@ -1,0 +1,418 @@
+.layered-currency-switcher {
+    width: auto;
+    float: right;
+    padding: 0 0 0 50px;
+    margin: 0px;
+}
+
+.layered-currency-switcher li {
+    display: block;
+    float: left;
+    font-size: 15px;
+    margin: 0px;
+}
+
+.layered-currency-switcher li button.currency-switcher-btn {
+    width: auto;
+    height: auto;
+    margin-bottom: 0px;
+    background: #fff;
+    font-family: Arial !important;
+    line-height: 18px;
+    border: 1px solid #dadada;
+    border-radius: 25px;
+    color: #9a9a9a;
+    float: left;
+    font-weight: 700;
+    margin-left: -46px;
+    min-width: 90px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 11px 10px 49px
+}
+
+
+.layered-currency-switcher li button.currency-switcher-btn:focus {
+    outline: 0;
+    -webkit-outline: none;
+    -moz-outline: none;
+    -o-outline: none
+}
+
+.layered-currency-switcher li button.currency-switcher-btn:hover {
+    background: #ddf6cf;
+    border-color: #a9d092;
+    color: #89b171
+}
+
+.layered-currency-switcher li button.currency-switcher-btn span {
+    display: none
+}
+
+.layered-currency-switcher li button.currency-switcher-btn:first-child {
+    border-radius: 25px
+}
+
+.layered-currency-switcher li button.currency-switcher-btn.selected {
+    background: #de4c39;
+    border-color: #de4c39;
+    color: #fff;
+    z-index: 99;
+    padding-left: 23px !important;
+    padding-right: 23px !important
+}
+
+.layered-currency-switcher li button.currency-switcher-btn.selected span {
+    display: inline-block
+}
+
+.doubly,
+.money {
+    position: relative;
+    font-weight: inherit !important;
+    font-size: inherit !important;
+    text-decoration: inherit !important;
+}
+
+.doubly-message {
+    margin: 5px 0
+}
+
+.doubly-wrapper {
+    float: right
+}
+
+.doubly-float {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    right: auto;
+    z-index: 100000;
+}
+
+select.currency-switcher {
+    margin: 0px;
+    position: relative;
+    top: auto;
+}
+
+select.currency-switcher {
+    display: none
+}
+
+.nice-select {
+    -webkit-tap-highlight-color: transparent;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-family: "Helvetica Neue", Arial;
+    font-size: 14px;
+    font-weight: 400;
+    height: 42px;
+    line-height: 40px;
+    outline: 0;
+    padding-left: 12px;
+    padding-right: 30px;
+    position: relative;
+    text-align: left !important;
+    transition: all .2s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    width: auto
+}
+
+.nice-select:hover {
+    border-color: #dbdbdb
+}
+
+.nice-select.open,
+.nice-select:active,
+.nice-select:focus {
+    border-color: #88bfff
+}
+
+.nice-select:after {
+    border-bottom: 2px solid #999;
+    border-right: 2px solid #999;
+    content: "";
+    display: block;
+    height: 5px;
+    box-sizing: content-box;
+    pointer-events: none;
+    position: absolute;
+    right: 14px;
+    top: 16px;
+    -webkit-transform-origin: 66% 66%;
+    transform-origin: 66% 66%;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transition: all .15s ease-in-out;
+    width: 5px
+}
+
+.nice-select.open:after {
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg)
+}
+
+.nice-select.open .list {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: scale(1) translateY(0);
+    transform: scale(1) translateY(0);
+    z-index: 1000000 !important;
+}
+
+.nice-select.disabled {
+    border-color: #ededed;
+    color: #999;
+    pointer-events: none
+}
+
+.nice-select.disabled:after {
+    border-color: #ccc
+}
+
+.nice-select.wide {
+    width: 100%
+}
+
+.nice-select.wide .list {
+    left: 0 !important;
+    right: 0 !important
+}
+
+.nice-select.right {
+    float: right
+}
+
+.nice-select.right .list {
+    left: auto;
+    right: 0
+}
+
+.nice-select.small {
+    font-size: 12px;
+    height: 36px;
+    line-height: 34px
+}
+
+.nice-select.small:after {
+    height: 4px;
+    width: 4px
+}
+
+.flags-India,
+.flags-United-States {
+    width: 30px;
+    height: 20px
+}
+
+.nice-select.small .option {
+    line-height: 34px;
+    min-height: 34px
+}
+
+.nice-select .list {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(68, 68, 68, .11);
+    box-sizing: border-box;
+    margin: 4px 0 0 !important;
+    opacity: 0;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    max-height: 260px;
+    left: 0;
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transform: scale(.75) translateY(-21px);
+    transform: scale(.75) translateY(-21px);
+    transition: all .2s cubic-bezier(.5, 0, 0, 1.25), opacity .15s ease-out;
+    z-index: 100000
+}
+
+.nice-select .current img,
+.nice-select .option img {
+    vertical-align: top;
+    padding-top: 10px
+}
+
+.nice-select .list:hover .option:not(:hover) {
+    background-color: transparent !important
+}
+
+.nice-select .option {
+    font-size: 13px !important;
+    float: none !important;
+    text-align: left !important;
+    margin: 0px !important;
+    font-family: Helvetica Neue, Arial !important;
+    letter-spacing: normal;
+    text-transform: none;
+    display: block !important;
+    cursor: pointer;
+    font-weight: 400;
+    line-height: 40px !important;
+    list-style: none;
+    min-height: 40px;
+    min-width: 55px;
+    margin-bottom: 0;
+    outline: 0;
+    padding-left: 18px !important;
+    padding-right: 52px !important;
+    text-align: left;
+    transition: all .2s
+}
+
+.nice-select .option.focus,
+.nice-select .option.selected.focus,
+.nice-select .option:hover {
+    background-color: #f6f6f6
+}
+
+.nice-select .option.selected {
+    font-weight: 700
+}
+
+.nice-select .current img {
+    line-height: 45px
+}
+
+.nice-select.slim {
+    padding: 0 30px 0 0;
+    height: 20px;
+    line-height: 20px;
+    border: 0;
+    background: 0 0 !important
+}
+
+.nice-select.slim .current .flags {
+    margin-top: 0 !important
+}
+
+.nice-select.slim:after {
+    right: 4px;
+    top: 6px
+}
+
+.flags {
+    // background-image: url("https://i.imgur.com/eeOLUGG.png");
+    background-repeat: no-repeat;
+    display: block;
+    margin: 10px 4px 0 0 !important;
+    float: left
+}
+
+.flags-United-States {
+    background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png');
+    background-size: cover;
+}
+
+.flags-India {
+    background-image: url('https://cdn.countryflags.com/thumbs/india/flag-400.png');
+    background-size: cover;
+
+}
+
+.flags-small {
+    background-image: url("https://i.imgur.com/kAsOZlw.png");
+    background-repeat: no-repeat;
+    display: block;
+    margin: 5px 3px 0 0 !important;
+    border: 1px solid #fff;
+    box-sizing: content-box;
+    float: left
+}
+
+.nice-select.open .list .flags-small {
+    margin-top: 15px !important
+}
+
+.flags-small.flags-India {
+    width: 15px;
+    height: 10px;
+    background-position: -165px -90px
+}
+
+.flags-small.flags-United-States {
+    width: 15px;
+    height: 9px;
+    background-position: -75px -160px
+}
+
+.doubly-float .nice-select .list {
+    top: -90px;
+    left: 0;
+    right: auto
+}
+
+.nice-select,
+.nice-select .list {
+    background: #FFFFFF;
+}
+
+.nice-select .current,
+.nice-select .list .option {
+    color: #403F3F;
+}
+
+.nice-select .option:hover,
+.nice-select .option.focus,
+.nice-select .option.selected.focus {
+    background-color: #F6F6F6;
+}
+
+.doubly-message {
+    background-color: #333333 !important;
+    color: #FFFFFF !important;
+    border-radius: 5px;
+    padding: 3px 10px;
+
+    #shopify-section-header {
+        position: relative;
+        z-index: 1;
+    }
+
+    .doubly-wrapper {
+        margin-right: 10px;
+    }
+
+    .doubly-wrapper .nice-select .current {
+        font-family: "Montserrat";
+    }
+
+    .nice-select .current {
+        color: #000 !important;
+    }
+
+    .nice-select:after {
+        border-color: #000;
+    }
+
+    .is-light .nice-select .current {
+        color: #fff !important;
+    }
+
+    .is-light .nice-select:after {
+        border-color: #fff;
+    }
+
+    .site-nav--mobile.text-right .doubly-wrapper {
+        position: absolute;
+        right: 5px;
+        top: 60px;
+    }
+}

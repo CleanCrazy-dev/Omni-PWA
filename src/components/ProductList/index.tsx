@@ -210,9 +210,9 @@ export class ProductListImpl extends React.PureComponent<
           <Row className="ProductListPage">
             {this.props.productList.map((product, index) => {
               return (
-                <Col xs={6} md={3} sm={3} className="Product">
+                <Col xs={6} md={6} sm={3} lg={3} className="Product">
                   <div className="Image">
-                    <i
+                    {/* <i
                       title="Click to add into Favorites"
                       onClick={() => {
                         if (!product.props.isFavorite) {
@@ -226,7 +226,7 @@ export class ProductListImpl extends React.PureComponent<
                         product.props.isFavorite ? "fa-heart" : "fa-heart-o"
                       }`}
                       aria-hidden="true"
-                    ></i>
+                    ></i> */}
                     {product.props.images.map((img, i) => (
                       <img
                         onClick={() =>

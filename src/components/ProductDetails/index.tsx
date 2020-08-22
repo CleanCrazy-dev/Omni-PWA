@@ -69,12 +69,12 @@ export class ProductDetailsImpl extends React.PureComponent<
     return (
       <div className="ProductDetails">
         <Row>
-          <Col xs={12} md={6} lg={6}>
+          <Col xs={12} md={12} lg={6}>
             <div className="ProductImage">
               <img src={productDetails.images[0].url} />
             </div>
           </Col>
-          <Col xs={12} md={6} lg={6}>
+          <Col xs={12} md={12} lg={6} className="Details" >
             <div className="ProductRow ProductName padding-20">
               {productDetails.name}
             </div>

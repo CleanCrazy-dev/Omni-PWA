@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./carousel.scss";
-import { isMobile } from "../../generalUtils";
+import { isMobile, isIPad } from "../../generalUtils";
 export class SideCarousel extends React.Component<{
   onClickSlide: () => void;
   slideImages: any[];
@@ -22,7 +22,7 @@ export class SideCarousel extends React.Component<{
       dots: isMobile() && true,
       infinite: true,
       speed: 500,
-      slidesToShow: isMobile() ? 1 : 3,
+      slidesToShow: isIPad() ? 2 : isMobile() ? 1 : 3,
       slidesToScroll: 1,
     };
     const { slideImages } = this.props;

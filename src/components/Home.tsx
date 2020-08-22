@@ -1,26 +1,26 @@
-import axios from "axios";
 import * as React from "react";
 import { connect } from "react-redux";
+import { withRouter } from "react-router";
+import Slider from "react-slick";
 import { CarouselItem, Col, Row } from "reactstrap";
+import { isIPad, isMobile } from "../generalUtils";
+import { IHistory } from "../interfaces";
 import { UserModel } from "../models/UserModel";
-import { Carousel } from "./Carousel";
-import { SideCarousel } from "./docs";
 import img1 from "../resource/img/1.jpg";
 import img2 from "../resource/img/2.jpg";
 import img3 from "../resource/img/3.jpg";
-import { withRouter } from "react-router";
-import { IHistory } from "../interfaces";
 import slideImg1 from "../resource/img/f1.jpg";
 import slideImg2 from "../resource/img/f2.jpg";
 import slideImg3 from "../resource/img/f3.jpg";
-import tdImg1 from "../resource/img/t1.jpg";
-import tdImg2 from "../resource/img/t2.jpg";
-import tdImg3 from "../resource/img/t3.jpg";
-import Slider from "react-slick";
-import { isMobile } from "../generalUtils";
 import p1 from "../resource/img/p1.jpg";
 import p2 from "../resource/img/p2.jpg";
 import p3 from "../resource/img/p3.jpg";
+import tdImg1 from "../resource/img/t1.jpg";
+import tdImg2 from "../resource/img/t2.jpg";
+import tdImg3 from "../resource/img/t3.jpg";
+import { Carousel } from "./Carousel";
+import { SideCarousel } from "./docs";
+import "./home.scss";
 const items = [
   {
     src:
@@ -48,6 +48,11 @@ export interface IHomeProps {
 }
 
 class HomeImpl extends React.Component<IHomeProps, {}> {
+  promoSliderRef: any;
+
+  state = {
+    activeSlide: 1,
+  };
 
   slides = [1, 2, 3, 4, 5, 6, 7, 8].map((x, i) => {
     const imgs = [img1, img2, img3, img1, img2, img3, img1, img2, img3];
@@ -75,7 +80,13 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
     var settings = {
       infinite: true,
       speed: 500,
-      slidesToShow: isMobile() ? 1 : 3,
+      slidesToShow: isIPad() ? 2 : isMobile() ? 1 : 3,
+      slidesToScroll: 1,
+    };
+    var settingsForPromo = {
+      infinite: true,
+      speed: 500,
+      slidesToShow: isIPad() ? 1 : isMobile() ? 1 : 3,
       slidesToScroll: 1,
     };
     const tImages = [
@@ -185,7 +196,7 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
             </div>
           </Col>
           <Col xs={12} md={12} lg={12}>
-            <Row className="MobileBlock ">
+            <Row className="MobileBlock hidden-ipad">
               <Col lg={8} md={8} className="mb-20">
                 <img src={p1} width="100%" height="87%" />
                 <div className="VideoText">
@@ -218,6 +229,81 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
                 </div>
               </Col>
             </Row>
+          </Col>
+        </Row>
+        <Row className="MobilePromoSlider visible-ipad">
+          <Col xs={12} md={9} lg={10} className="SliderCol">
+            <Slider
+              {...settingsForPromo}
+              ref={(ref) => (this.promoSliderRef = ref)}
+            >
+              {[1, 2, 3].map((x, i) => {
+                const photos = [p1, p2, p3, p1];
+                const descObj = [
+                  {
+                    text: "Malhar Collection",
+                    desc:
+                      "The rhythm of life, the wonder of colours, the passion of nature",
+                  },
+                  {
+                    text: "Chikankari Collection",
+                    desc: "Chikankari is the fine and intricate embroidery tr",
+                  },
+                  {
+                    text: "Rajwada Collection",
+                    desc:
+                      "Let the festivities begin with Rajwada: All that is opulen          ",
+                  },
+                  {
+                    text: "Malhar Collection",
+                    desc:
+                      "The rhythm of life, the wonder of colours, the passion of nature, all embodied in our new Malhar collection!",
+                  },
+                ];
+
+                return (
+                  <div className="PromoSlideImage">
+                    <img src={photos[i]} alt="" className="SlideImagePromo" />
+                    <div className="VideoText">
+                      <h4>{descObj[i].text}</h4>
+                      <span>{descObj[i].desc} </span>
+                    </div>
+                  </div>
+                );
+              })}
+            </Slider>
+            <div className="PromoControls ">
+              <button
+                className="PromoButton"
+                onClick={() => {
+                  this.setState({
+                    activeSlide:
+                      this.state.activeSlide === 1
+                        ? 3
+                        : this.state.activeSlide - 1,
+                  });
+                  this.promoSliderRef.slickPrev();
+                }}
+              >
+                <i className="fa fa-arrow-left" aria-hidden="true"></i>
+                Previous
+              </button>
+              <div className="SlideNumber">{this.state.activeSlide} / 3 </div>
+              <button
+                className="PromoButton"
+                onClick={() => {
+                  this.setState({
+                    activeSlide:
+                      this.state.activeSlide === 3
+                        ? 1
+                        : this.state.activeSlide + 1,
+                  });
+                  this.promoSliderRef.slickNext();
+                }}
+              >
+                Next<i className="fa fa-arrow-right" aria-hidden="true"></i>
+              </button>
+            </div>
           </Col>
         </Row>
         <Row>
