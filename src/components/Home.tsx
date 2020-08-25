@@ -18,6 +18,7 @@ import p3 from "../resource/img/p3.jpg";
 import tdImg1 from "../resource/img/t1.jpg";
 import tdImg2 from "../resource/img/t2.jpg";
 import tdImg3 from "../resource/img/t3.jpg";
+import { SignUpPage } from "./AccountPage/SignUpPage";
 import { Carousel } from "./Carousel";
 import { SideCarousel } from "./docs";
 import "./home.scss";
@@ -100,8 +101,10 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
       tdImg2,
       tdImg3,
     ];
+
     return (
       <div>
+        <SignUpPage />
         {isMobile() && (
           <div className="SearchInp">
             {" "}
@@ -198,7 +201,7 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
           <Col xs={12} md={12} lg={12}>
             <Row className="MobileBlock hidden-ipad">
               <Col lg={8} md={8} className="mb-20">
-                <img src={p1} width="100%" height="87%" />
+                <img alt="" src={p1} width="100%" height="87%" />
                 <div className="VideoText">
                   <h4>Malhar Collection</h4>
                   <span>
@@ -210,7 +213,7 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
               </Col>
               <Col lg={4} md={4}>
                 <div className="VideoRight">
-                  <img src={p2} width="100%" />
+                  <img alt="" src={p2} width="100%" />
                   <div className="VideoText">
                     <h4>Chikankari Collection</h4>
                     <span>
@@ -219,7 +222,7 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
                   </div>
                 </div>
                 <div>
-                  <img src={p3} width="100%" />
+                  <img alt="" src={p3} width="100%" />
                   <div className="VideoText">
                     <h4>Rajwada Collection</h4>
                     <span>

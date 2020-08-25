@@ -1,20 +1,17 @@
 import React, { useState } from "react";
+import TreeMenu from "react-simple-tree-menu";
 import {
   Collapse,
   Nav,
   Navbar as RNav,
   NavbarBrand,
-  NavbarText,
+
   NavbarToggler,
-  NavItem,
+  NavItem
 } from "reactstrap";
-import Logo from "./fabLogo.png";
-import { map } from "ramda";
-import "./navbar.scss";
-import navConfig from "./config.json";
-import { isMobile } from "../../generalUtils";
-import TreeMenu from "react-simple-tree-menu";
 import { CurrencySwitch } from "../CurrencySwitch";
+import Logo from "./fabLogo.png";
+import "./navbar.scss";
 // as an array
 const treeData = [
   {
@@ -42,7 +39,6 @@ const treeData = [
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenBurger, setIsOpenBurger] = useState(false);
-  const [activeItem, setActiveItem] = useState("");
 
   const toggle = () => setIsOpen(!isOpen);
   return (
