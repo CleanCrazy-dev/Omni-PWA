@@ -64,7 +64,7 @@ export class Payment_Methods_Menu extends React.Component {
             { name: "UPI", id: "upi" },
             { name: "Google Pay", id: "google_pay" },
             { name: "Wallet", id: "wallet" },
-            { name: "Loyalty Points", id: "loyalty_points" },
+            { name: "Loyalty Points", id: "loyalty" },
             { name: "Emi", id: "emi" },
         ],
         banks_list: [{ bank_name: "" }],
@@ -117,6 +117,7 @@ export class Payment_Methods_Menu extends React.Component {
     };
     render() {
         const { selected, banks_list, emi_banks, wallets, years,payment_methods, months } = this.state;
+        const class_dynamic = selected !== 'wallet'
         return (
             <div>
                 {/*Second page*/}
@@ -162,7 +163,7 @@ export class Payment_Methods_Menu extends React.Component {
                                     </div>
 
                                     <div className="container">
-                                        <div className="row justify-content-center">
+                                        <div className={class_dynamic ? "row" : ''}>
                                             {selected == "credit_card" && (
                                                 <div id="wi2800002-ppCardDetailsForm-id">
                                                     <div id="checkoutPaymentDetails">
@@ -327,7 +328,8 @@ export class Payment_Methods_Menu extends React.Component {
                                                                     <div className="control clearfix">
                                                                         <select
                                                                             name="bank"
-                                                                            className="form-control select_netbanking"
+                                                                            className="form-control"
+
                                                                             onChange={this.onChange}
                                                                         >
                                                                             <option>Select a bank</option>
@@ -367,14 +369,14 @@ export class Payment_Methods_Menu extends React.Component {
                                                         <input
                                                             aria-required="true"
                                                             type="text"
-                                                            className="form-control"
+                                                            className="payment-upi"
                                                             name="upi"
                                                             onChange={this.onChange}
                                                             placeholder="yourname@bankname"
                                                             required
                                                         />
                                                         <button
-                                                            className="cc-button-payment2 mt-3"
+                                                            className="cc-button-payment3 mt-3"
                                                             style={{ backgroundColor: "#e5cc76" }}
                                                         >
                                                             <span>Pay now</span>
@@ -395,14 +397,14 @@ export class Payment_Methods_Menu extends React.Component {
                                                         <input
                                                             aria-required="true"
                                                             type="text"
-                                                            className="form-control"
+                                                            className="payment-upi"
                                                             name="google_pay"
                                                             onChange={this.onChange}
                                                             placeholder="yourname@bankname"
                                                             required
                                                         />
                                                         <button
-                                                            className="cc-button-payment2 mt-3"
+                                                            className="cc-button-payment3 mt-3"
                                                             style={{ backgroundColor: "#e5cc76" }}
                                                         >
                                                             <span>Pay now</span>
@@ -413,44 +415,46 @@ export class Payment_Methods_Menu extends React.Component {
 
                                             {selected == "wallet" && (
                                                 <div id="wi2800002-ppNetBankingPayment-id">
-                                                    <div>
-                                                        <div className="row justify-content-center">
-                                                            <div className="netbanking_wrapper clearfix">
-                                                                <div
-                                                                    id="CC-CCAveButtonId"
-                                                                    className="col-md-12"
-                                                                >
-                                                                    <div className="form-group">
-                                                                        <label className="control-label required-label">
-                                                                            Select a Wallet:
-                                    </label>
-                                                                    </div>
-                                                                    <div className="control clearfix">
-                                                                        <select
-                                                                            name="wallet"
-                                                                            className="form-control select_netbanking"
-                                                                            onChange={this.onChange}
-                                                                        >
-                                                                            {wallets.map((bank) => {
+                                                <div>
+                                                    <div className="mt-5">
+                                                        <div className="netbanking_wrapper clearfix">
+                                                            <div
+                                                                id="CC-CCAveButtonId"
+                                                                className="col-md-12"
+                                                            >
+                                                                <div className="form-group col-sm-6">
+                                                                    <label className="control-label required-label">
+                                                                        Select a bank:
+                                </label>
+                                                                </div>
+                                                                <div className="control clearfix">
+                                                                    <select
+                                                                        name="bank"
+                                                                        className="form-control"
+
+                                                                        onChange={this.onChange}
+                                                                    >
+                                                                        <option>Select a wallet</option>
+                                                                        {wallets.map((bank) => {
                                                                                 return (
                                                                                     <option value={bank}>{bank}</option>
                                                                                 );
                                                                             })}
-                                                                        </select>
-                                                                    </div>
-                                                                    <div>
-                                                                        <button
-                                                                            className="cc-button-payment mt-3"
-                                                                            style={{ backgroundColor: "#e5cc76" }}
-                                                                        >
-                                                                            <span>Pay now</span>
-                                                                        </button>
-                                                                    </div>
+                                                                    </select>
+                                                                </div>
+                                                                <div>
+                                                                    <button
+                                                                        className="cc-button-payment mt-3"
+                                                                        style={{ backgroundColor: "#e5cc76" }}
+                                                                    >
+                                                                        <span>Pay now</span>
+                                                                    </button>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </div>
                                             )}
 
                                             {selected == "loyalty" && (
