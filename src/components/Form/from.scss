@@ -38,14 +38,111 @@
   border: 0 none;
   font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+.cc-button-payment3 {
+  width: 200%;
+  color: #000;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 26px;
+  height: 42px;
+  border-radius: 2px;
+  border: 0 none;
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
 .control-label {
   font-weight: 800;
   font-size: 12px;
   margin-bottom: 1px;
 }
+.select_netbanking{
+  width: 60% !important
+}
+.payment-upi{
+  display: block;
+  width: 200% !important; 
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.payment-wallet {
+  display: block;
+  width: 100% !important; 
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+select.form-control{
+  width: 60% !important;
+}
+@media only screen and (max-width: 500px) and (min-width: 250px) {
+  select.form-control{
+    width: 100% !important;
+  }
+  .cc-button-payment3 {
+    width: 100% !important;
+    color: #000;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 26px;
+    height: 42px;
+    border-radius: 2px;
+    border: 0 none;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .payment-bank{
+    width: 100% !important;
+    color: #000;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 26px;
+    height: 42px;
+    border-radius: 2px;
+    border: 0 none;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .payment-upi{
+    display: block;
+    width: 100% !important; 
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+
+}
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
+  select.form-control{
+    width: 100% !important;
+  }
+  .select_netbanking{
+    width: 100% !important
+  }
   .main_payment_wrapper {
     min-height: 446px;
   }
