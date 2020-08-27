@@ -3,6 +3,8 @@ import { HashRouter } from "react-router-dom";
 import React from "react";
 import { BasePage } from "./components/BasePage";
 import { ProductDetails } from "./components/ProductDetails";
+import { Form } from './components/Form/form'
+import { Payment_Methods_Menu } from './components/Form/payment_methods_menu'
 
 const Home = React.lazy(() =>
   import("./components/Home").then(({ Home }) => ({
@@ -55,6 +57,16 @@ export const Routes = () => {
               exact
               path="/product-detail/:id"
               component={WrappedComponent(ProductDetails)}
+            />
+            <Route
+              exact
+              path="/address-form"
+              component={Form}
+            />
+            <Route
+              exact
+              path="/payment-methods"
+              component={Payment_Methods_Menu}
             />
           </React.Fragment>
         </Switch>
