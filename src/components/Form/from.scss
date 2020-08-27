@@ -1,0 +1,258 @@
+.save_continue {
+  text-align: right;
+  margin-top: 16px;
+}
+
+.cc-button-primary {
+  width: 100%;
+  color: #000;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 26px;
+  height: 42px;
+  border-radius: 2px;
+  border: 0 none;
+  max-width: 210px;
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cc-button-payment {
+  width: 100%;
+  color: #000;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 26px;
+  height: 42px;
+  border-radius: 2px;
+  border: 0 none;
+  max-width: 420px;
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cc-button-payment2 {
+  width: 100%;
+  color: #000;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 26px;
+  height: 42px;
+  border-radius: 2px;
+  border: 0 none;
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cc-button-payment3 {
+  width: 200%;
+  color: #000;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 26px;
+  height: 42px;
+  border-radius: 2px;
+  border: 0 none;
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.control-label {
+  font-weight: 800;
+  font-size: 12px;
+  margin-bottom: 1px;
+}
+.select_netbanking{
+  width: 60% !important
+}
+.payment-upi{
+  display: block;
+  width: 200% !important; 
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.payment-wallet {
+  display: block;
+  width: 100% !important; 
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+select.form-control{
+  width: 60% !important;
+}
+@media only screen and (max-width: 500px) and (min-width: 250px) {
+  select.form-control{
+    width: 100% !important;
+  }
+  .cc-button-payment3 {
+    width: 100% !important;
+    color: #000;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 26px;
+    height: 42px;
+    border-radius: 2px;
+    border: 0 none;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .payment-bank{
+    width: 100% !important;
+    color: #000;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 26px;
+    height: 42px;
+    border-radius: 2px;
+    border: 0 none;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .payment-upi{
+    display: block;
+    width: 100% !important; 
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  select.form-control{
+    width: 100% !important;
+  }
+  .select_netbanking{
+    width: 100% !important
+  }
+  .main_payment_wrapper {
+    min-height: 446px;
+  }
+  .payment_div {
+    min-height: 446px;
+    padding: 36px 44px;
+  }
+}
+.main_payment_wrapper {
+  min-height: 434px;
+  margin-right: 10px;
+  margin: 0 30px;
+}
+.payment_div {
+  background: #f9f8f1;
+  margin-right: 10px;
+  border: 0;
+  background: transparent;
+  font-weight: 300;
+  padding: 15px 0 8px;
+  font-size: 12px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+.payment_button button {
+  border: 0;
+  background: transparent;
+  font-weight: 300;
+  padding: 15px 0 8px;
+  font-size: 12px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+.amex_banner {
+  padding: 7px 22px;
+  background: #fff;
+  margin: 0 -10px 4px;
+  display: table;
+  width: 100%;
+}
+.payment_desc {
+  min-height: 434px;
+  background: #f9f8f1;
+  padding: 12px 44px;
+  margin-right: 20px;
+  padding: 7px 22px;
+  margin: 0 -10px 4px;
+  display: table;
+  width: 100%;
+}
+.cvvPopover {
+  background: #000;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 800;
+  position: absolute;
+  right: -30px;
+  top: 6px;
+  cursor: default;
+}
+
+#CC-checkoutPaymentDetails-legend {
+  font-size: 18px;
+  line-height: 20px;
+  font-family: "Unna", serif;
+  font-weight: 700;
+  margin: 0 0 14px;
+  border: 0;
+}
+#checkoutGenericPaymentDetails-header {
+  font-family: "Unna", serif;
+  color: #000;
+  font-size: 21px;
+  line-height: 22px;
+  margin: 0;
+  font-weight: 700;
+  padding: 20px 0;
+  border-bottom: 0;
+}
+.your-pts-info {
+  position: absolute;
+  right: '100px';
+}
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+input.form-control {
+  background: #f9f8f1;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select {
+  background: #f9f8f1;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-size: 10px 6px;
+}
