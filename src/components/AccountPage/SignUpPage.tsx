@@ -3,8 +3,9 @@ import { Modal, ModalBody, Row, Col } from "reactstrap";
 import "./styles.scss";
 export interface ILoginProps {}
 
-export const SignUpPage = () => {
-  const [isOpen, setOpen] = React.useState(true);
+export const SignUpPage = (props: any) => {
+  const [isOpen, setOpen] = React.useState(false);
+  React.useEffect(() => setOpen(props.isOpen), [props.isOpen]);
 
   return (
     <Row>
@@ -25,33 +26,25 @@ export const SignUpPage = () => {
             <Col xs={12} md={12} lg={12}>
               <div className="InputContainer">
                 <span>Last Name * </span>
-                <input
-                  className="FormInput"
-                />
+                <input className="FormInput" />
               </div>{" "}
             </Col>
             <Col xs={12} md={12} lg={12}>
               <div className="InputContainer">
                 <span>Mobile Number * </span>
-                <input
-                  className="FormInput"
-                />
+                <input className="FormInput" />
               </div>{" "}
             </Col>
             <Col xs={12} md={12} lg={12}>
               <div className="InputContainer">
                 <span>Email Address * </span>
-                <input
-                  className="FormInput"
-                />
+                <input className="FormInput" />
               </div>{" "}
             </Col>
             <Col xs={12} md={12} lg={12}>
               <div className="InputContainer">
                 <span>Referral Code: </span>
-                <input
-                  className="FormInput"
-                />
+                <input className="FormInput" />
               </div>{" "}
             </Col>
             <Col xs={12} md={12} lg={12}>
