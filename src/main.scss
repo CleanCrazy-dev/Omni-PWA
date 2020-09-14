@@ -1,6 +1,54 @@
 @import url('../node_modules/font-awesome/css/font-awesome.min.css');
 @import url('../node_modules/react-simple-tree-menu/dist/main.css');
 
+
+body {
+    text-align: center;
+}
+
+.ImageLarge {
+    z-index: 1000;
+}
+
+.loading-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.loading-bar--active::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 5px;
+    background-color: #e5cc76;
+
+    -webkit-box-shadow: 10px 0 30px 15px #e5cc76, -10px 0 30px 15px #e5cc76;
+    -moz-box-shadow: 10px 0 30px 15px #e5cc76, -10px 0 30px 15px #e5cc76;
+    box-shadow: 10px 0 30px 15px #e5cc76, -10px 0 30px 15px #e5cc76;
+
+    -webkit-animation: loadBar 2s cubic-bezier(.09, .89, .7, .71) infinite;
+    -moz-animation: loadBar 2s cubic-bezier(.09, .89, .7, .71) infinite;
+    animation: loadBar 2s cubic-bezier(.09, .89, .7, .71) infinite;
+}
+
+@keyframes loadBar {
+    0% {
+        left: -10%;
+    }
+
+    100% {
+        left: 110%;
+    }
+}
+
+
 .BasePage {
     margin-top: 70px;
     padding: 30px;
@@ -265,7 +313,7 @@
     .SignupInput {
         display: flex;
         justify-content: center;
-
+        margin-bottom: 50px;
     }
 
     .Inner {
@@ -330,6 +378,37 @@
 
 
 @mixin ipadMixin() {
+    .HomeSlideImage {
+        min-height: 275px;
+    }
+
+    .LogoOnHamburger {
+        width: 85px;
+    }
+
+    .StoreCheckMain {
+        justify-content: center;
+
+        .StoreSelection {}
+    }
+
+    .navbar-brand {
+        .fa-bars {
+            font-size: 20px !important;
+        }
+    }
+
+    .StoreModal {
+        .modal-content {
+            min-width: 100%;
+            padding: 10px;
+        }
+    }
+
+    .hidden-lg {
+        display: block !important;
+    }
+
     .Carousel-Items {
         width: 80% !important;
         text-align: right;
@@ -365,7 +444,7 @@
     }
 
     .FilterMobileContainer {
-        display: flex;
+        display: flex !important;
         justify-content: space-between;
         margin-top: 18px;
 
@@ -378,12 +457,23 @@
             position: relative;
             font-size: 15px;
 
-            .fa-plus {
+            .fa-plus,
+            .fa-minus {
                 position: absolute;
                 right: 10px;
                 top: 12px;
             }
         }
+    }
+
+    .pdl-open {
+        display: block !important;
+        visibility: visible !important;
+        height: 100px !important;
+        transition: height 1s !important;
+        padding-top: 20px !important;
+        text-align: left;
+
     }
 
     .padding-20 {
@@ -399,17 +489,105 @@
         margin: 10px 0;
     }
 
-    .Details {
-        text-align: center;
-        padding-top: 50px;
-    }
-
     .ProductConfig {
         .ProductName {
             text-align: center !important;
         }
 
         text-align: center;
+    }
+
+    .AuthButtons {
+        display: flex;
+        font-size: 20px;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .ProductDetails {
+        .Details {
+            text-align: center;
+        }
+    }
+
+    .ProductDesc {
+        text-align: left;
+
+        .head {
+            padding: 0 20px;
+            width: 100%;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+
+            .fa {
+                margin-right: 20px;
+            }
+        }
+
+        .pro-details {
+            padding: 30px;
+        }
+    }
+
+    .OnModal {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .LoginModal {
+        .modal-content {
+            .modal-body {
+
+
+                .FormContainer {
+                    .InputContainer {
+                        padding: 10px 0px;
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        flex-direction: column;
+
+                        span {
+                            text-align: left;
+                            width: 100%;
+                        }
+
+                        .FormInput {
+                            width: 100%;
+                            margin: 0;
+                            margin-top: 4px;
+                        }
+
+                    }
+
+                    .FormFooter {
+                        margin: 0;
+
+                        .SignInButton {
+                            margin-top: 20px;
+                            padding: 0 15px;
+
+                            button {
+                                width: 100% !important;
+                            }
+                        }
+
+                        .BottomTextContainer {
+                            margin: 0;
+                            justify-content: space-around;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .AccountLG {
+        display: none;
     }
 }
 
@@ -422,6 +600,33 @@
 }
 
 @media only screen and (max-width: 720px) {
+    .AuthButtons {
+        display: flex;
+        font-size: 20px;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .ProductDesc {
+        text-align: left;
+
+        .head {
+            padding: 0 20px;
+            width: 100%;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+
+            .fa {
+                margin-right: 20px;
+            }
+        }
+
+        .pro-details {
+            padding: 30px;
+        }
+    }
 
     .MobileBlock {
         display: block;
@@ -429,28 +634,6 @@
 
     .mb-20 {
         margin-bottom: 20px;
-    }
-
-    .FilterMobileContainer {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 18px;
-
-        .Category {
-            padding: 10px;
-            background-color: gray;
-            color: white;
-            font-weight: bold;
-            min-width: 45%;
-            position: relative;
-            font-size: 15px;
-
-            .fa-plus {
-                position: absolute;
-                right: 10px;
-                top: 12px;
-            }
-        }
     }
 
     .hidden-lg {
@@ -496,7 +679,6 @@
 
         .SingupButton {
             margin-top: 30px;
-
             min-width: 100%;
         }
     }

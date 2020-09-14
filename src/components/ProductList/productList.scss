@@ -14,15 +14,18 @@
         position: absolute;
         bottom: 0;
         text-align: center;
-        width: 100%;
+        width: 88%;
         padding: 10px;
         background: #b9b9b942;
         display: none;
+        margin-left: 20px;
+        margin-bottom: 20px;
     }
 
     .Image {
         position: relative;
         width: 100%;
+
         .fa-heart-o {
             position: absolute;
             right: 10px;
@@ -55,18 +58,20 @@
     .ProductConfig {
         padding: 20px;
         background: #f9f8f1;
-        width: 100%;
+        width: 88%;
         height: 85px;
         overflow: hidden;
+        margin-top: -20px;
+
 
         .ProductName {
             font-size: 12px;
+            text-align: center;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
             font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
             color: #000;
-            text-align: left;
             margin: 0 !important;
             line-height: 14px;
             text-decoration: underline;
@@ -103,9 +108,12 @@
 
     .ViewType {
         margin-right: 20px;
-
         padding: 3px;
         border: 1px solid #b9b9b9;
+
+        &:hover {
+            cursor: pointer;
+        }
 
         .fa-square {
             margin: 0 3px;
@@ -134,6 +142,7 @@
     min-width: 300px;
     padding-right: 50px;
     padding-left: 30px;
+    text-align: left;
 
     .FilterOptions {
         .FilterName {
@@ -221,4 +230,49 @@
 
 .ProductListPageContainer {
     // display: flex;
+}
+
+.filterOptions {
+    height: 0;
+    visibility: hidden;
+    transition: height 1s;
+}
+
+
+@media only screen and (max-width: 730px) {
+    .filterOptions {
+        height: 0;
+        visibility: hidden;
+        transition: height 1s;
+    }
+
+    .pdl-open {
+        display: block;
+        visibility: visible;
+        height: 100px;
+        transition: height 1s;
+        padding-top: 20px;
+    }
+
+    .FilterMobileContainer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 18px;
+
+        .Category {
+            padding: 10px;
+            background-color: gray;
+            color: white;
+            font-weight: bold;
+            min-width: 45%;
+            position: relative;
+            font-size: 15px;
+
+            .fa {
+                position: absolute;
+                right: 10px;
+                top: 12px;
+            }
+        }
+    }
 }

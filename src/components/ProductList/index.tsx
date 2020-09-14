@@ -6,6 +6,8 @@ import { Col, Row } from "reactstrap";
 import { IHistory } from "../../interfaces";
 import { ProductModel } from "../../models/ProductModel";
 import "./productList.scss";
+import { Login } from "../AccountPage/Login";
+import { isMobile } from "../../generalUtils";
 export interface IProductListProps {
   productList: ProductModel[];
   history: IHistory;
@@ -13,8 +15,18 @@ export interface IProductListProps {
 
 export class ProductListImpl extends React.PureComponent<
   IProductListProps,
-  {}
+  {
+    showRef: boolean;
+    showCate: boolean;
+    colNums: number;
+  }
 > {
+  state = {
+    colNums: isMobile() ? 6 : 3,
+    showRef: false,
+    showCate: false,
+  };
+
   async componentDidMount() {
     const response = await Axios.get(
       "https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/products/list?categories=men_all&sortBy=stock&concepts=H%2526M%20MAN&country=us&lang=en&currentpage=0&pagesize=30",
@@ -22,7 +34,7 @@ export class ProductListImpl extends React.PureComponent<
         headers: {
           "x-rapidapi-host": "apidojo-hm-hennes-mauritz-v1.p.rapidapi.com",
           "x-rapidapi-key":
-            "516a5ecdcemsh2b5192fad8db3b0p12badbjsn10762fa93820",
+            "3320af976bmsh4cfc14f0be3fcccp1ead0bjsn8d7a9dab2022",
           useQueryString: true,
         },
       }
@@ -36,23 +48,73 @@ export class ProductListImpl extends React.PureComponent<
   render() {
     return (
       <div className="ProductListPageContainer M-Full-Width">
+        {/* <Login /> */}
         <div className="ProductPath hidden-lg">Home / Collections</div>
         <div className="FilterMobileContainer hidden-lg">
-          <div className="Category">
-            CATEGORY <i className="fa fa-plus" />
+          <div
+            onClick={() =>
+              this.setState({
+                showRef: false,
+                showCate: !this.state.showCate,
+              })
+            }
+            className="Category"
+          >
+            CATEGORY{" "}
+            <i
+              className={`${
+                !this.state.showCate ? "fa fa-plus" : "fa fa-minus"
+              }`}
+            />
           </div>
-          <div className="Category">
-            REFINE BY <i className="fa fa-plus" />
+          <div
+            onClick={() =>
+              this.setState({
+                showCate: false,
+                showRef: !this.state.showRef,
+              })
+            }
+            className="Category"
+          >
+            REFINE BY{" "}
+            <i
+              className={`${
+                !this.state.showRef ? "fa fa-plus" : "fa fa-minus"
+              }`}
+            />
+          </div>
+        </div>
+        <div className={`filterOptions ${this.state.showCate && "pdl-open"}`}>
+          <div>View BY</div>
+          <div>Sort BY</div>
+          <div>Kurta BY</div>
+          <div>Grocceries BY</div>
+        </div>
+        <div className={`filterOptions ${this.state.showRef && "pdl-open"}`}>
+          <div>
+            <i className="fa fa-plus"></i> Price
+          </div>
+          <div>
+            <i className="fa fa-plus"></i> Size
+          </div>
+          <div>
+            <i className="fa fa-plus"></i> Brand
           </div>
         </div>
         <div className="FilterMobileContainer Views hidden-lg">
           <div className="ViewBy">
             <span>View By:</span>
             <div className="BoxContainer">
-              <div className="ViewType">
+              <div
+                className="ViewType"
+                onClick={() => this.setState({ colNums: 12 })}
+              >
                 <i className="fa fa-square" aria-hidden="true"></i>
               </div>
-              <div className="ViewType">
+              <div
+                className="ViewType"
+                onClick={() => this.setState({ colNums: 6 })}
+              >
                 <i className="fa fa-square" aria-hidden="true"></i>
                 <i className="fa fa-square" aria-hidden="true"></i>
               </div>
@@ -184,12 +246,18 @@ export class ProductListImpl extends React.PureComponent<
               <div className="ViewBy">
                 <span>View By:</span>
                 <div className="BoxContainer">
-                  <div className="ViewType">
+                  <div
+                    className="ViewType"
+                    onClick={() => this.setState({ colNums: 4 })}
+                  >
                     <i className="fa fa-square" aria-hidden="true"></i>
                     <i className="fa fa-square" aria-hidden="true"></i>
                     <i className="fa fa-square" aria-hidden="true"></i>
                   </div>
-                  <div className="ViewType">
+                  <div
+                    className="ViewType"
+                    onClick={() => this.setState({ colNums: 3 })}
+                  >
                     <i className="fa fa-square" aria-hidden="true"></i>
                     <i className="fa fa-square" aria-hidden="true"></i>
                     <i className="fa fa-square" aria-hidden="true"></i>
@@ -210,7 +278,13 @@ export class ProductListImpl extends React.PureComponent<
           <Row className="ProductListPage">
             {this.props.productList.map((product, index) => {
               return (
-                <Col xs={6} md={6} sm={3} lg={3} className="Product">
+                <Col
+                  xs={this.state.colNums}
+                  md={6}
+                  sm={this.state.colNums}
+                  lg={this.state.colNums}
+                  className="Product"
+                >
                   <div className="Image">
                     {/* <i
                       title="Click to add into Favorites"

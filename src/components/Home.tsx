@@ -1,6 +1,9 @@
 import * as React from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router";
+import tdImg1 from "../resource/img/t1.jpg";
+import tdImg2 from "../resource/img/t2.jpg";
+import tdImg3 from "../resource/img/t3.jpg";
 import Slider from "react-slick";
 import { CarouselItem, Col, Row } from "reactstrap";
 import { isIPad, isMobile } from "../generalUtils";
@@ -15,9 +18,6 @@ import slideImg3 from "../resource/img/f3.jpg";
 import p1 from "../resource/img/p1.jpg";
 import p2 from "../resource/img/p2.jpg";
 import p3 from "../resource/img/p3.jpg";
-import tdImg1 from "../resource/img/t1.jpg";
-import tdImg2 from "../resource/img/t2.jpg";
-import tdImg3 from "../resource/img/t3.jpg";
 import { SignUpPage } from "./AccountPage/SignUpPage";
 import { Carousel } from "./Carousel";
 import { SideCarousel } from "./docs";
@@ -104,7 +104,7 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
 
     return (
       <div>
-        <SignUpPage />
+        {/* <SignUpPage /> */}
         {isMobile() && (
           <div className="SearchInp">
             {" "}
@@ -265,7 +265,7 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
                 ];
 
                 return (
-                  <div className="PromoSlideImage">
+                  <div key={i} className="PromoSlideImage">
                     <img src={photos[i]} alt="" className="SlideImagePromo" />
                     <div className="VideoText">
                       <h4>{descObj[i].text}</h4>
@@ -324,7 +324,7 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
             <Slider {...settings}>
               {[1, 2, 3, 4, 5, 6, 7, 8].map((x, i) => {
                 return (
-                  <div className="TradCarouselSlide">
+                  <div key={i} className="TradCarouselSlide">
                     <img src={tImages[i]} alt="" className="SlideImageTrad" />
                     <div className="TradText">
                       <span>Bagru Print</span>
@@ -336,8 +336,8 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
             </Slider>
           </Col>
         </Row>
-        <Row>
-          <Col xs={12} className="flex j-center fd-col HomeSignup">
+        <Row className="HomeBottom" >
+          <Col xs={12} md={12} lg={8} className="flex j-center fd-col HomeSignup">
             <h2>Be the First to know!</h2>
             <p>
               Join our mailing list for exclusive access to the latest fashion

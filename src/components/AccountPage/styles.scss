@@ -1,159 +1,172 @@
 .LoginModal {
-    max-width: 694px;
-    width: 694px;
-}
 
-.modal-content {
+    .modal-content {
 
-    border-radius: 0;
-    background-color: #f4f2e5;
+        border-radius: 0;
+        background-color: #f4f2e5;
 
-    .AlreadyHave {
-        text-align: center;
+        .AlreadyHave {
+            text-align: center;
 
-        .NormalText {
-            padding: 10px;
-            font-size: 16px;
-            border-bottom: 1px solid;
-            margin-bottom: 20px;
+            .NormalText {
+                padding: 10px;
+                font-size: 16px;
+                border-bottom: 1px solid;
+                margin-bottom: 20px;
 
-        }
-
-        .SimpleBorder {
-            background: none;
-            border: 1px solid #5c5c5c;
-            font-size: 14px;
-            color: #000;
-            width: 242px;
-            margin: 0 auto;
-            line-height: 33px;
-            height: 40px;
-            border-radius: 4px;
-        }
-    }
-
-    .SingUpText {
-        justify-content: flex-end;
-        padding: 20px;
-
-        span {
-            font-size: 12px;
-        }
-    }
-
-    .modal-body {
-        .FormContainer {
-            padding: 30px;
-
-            .InputContainer {
-                padding: 10px 0px;
-                display: flex;
-                justify-content: end;
-                text-align: left;
-                align-items: center;
-
-
-                span {
-                    font-size: 13px;
-                    min-width: 25%;
-                    font-weight: 700;
-                }
-
-                .FormInput {
-                    min-width: 55%;
-                    margin-left: 20px;
-                    height: 39px;
-                    background: #f4f2e5;
-                    border: 1px solid gray;
-                    padding: 10px;
-                    border-radius: 3px;
-                }
             }
 
-            .FormFooter {
-                text-align: center;
-                margin-left: 70px;
+            .SimpleBorder {
+                background: none;
+                border: 1px solid #5c5c5c;
+                font-size: 14px;
+                color: #000;
+                width: 242px;
+                margin: 0 auto;
+                line-height: 33px;
+                height: 40px;
+                border-radius: 4px;
+            }
+        }
 
-                .SignInButton {
-                    .Button {
-                        width: 314px;
-                        letter-spacing: 0;
+        .SingUpText {
+            justify-content: flex-end;
+            padding: 20px;
+
+            span {
+                font-size: 12px;
+            }
+        }
+
+        .modal-body {
+            .FormContainer {
+                padding-top: 20px;
+                padding-left: 10px;
+                padding-right: 10px;
+
+                .InputContainer {
+                    padding: 10px 0px;
+                    display: flex;
+                    justify-content: space-between;
+                    text-align: left;
+                    align-items: center;
+                    width: 88%;
+
+                    span {
+                        font-size: 13px;
+                        min-width: 35%;
+                        text-align: left;
                         font-weight: 700;
-                        font-size: 12px;
-                        border: 0 none;
-                        line-height: 28px;
-                        height: 36px;
-                        border-radius: 5px;
-                        background-color: #e5cc76;
+                    }
+
+                    .FormInput {
+                        min-width: 60%;
+                        margin-left: 20px;
+                        height: 39px;
+                        background: #f4f2e5;
+                        border: 1px solid gray;
+                        padding: 10px;
+                        border-radius: 3px;
                     }
                 }
 
-                .BottomTextContainer {
-                    display: flex;
-                    justify-content: space-between;
-                    margin-left: 88px;
-                    padding: 20px;
-                    align-items: center;
-                    max-width: 67%;
+                .FormFooter {
+                    text-align: center;
+                    margin-top: 30px;
 
+                    .SignInButton {
+                        .Button {
+                            width: 314px;
+                            letter-spacing: 0;
+                            font-weight: 700;
+                            font-size: 12px;
+                            border: 0 none;
+                            line-height: 28px;
+                            height: 36px;
+                            border-radius: 5px;
+                            background-color: #e5cc76;
+                        }
+                    }
+
+                    .BottomTextContainer {
+                        display: flex;
+                        // justify-content: space-evenly;
+                        padding: 20px 60px;
+                        // align-items: center;
+                        text-align: right;
+                        width: 100%;
+                    }
+
+                    span {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .TextRed {
+                        font-size: 12px !important;
+                        color: #902c34;
+                        font-weight: normal;
+                        display: block;
+                        line-height: 15px;
+                        margin: 0;
+                        width: 100%;
+                    }
                 }
 
-                span {
-                    display: flex;
-                    align-items: center;
+                .SignInText {
+                    font-size: 30px;
+                    text-align: center;
+                    font-weight: 700;
+                    border-bottom: 1px solid;
+                    padding-bottom: 25px;
+                    margin-bottom: 25px;
                 }
-
-                .TextRed {
-                    font-size: 12px !important;
-                    color: #902c34;
-                    font-weight: normal;
-                    display: block;
-                    line-height: 15px;
-                    margin: 0;
-                    width: auto;
-                }
-            }
-
-            .SignInText {
-                font-size: 30px;
-                text-align: center;
-                font-weight: 700;
-                border-bottom: 1px solid;
-                padding-bottom: 25px;
-                margin-bottom: 25px;
             }
         }
     }
+
 }
 
 @media only screen and (max-width: 720px) {
     .LoginModal {
         max-width: 100%;
         width: unset;
-    }
 
-    .modal-content {
-        .modal-body {
-            .FormContainer {
-                padding: 10px;
+        .modal-content {
+            .modal-body {
+                .FormContainer {
+                    padding: 10px;
 
-                .InputContainer {
-                    align-items: flex-end;
-                    flex-direction: column;
+                    .InputContainer {
+                        align-items: flex-start;
+                        flex-direction: column;
+                        width: 100%;
 
-                    .FormInput {
-                        max-width: 100%;
-                        margin-left: 0;
-                        min-width: 100%;
+                        span {
+                            text-align: unset;
+
+                        }
+
+                        .FormInput {
+                            max-width: 100%;
+                            margin-left: 0;
+                            min-width: 100%;
+                        }
                     }
-                }
 
-                .FormFooter {
-                    margin: 0;
+                    .FormFooter {
+                        margin: 0;
 
-                    .SignInButton {
-                        .Button {
-                            width: 200px;
+                        .BottomTextContainer {
+                            margin: auto;
+                        }
+
+                        .SignInButton {
+                            padding: 0 15px;
+
+                            .Button {
+                                width: 100%;
+                            }
                         }
                     }
                 }

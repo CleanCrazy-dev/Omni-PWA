@@ -3,58 +3,51 @@ import { Modal, ModalBody, Row, Col } from "reactstrap";
 import "./styles.scss";
 export interface ILoginProps {}
 
-export const SignUpPage = () => {
-  const [isOpen, setOpen] = React.useState(true);
+export const SignUpPage = (props: any) => {
+  const [isOpen, setOpen] = React.useState(false);
+  React.useEffect(() => setOpen(props.isOpen), [props.isOpen]);
 
   return (
     <Row>
       <Modal
         isOpen={isOpen}
-        toggle={() => setOpen(!isOpen)}
+        toggle={() => props.setOpen(!isOpen)}
         className="LoginModal"
       >
         <ModalBody>
           <div className="FormContainer">
             <div className="SignInText">Sign Up</div>
-            <Col xs={12} md={12} lg={12}>
+            <Col xs={12} md={12} lg={12} className="InputRow" >
               <div className="InputContainer">
                 <span>First Name * </span>
                 <input className="FormInput" />
               </div>
             </Col>
-            <Col xs={12} md={12} lg={12}>
+            <Col xs={12} md={12} lg={12} className="InputRow" >
               <div className="InputContainer">
                 <span>Last Name * </span>
-                <input
-                  className="FormInput"
-                />
+                <input className="FormInput" />
               </div>{" "}
             </Col>
-            <Col xs={12} md={12} lg={12}>
+            <Col xs={12} md={12} lg={12} className="InputRow" >
               <div className="InputContainer">
                 <span>Mobile Number * </span>
-                <input
-                  className="FormInput"
-                />
+                <input className="FormInput" />
               </div>{" "}
             </Col>
-            <Col xs={12} md={12} lg={12}>
+            <Col xs={12} md={12} lg={12} className="InputRow" >
               <div className="InputContainer">
                 <span>Email Address * </span>
-                <input
-                  className="FormInput"
-                />
+                <input className="FormInput" />
               </div>{" "}
             </Col>
-            <Col xs={12} md={12} lg={12}>
+            <Col xs={12} md={12} lg={12} className="InputRow" >
               <div className="InputContainer">
                 <span>Referral Code: </span>
-                <input
-                  className="FormInput"
-                />
+                <input className="FormInput" />
               </div>{" "}
             </Col>
-            <Col xs={12} md={12} lg={12}>
+            <Col xs={12} md={12} lg={12} className="InputRow" >
               <div className="InputContainer">
                 <span>Password * </span>
                 <input
@@ -63,7 +56,7 @@ export const SignUpPage = () => {
                 />
               </div>{" "}
             </Col>
-            <Col xs={12} md={12} lg={12}>
+            <Col xs={12} md={12} lg={12} className="InputRow" >
               <div className="InputContainer">
                 <span>Confirm Your Password * </span>
                 <input

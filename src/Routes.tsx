@@ -3,6 +3,8 @@ import { HashRouter } from "react-router-dom";
 import React from "react";
 import { BasePage } from "./components/BasePage";
 import { ProductDetails } from "./components/ProductDetails";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Home = React.lazy(() =>
   import("./components/Home").then(({ Home }) => ({
@@ -37,7 +39,7 @@ const WrappedComponent = (Component: any) => {
 export const Routes = () => {
   return (
     <HashRouter>
-      <React.Suspense fallback={<h1>Loading...</h1>}>
+      <React.Suspense fallback={<div className="loading-bar loading-bar--active"></div>}>
         <Switch>
           <React.Fragment>
             <Route exact path="/" component={WrappedComponent(Home)} />

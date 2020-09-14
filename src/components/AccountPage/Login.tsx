@@ -1,16 +1,17 @@
 import * as React from "react";
 import { Modal, ModalBody, Row, Col } from "reactstrap";
-import "./Login.scss";
+import "./styles.scss";
 export interface ILoginProps {}
 
-export const Login = () => {
-  const [isOpen, setOpen] = React.useState(true);
+export const Login = (props: any) => {
+  const [isOpen, setOpen] = React.useState(false);
+  React.useEffect(() => setOpen(props.isOpen), [props.isOpen]);
 
   return (
     <Row>
       <Modal
         isOpen={isOpen}
-        toggle={() => setOpen(!isOpen)}
+        toggle={() => props.setOpen(!isOpen)}
         className="LoginModal"
       >
         <ModalBody>
@@ -18,9 +19,15 @@ export const Login = () => {
             <div className="SignInText">Sign In</div>
             <Col xs={12} md={12} lg={12}>
               <div className="InputContainer">
-                <span>Email Address * </span>
+                <span>Store ID * </span>
                 <input className="FormInput" />
               </div>
+            </Col>
+            <Col xs={12} md={12} lg={12}>
+              <div className="InputContainer">
+                <span>Employee ID * </span>
+                <input className="FormInput" />
+              </div>{" "}
             </Col>
             <Col xs={12} md={12} lg={12}>
               <div className="InputContainer">
@@ -36,11 +43,11 @@ export const Login = () => {
                 <button className="Button">Sign In</button>
               </div>
               <div className="BottomTextContainer">
+                {/* <span>
+                  New to Omni? &nbsp; */}
                 <span className="TextRed">Forgot Password?</span>
-                <span>
-                  New to Omin? &nbsp;
-                  <span className="TextRed">Create Account</span>
-                </span>
+                {/* <span className="TextRed">Create Account</span> */}
+                {/* </span> */}
               </div>
             </div>
           </div>
