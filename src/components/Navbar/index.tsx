@@ -50,6 +50,8 @@ const tree = navConfig.items.map((item) => {
   return obj;
 });
 
+declare const location: any;
+
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenBurger, setIsOpenBurger] = useState(false);
@@ -57,7 +59,12 @@ export const Navbar = () => {
   const [isLogin, isOpenLogin] = useState(false);
   const [isSignUp, isOpenSignUp] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-  console.log(">> isLogin", isLogin);
+
+  React.useEffect(
+    () => isOpenLogin(location.href === "http://localhost:3000/#/"),
+    []
+  );
+
   return (
     <RNav color="light" light fixed="top" expand="md">
       <Login
@@ -108,12 +115,12 @@ export const Navbar = () => {
             Login
           </div>
           &nbsp;&nbsp;
-          <div
+          {/* <div
             style={{ margin: "0px 10px" }}
             onClick={() => isOpenSignUp(true)}
           >
             SignUp
-          </div>
+          </div> */}
         </div>
         <div className="TreeNode hidden-lg">
           <TreeMenu data={tree as any} hasSearch={false} />
@@ -147,13 +154,13 @@ export const Navbar = () => {
             Login
           </div>
           &nbsp;&nbsp;
-          <div
+          {/* <div
             style={{ margin: "0px 10px" }}
             onClick={() => isOpenSignUp(true)}
             className="AccountLG"
           >
             SignUp
-          </div>
+          </div> */}
           <CurrencySwitch />
           {/* <NavbarText>
             Sign In | Sign Up | Track Your Order | Store Locator
