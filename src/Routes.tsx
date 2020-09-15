@@ -5,6 +5,7 @@ import { BasePage } from "./components/BasePage";
 import { ProductDetails } from "./components/ProductDetails";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Login } from "./components/AccountPage/Login";
 
 const Home = React.lazy(() =>
   import("./components/Home").then(({ Home }) => ({
@@ -39,10 +40,13 @@ const WrappedComponent = (Component: any) => {
 export const Routes = () => {
   return (
     <HashRouter>
-      <React.Suspense fallback={<div className="loading-bar loading-bar--active"></div>}>
+      <React.Suspense
+        fallback={<div className="loading-bar loading-bar--active"></div>}
+      >
         <Switch>
           <React.Fragment>
-            <Route exact path="/" component={WrappedComponent(Home)} />
+            <Route exact path="/" component={Login} />
+            <Route exact path="/home" component={WrappedComponent(Home)} />
             <Route
               exact
               path="/lib/docs"

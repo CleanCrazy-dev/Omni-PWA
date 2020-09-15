@@ -67,14 +67,14 @@ export const Navbar = () => {
 
   return (
     <RNav color="light" light fixed="top" expand="md">
-      <Login
+      {/* <Login
         setOpen={(isOpen: boolean) => isOpenLogin(isOpen)}
         isOpen={isLogin}
       />
       <SignUpPage
         setOpen={(isOpen: boolean) => isOpenSignUp(isOpen)}
         isOpen={isSignUp}
-      />
+      /> */}
       <NavbarBrand>
         <i
           className="fa fa-bars hidden-lg"
@@ -111,9 +111,9 @@ export const Navbar = () => {
           </a>
         </div>{" "}
         <div className="AuthButtons">
-          <div style={{ margin: "0px 10px" }} onClick={() => isOpenLogin(true)}>
+          {/* <div style={{ margin: "0px 10px" }} onClick={() => isOpenLogin(true)}>
             Login
-          </div>
+          </div> */}
           &nbsp;&nbsp;
           {/* <div
             style={{ margin: "0px 10px" }}
@@ -146,13 +146,13 @@ export const Navbar = () => {
               </div>
             </NavItem>
           </Nav>
-          <div
+          {/* <div
             className="AccountLG"
             style={{ margin: "0px 10px" }}
             onClick={() => isOpenLogin(true)}
           >
             Login
-          </div>
+          </div> */}
           &nbsp;&nbsp;
           {/* <div
             style={{ margin: "0px 10px" }}

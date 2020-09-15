@@ -1,7 +1,21 @@
+.LoginRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
 .LoginModal {
+    width: 500px;
+
+    .logoImg {
+        width: 135px;
+        margin-bottom: 20px;
+    }
 
     .modal-content {
-
         border-radius: 0;
         background-color: #f4f2e5;
 
