@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="872" height="837" viewBox="0 0 872 837">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="436.5" cy="419.5" r="375.5"/>
+  <path id="Shape_1_copy_3" data-name="Shape 1 copy 3" class="cls-2" d="M574.326,424.251L422.254,310.2V538.3L574.326,424.251"/>
+  <path id="Rectangle_668_copy" data-name="Rectangle 668 copy" class="cls-2" d="M298.658,405.241H545.823v38.025H298.658V405.241Z"/>
+</svg>

@@ -77,10 +77,12 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
     );
   });
 
+  
+
   render() {
     var settings = {
       infinite: true,
-      speed: 500,
+      speed: 5000,
       slidesToShow: isIPad() ? 2 : isMobile() ? 1 : 3,
       slidesToScroll: 1,
     };
@@ -88,7 +90,7 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
       infinite: true,
       speed: 500,
       slidesToShow: isIPad() ? 1 : isMobile() ? 1 : 3,
-      slidesToScroll: 1,
+      slidesToScroll: 1    
     };
     const tImages = [
       tdImg1,
@@ -118,12 +120,12 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
         <div className="CarouselContainer">
           <Carousel items={items} slides={this.slides} />
         </div>
-        <div className="fab-featured">
+        {/* <div className="fab-featured">
           <h2>
             <span>Featured</span>
             <div className="f_products">Products</div>
           </h2>
-        </div>
+        </div> */}
         <SideCarousel
           slideImages={[
             slideImg1,
@@ -338,7 +340,7 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
         </Row>
         <Row className="HomeBottom" >
           <Col xs={12} md={12} lg={8} className="flex j-center fd-col HomeSignup">
-            <h2>Be the First to know!</h2>
+            <h2 style={{ fontFamily: "Unna,serif"}}>Be the First to know!</h2>
             <p>
               Join our mailing list for exclusive access to the latest fashion
               trends, tips, and more.
