@@ -10,10 +10,12 @@ import {
 } from "reactstrap";
 import { CurrencySwitch } from "../CurrencySwitch";
 import Logo from "./fabLogo.png";
+import searchIcon from "./search.svg";
 import "./navbar.scss";
 import navConfig from "./config.json";
 import { SignUpPage } from "../AccountPage/SignUpPage";
 import { Login } from "../AccountPage/Login";
+
 
 const treeData = [
   {
@@ -135,7 +137,8 @@ export const Navbar = () => {
                   className="SearchInput"
                   placeholder="Enter your search text here..."
                 />
-                <i className="fa fa-search" aria-hidden="true"></i>
+                {/* <i className="fa fa-search" aria-hidden="true"></i> */}
+                <img className="searchIcon" src={searchIcon} alt="" />
               </div>
             </NavItem>
           </Nav>
@@ -147,13 +150,13 @@ export const Navbar = () => {
             Login
           </div>
           &nbsp;&nbsp;
-          <div
+          {/* <div
             style={{ margin: "0px 10px" }}
             onClick={() => isOpenSignUp(true)}
             className="AccountLG"
           >
             SignUp
-          </div>
+          </div> */}
           <CurrencySwitch />
           {/* <NavbarText>
             Sign In | Sign Up | Track Your Order | Store Locator
@@ -162,15 +165,17 @@ export const Navbar = () => {
 
         <div className="MenuItemContainer hidden-xs ">
           {navConfig.items.map((itemData, index) => {
+            console.log(index);
             return (
               <>
                 <div
                   onMouseEnter={() => setActiveItem(itemData.repositoryId)}
+                  onMouseLeave={() => setActiveItem("")}
                   className="NavItem"
                   key={index}
                 >
                   {itemData.displayName}
-                  <i className="fa fa-chevron-down"></i>
+                  <i className="fa fa-angle-down" style={{marginLeft :"5px"}}></i>
                   {activeItem === itemData.repositoryId && (
                     <div
                       onMouseLeave={() => setActiveItem("")}

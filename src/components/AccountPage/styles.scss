@@ -1,5 +1,5 @@
 .LoginModal {
-
+    
     .modal-content {
 
         border-radius: 0;
@@ -126,7 +126,12 @@
     }
 
 }
-
+@media only screen and (min-width: 991px) {
+    .LoginModal {
+        max-width: 700px !important;
+        width: 694px !important;
+    }
+}
 @media only screen and (max-width: 720px) {
     .LoginModal {
         max-width: 100%;

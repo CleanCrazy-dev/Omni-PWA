@@ -1,789 +1,849 @@
-@import url('../node_modules/font-awesome/css/font-awesome.min.css');
-@import url('../node_modules/react-simple-tree-menu/dist/main.css');
+@import url("../node_modules/font-awesome/css/font-awesome.min.css");
+@import url("../node_modules/react-simple-tree-menu/dist/main.css");
 
-
+* {
+  outline: none !important;
+}
 body {
-    text-align: center;
+  text-align: center;
 }
 
 .ImageLarge {
-    z-index: 1000;
+  z-index: 1000;
 }
 
 .loading-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background-color: transparent;
-    overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: transparent;
+  overflow: hidden;
 }
 
 .loading-bar--active::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 5px;
-    background-color: #e5cc76;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 5px;
+  background-color: #e5cc76;
 
-    -webkit-box-shadow: 10px 0 30px 15px #e5cc76, -10px 0 30px 15px #e5cc76;
-    -moz-box-shadow: 10px 0 30px 15px #e5cc76, -10px 0 30px 15px #e5cc76;
-    box-shadow: 10px 0 30px 15px #e5cc76, -10px 0 30px 15px #e5cc76;
+  -webkit-box-shadow: 10px 0 30px 15px #e5cc76, -10px 0 30px 15px #e5cc76;
+  -moz-box-shadow: 10px 0 30px 15px #e5cc76, -10px 0 30px 15px #e5cc76;
+  box-shadow: 10px 0 30px 15px #e5cc76, -10px 0 30px 15px #e5cc76;
 
-    -webkit-animation: loadBar 2s cubic-bezier(.09, .89, .7, .71) infinite;
-    -moz-animation: loadBar 2s cubic-bezier(.09, .89, .7, .71) infinite;
-    animation: loadBar 2s cubic-bezier(.09, .89, .7, .71) infinite;
+  -webkit-animation: loadBar 2s cubic-bezier(0.09, 0.89, 0.7, 0.71) infinite;
+  -moz-animation: loadBar 2s cubic-bezier(0.09, 0.89, 0.7, 0.71) infinite;
+  animation: loadBar 2s cubic-bezier(0.09, 0.89, 0.7, 0.71) infinite;
 }
 
 @keyframes loadBar {
-    0% {
-        left: -10%;
-    }
+  0% {
+    left: -10%;
+  }
 
-    100% {
-        left: 110%;
-    }
+  100% {
+    left: 110%;
+  }
 }
 
-
 .BasePage {
-    margin-top: 70px;
-    padding: 30px;
+  margin-top: 70px;
+  padding: 30px;
 }
 
 .hidden-lg {
-    display: none;
+  display: none;
 }
 
 .flex {
-    display: flex;
+  display: flex;
 }
 
-
 .j-center {
-    justify-content: center;
+  justify-content: center;
 }
 
 .fd-col {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .padding-20 {
-
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .navbar-text {
-    color: rgba(0, 0, 0, .5);
-    min-width: 300px;
-    font-weight: 800;
+  color: rgba(0, 0, 0, 0.5);
+  min-width: 300px;
+  font-weight: 800;
 }
 
 .bg-wheat {
-    background-color:
-        #f9f8f1;
+  background-color: #f9f8f1;
 }
 
 .VideoText {
-    background: #f9f8f1;
-    padding: 20px;
+  background: #f9f8f1;
+  padding: 20px;
 }
 
 .VideoRight {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .promo-featured {
+  position: relative;
+
+  h2 {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-size: 54px;
+    font-family: "Unna", serif;
+    font-weight: normal;
+    color: #000;
+    line-height: normal;
     position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
 
-    h2 {
-        padding: 0;
-        margin: 0;
-        text-decoration: none;
-        font-size: 54px;
-        font-family: 'Unna', serif;
-        font-weight: normal;
-        color: #000;
-        line-height: normal;
-        position: relative;
-        top: 0;
-        left: 0;
-        text-align: center;
-
-        .promo-text {
-            position: relative;
-            bottom: 16px;
-            font-size: 16px;
-            left: 30px;
-        }
+    .promo-text {
+      position: relative;
+      bottom: 16px;
+      font-size: 16px;
+      left: 30px;
     }
+  }
 
-    span {
-        font-size: 39px;
-        top: 10px;
-        position: relative;
-        letter-spacing: .015em;
-        line-height: 96px;
-        left: 28px;
-    }
+  span {
+    font-size: 39px;
+    top: 10px;
+    position: relative;
+    letter-spacing: 0.015em;
+    line-height: 96px;
+    left: 28px;
+  }
 
-    &::before {
-        content: "P";
-        font-size: 120px;
-        color: #ccc;
-        font-family: 'Unna', serif;
-        opacity: .6;
-        position: absolute;
-        top: 45%;
-        left: 40%;
-    }
+  &::before {
+    content: "P";
+    font-size: 120px;
+    color: #ccc;
+    font-family: "Unna", serif;
+    opacity: 0.6;
+    position: absolute;
+    top: 45%;
+    left: 40%;
+  }
+}
+
+.fab-featured-wrapper {
+  position: absolute;
+  left: 90px;
+  bottom: 0;
 }
 
 .fab-featured {
+  position: relative;
+
+  h2 {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-size: 27px;
+    font-family: "Unna", serif;
+    font-weight: normal;
+    color: #000;
+    line-height: normal;
     position: relative;
+    top: 0;
+    left: 0;
+    text-align: left;
 
-    h2 {
-        padding: 0;
-        margin: 0;
-        text-decoration: none;
-        font-size: 54px;
-        font-family: 'Unna', serif;
-        font-weight: normal;
-        color: #000;
-        line-height: normal;
-        position: relative;
-        top: 0;
-        left: 0;
-        text-align: center;
-
-        .f_products {
-            position: relative;
-            bottom: 30px;
-            font-size: 36px;
-        }
+    .f_products {
+      position: relative;
+      bottom: 15px;
+      font-size: 54px;
     }
+  }
 
-    span {
-        font-size: 22px;
-        top: 10px;
-        position: relative;
-        letter-spacing: .015em;
-        line-height: 96px;
-    }
+  span {
+    font-size: 27px;
+    top: 18px;
+    position: relative;
+    letter-spacing: 0.015em;
+    line-height: 96px;
+  }
 
-    &::before {
-        content: "F";
-        font-size: 120px;
-        color: #ccc;
-        font-family: 'Unna', serif;
-        opacity: .6;
-        position: absolute;
-        top: 45%;
-        left: 40%;
-    }
+  &::before {
+    content: "F";
+    font-size: 140px;
+    color: #ccc;
+    font-family: "Unna", serif;
+    opacity: 0.6;
+    position: absolute;
+    top: 45%;
+    left: -35%;
+  }
 }
 
 .row {
-    padding: 30px 0px;
+  padding: 30px 0px;
 }
 
 .home-img {
-    margin-top: -55px;
+  margin-top: -55px;
 }
 
 .SliderCol {
-    padding: 30px;
-    margin: auto;
+  padding: 30px;
+  margin: auto;
 
-    .slick-center {
-        transform: scale(1, 1);
-        transition: all 1s;
+  .slick-center {
+    transform: scale(1, 1);
+    transition: all 1s;
 
-        .SlideImageTrad {
-            max-width: 100%;
-            margin: auto;
-        }
+    .SlideImageTrad {
+      max-width: 100%;
+      margin: auto;
     }
-
+  }
 }
 
 .TradCarouselSlide {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 
-    .TradText {
-        span {
-            font-size: 28px;
-            font-family: 'Unna', serif;
-            line-height: 28px;
-            display: block;
-            margin: 20px 0 0;
-        }
-
-        p {
-            font-size: 12px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            height: 18px;
-            font-weight: 300;
-        }
+  .TradText {
+    span {
+      font-size: 28px;
+      font-family: "Unna", serif;
+      line-height: 28px;
+      display: block;
+      margin: 20px 0 0;
     }
 
-    .SlideImageTrad {
-        max-width: 80%;
-        margin: auto;
+    p {
+      font-size: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 18px;
+      font-weight: 300;
     }
+  }
+
+  .SlideImageTrad {
+    max-width: 80%;
+    margin: auto;
+  }
 }
 
 .Hometext {
-    text-align: center;
-    position: relative;
-    min-height: 70px;
-    font-family: fantasy;
+  text-align: center;
+  position: relative;
+  min-height: 70px;
+  font-family: fantasy;
 
-    h1 {
-        font-size: 24px;
-        font-weight: 500;
-    }
+  h1 {
+    font-size: 24px;
+    font-weight: 500;
+  }
 
-    span {
-        position: absolute;
-        font-size: 17px;
-        min-width: 167px;
-        bottom: 22px;
-    }
+  span {
+    position: absolute;
+    font-size: 17px;
+    min-width: 167px;
+    bottom: 22px;
+  }
 }
 
 .traditionalTitle {
-    max-width: 348px;
-    margin: 18px auto 0;
+  max-width: 348px;
+  margin: 18px auto 0;
+  position: relative;
+
+  &::before {
+    content: "T";
+    font-size: 120px;
+    color: #e2e1da;
+    font-family: "Unna", serif;
     position: relative;
+    top: 0;
+    left: 0;
+  }
 
-    &::before {
-        content: "T";
-        font-size: 120px;
-        color: #e2e1da;
-        font-family: 'Unna', serif;
-        position: relative;
-        top: 0;
-        left: 0;
+  h2 {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-size: 15px;
+    text-align: left;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    color: #000;
+    top: -12px;
+    line-height: normal;
+    left: 44px;
+    position: absolute;
+
+    span {
+      display: block;
+      font-size: 40px;
+      top: 0;
+      position: relative;
+      letter-spacing: 0.015em;
+      line-height: 44px;
+      font-family: "Unna", serif;
     }
+  }
 
-    h2 {
-        padding: 0;
-        margin: 0;
-        text-decoration: none;
-        font-size: 15px;
-        text-align: left;
-        font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        font-weight: normal;
-        color: #000;
-        top: -12px;
-        line-height: normal;
-        left: 44px;
-        position: absolute;
-
-        span {
-            display: block;
-            font-size: 40px;
-            top: 0;
-            position: relative;
-            letter-spacing: .015em;
-            line-height: 44px;
-            font-family: 'Unna', serif;
-        }
-    }
-
-    .traditional-product {
-        font-weight: 300;
-    }
+  .traditional-product {
+    font-weight: 300;
+  }
 }
 
 .HomeSignup {
-    text-align: center;
-    padding: 40px 0px;
-    width: 65%;
+  text-align: center;
+  padding: 40px 0px;
+  width: 65%;
 
-    .SignupInput {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 50px;
+  .SignupInput {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .Inner {
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+    input {
+      height: 51px !important;
+    width: 62% !important;
     }
+  }
 
-    .Inner {
-        display: flex;
-        width: 65%;
-        justify-content: space-between;
-    }
+  .SingupButton {
+    width: 40%;
+    text-transform: capitalize;
+    padding: 18px 5px;
+    border: 0;
+    color: #000;
+    background-color: #e5cc76;
+    border-radius: 3px;
+    font-weight: 800;
+    line-height: 16px;
+    max-width: 224px;
+    font-size: 13px;
+  }
 
-    .SingupButton {
-        width: 50%;
-        text-transform: capitalize;
-        padding: 18px 5px;
-        border: 0;
-        color: #000;
-        background-color: #e5cc76;
-        border-radius: 3px;
-        font-weight: 800;
-        font-size: 16px;
-        line-height: 16px;
-    }
+  .SearchInput {
+    // width: 100%;
+    // padding: 18px 25px;
+    // border: 0;
+    // font-size: 16px;
+    // line-height: 16px;
+    // margin-right: 20px;
 
-    .SearchInput {
-        width: 100%;
-        padding: 18px 25px;
-        border: 0;
-        font-size: 16px;
-        line-height: 16px;
-        margin-right: 20px;
-
-        background: #f9f8f1;
-    }
+    // background: #f9f8f1;
+  }
 }
 
 .sub_tit {
-    transform: rotate(-90deg);
-    position: relative;
-    right: -110px;
-    bottom: 145px;
-    font-weight: 300;
-    font-size: 12px;
-    text-transform: uppercase;
-    max-width: 230px;
-    width: 100%;
-    text-align: right;
-    z-index: 9;
-    color: #000;
-    font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  transform: rotate(-90deg);
+  position: relative;
+  right: -110px;
+  bottom: 145px;
+  font-weight: 300;
+  font-size: 12px;
+  text-transform: uppercase;
+  max-width: 230px;
+  width: 100%;
+  text-align: right;
+  z-index: 9;
+  color: #000;
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .CarouselContainer {
-    padding: 20px 50px;
-    background: white;
+  background: white;
+  .carousel {
+    padding: 25px 50px;
+    .carousel-control-prev {
+      justify-content: left !important;
+      padding-left: 15px;
+      .carousel-control-prev-icon {
+        background-image: none !important;
+        &::before {
+          border: solid black;
+          border-width: 0 1px 1px 0;
+          display: inline-block;
+          padding: 4px;
+          transform: rotate(135deg);
+          content: "" !important;
+        }
+      }
+    }
+    .carousel-control-next {
+      justify-content: flex-end !important;
+      padding-right: 15px;
+      .carousel-control-next-icon {
+        background-image: none !important;
+        &::after {
+          border: solid black;
+          border-width: 0 1px 1px 0;
+          display: inline-block;
+          padding: 4px;
+          transform: rotate(-45deg);
+          content: "" !important;
+        }
+      }
+    }
+    .carousel-indicators {
+      margin-bottom: 5px !important;
+      li {
+        border: 1px solid #ccc;
+        height: 8px !important;
+        width: 8px;
+        border-radius: 50%;
+        &.active {
+          background-color: #cccccc;
+        }
+      }
+    }
+  }
 }
 
 .slick-arrow {
-    display: none !important;
+  display: none !important;
 }
 
 .visible-ipad {
-    display: none;
+  display: none;
 }
 
+.AccountLG {
+  margin-bottom: 2px;
+  font-size: 12px;
+}
 
 @mixin ipadMixin() {
-    .HomeSlideImage {
-        min-height: 275px;
+  .HomeSlideImage {
+    min-height: 275px;
+  }
+
+  .LogoOnHamburger {
+    width: 85px;
+  }
+
+  .StoreCheckMain {
+    justify-content: center;
+
+    .StoreSelection {
+    }
+  }
+
+  .navbar-brand {
+    margin-top: 0px;
+    .fa-bars {
+      font-size: 20px !important;
+    }
+  }
+
+  .StoreModal {
+    .modal-content {
+      min-width: 100%;
+      padding: 10px;
+    }
+  }
+
+  .hidden-lg {
+    display: block !important;
+  }
+
+  .Carousel-Items {
+    width: 80% !important;
+    text-align: right;
+  }
+
+  .hidden-ipad {
+    display: none;
+    padding-top: 0;
+  }
+
+  .visible-ipad {
+    display: flex;
+  }
+
+  .SlideImagePromo {
+    width: 100%;
+  }
+
+  .Controls {
+    margin-left: 0 !important;
+  }
+
+  .M-Full-Width {
+    flex-direction: column;
+  }
+
+  .hidden-xs {
+    display: none !important;
+  }
+
+  .hidden-lg {
+    display: none;
+  }
+
+  .FilterMobileContainer {
+    display: flex !important;
+    justify-content: space-between;
+    margin-top: 18px;
+
+    .Category {
+      padding: 10px;
+      background-color: gray;
+      color: white;
+      font-weight: bold;
+      min-width: 45%;
+      position: relative;
+      font-size: 15px;
+
+      .fa-plus,
+      .fa-minus {
+        position: absolute;
+        right: 10px;
+        top: 12px;
+      }
+    }
+  }
+
+  .pdl-open {
+    display: block !important;
+    visibility: visible !important;
+    height: 100px !important;
+    transition: height 1s !important;
+    padding-top: 20px !important;
+    text-align: left;
+  }
+
+  .padding-20 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .add,
+  .check {
+    margin: 10px 0;
+  }
+
+  .ProductConfig {
+    .ProductName {
+      text-align: center !important;
     }
 
-    .LogoOnHamburger {
-        width: 85px;
+    text-align: center;
+  }
+
+  .AuthButtons {
+    display: flex;
+    font-size: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .ProductDetails {
+    .Details {
+      text-align: center;
+    }
+  }
+
+  .ProductDesc {
+    text-align: left;
+
+    .head {
+      padding: 0 20px;
+      width: 100%;
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+
+      .fa {
+        margin-right: 20px;
+      }
     }
 
-    .StoreCheckMain {
-        justify-content: center;
-
-        .StoreSelection {}
+    .pro-details {
+      padding: 30px;
     }
+  }
 
-    .navbar-brand {
-        .fa-bars {
-            font-size: 20px !important;
+  .OnModal {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .LoginModal {
+    .modal-content {
+      .modal-body {
+        .FormContainer {
+          .InputContainer {
+            padding: 10px 0px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            flex-direction: column;
+
+            span {
+              text-align: left;
+              width: 100%;
+            }
+
+            .FormInput {
+              width: 100%;
+              margin: 0;
+              margin-top: 4px;
+            }
+          }
+
+          .FormFooter {
+            margin: 0;
+
+            .SignInButton {
+              margin-top: 20px;
+              padding: 0 15px;
+
+              button {
+                width: 100% !important;
+              }
+            }
+
+            .BottomTextContainer {
+              margin: 0;
+              justify-content: space-around;
+            }
+          }
         }
+      }
+    }
+  }
+
+  .AccountLG {
+    display: none;
+  }
+}
+
+//   .slick-prev:before, .slick-next:before {
+//     font-family: "Glyphicons Halflings", "slick", sans-serif;
+//     font-size: 40px;
+// }
+
+// .slick-prev:before { content: "\e257"; }
+// .slick-next:before { content: "\e258"; }
+
+@media only screen and (width: 1024px) {
+  @include ipadMixin();
+}
+
+@media only screen and (width: 768px) {
+  @include ipadMixin();
+}
+
+@media only screen and (max-width: 720px) {
+  .AuthButtons {
+    display: flex;
+    font-size: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .ProductDesc {
+    text-align: left;
+
+    .head {
+      padding: 0 20px;
+      width: 100%;
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+
+      .fa {
+        margin-right: 20px;
+      }
     }
 
-    .StoreModal {
-        .modal-content {
-            min-width: 100%;
-            padding: 10px;
-        }
+    .pro-details {
+      padding: 30px;
+    }
+  }
+
+  .MobileBlock {
+    display: block;
+  }
+
+  .mb-20 {
+    margin-bottom: 20px;
+  }
+
+  .hidden-lg {
+    display: flex;
+  }
+
+  .Product {
+    padding: 5px !important;
+  }
+
+  .CarouselContainer {
+    padding: 0;
+  }
+
+  .HomeSlideImage {
+    min-height: 250px;
+  }
+
+  .hidden-xs {
+    display: none !important;
+  }
+
+  .traditionalTitle {
+    margin-bottom: 30px;
+  }
+
+  .SideImage {
+    width: 100%;
+  }
+
+  .HomeSignup {
+    padding-top: 0;
+    margin-top: -50px;
+    .Inner {
+      flex-direction: column;
+
+      width: 100%;
     }
 
-    .hidden-lg {
-        display: block !important;
+    .SingupButton {
+      margin-top: 30px;
+      min-width: 100%;
+    }
+  }
+
+  .home-img {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .home-bottom {
+    flex-direction: column-reverse;
+  }
+
+  .Side-Carousel {
+    justify-content: center;
+
+    button {
+      display: none !important;
     }
 
     .Carousel-Items {
-        width: 80% !important;
-        text-align: right;
+      width: 90%;
     }
 
-    .hidden-ipad {
-        display: none;
-        padding-top: 0;
+    .slick-slide {
     }
+  }
 
-    .visible-ipad {
-        display: flex;
+  .SearchInp {
+    margin-bottom: 30px;
+
+    // margin-top: 24px;
+    .SearchInput {
+      min-width: 100%;
     }
+  }
 
-    .SlideImagePromo {
-        width: 100%;
+  .navbar-toggler {
+    display: none;
+    border: none;
+  }
+
+  .ProductImage {
+    text-align: center;
+
+    img {
+      width: 90%;
+      margin-bottom: 20px;
     }
+  }
 
-    .Controls {
-        margin-left: 0 !important;
-    }
+  .ProductCode {
+    text-align: center;
+  }
 
-    .M-Full-Width {
-        flex-direction: column;
-    }
+  .ProductName {
+    font-size: 24px;
+  }
 
-    .hidden-xs {
-        display: none !important;
-    }
+  .ProductDetails {
+    padding: 0 10px;
 
-    .hidden-lg {
-        display: none;
-    }
-
-    .FilterMobileContainer {
-        display: flex !important;
-        justify-content: space-between;
-        margin-top: 18px;
-
-        .Category {
-            padding: 10px;
-            background-color: gray;
-            color: white;
-            font-weight: bold;
-            min-width: 45%;
-            position: relative;
-            font-size: 15px;
-
-            .fa-plus,
-            .fa-minus {
-                position: absolute;
-                right: 10px;
-                top: 12px;
-            }
-        }
-    }
-
-    .pdl-open {
-        display: block !important;
-        visibility: visible !important;
-        height: 100px !important;
-        transition: height 1s !important;
-        padding-top: 20px !important;
-        text-align: left;
-
-    }
-
-    .padding-20 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+    .head {
+      font-size: 14px;
     }
 
     .add,
     .check {
-        margin: 10px 0;
+      margin: 10px 0;
     }
+  }
 
-    .ProductConfig {
-        .ProductName {
-            text-align: center !important;
-        }
-
-        text-align: center;
-    }
-
-    .AuthButtons {
-        display: flex;
-        font-size: 20px;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .ProductDetails {
-        .Details {
-            text-align: center;
-        }
-    }
-
-    .ProductDesc {
-        text-align: left;
-
-        .head {
-            padding: 0 20px;
-            width: 100%;
-            min-height: 40px;
-            display: flex;
-            align-items: center;
-
-            .fa {
-                margin-right: 20px;
-            }
-        }
-
-        .pro-details {
-            padding: 30px;
-        }
-    }
-
-    .OnModal {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-
-    .LoginModal {
-        .modal-content {
-            .modal-body {
-
-
-                .FormContainer {
-                    .InputContainer {
-                        padding: 10px 0px;
-                        display: flex;
-                        align-items: center;
-                        width: 100%;
-                        flex-direction: column;
-
-                        span {
-                            text-align: left;
-                            width: 100%;
-                        }
-
-                        .FormInput {
-                            width: 100%;
-                            margin: 0;
-                            margin-top: 4px;
-                        }
-
-                    }
-
-                    .FormFooter {
-                        margin: 0;
-
-                        .SignInButton {
-                            margin-top: 20px;
-                            padding: 0 15px;
-
-                            button {
-                                width: 100% !important;
-                            }
-                        }
-
-                        .BottomTextContainer {
-                            margin: 0;
-                            justify-content: space-around;
-                        }
-                    }
-                }
-
-            }
-        }
-    }
-
-    .AccountLG {
-        display: none;
-    }
-}
-
-@media only screen and (width: 1024px) {
-    @include ipadMixin();
-}
-
-@media only screen and (width: 768px) {
-    @include ipadMixin();
-}
-
-@media only screen and (max-width: 720px) {
-    .AuthButtons {
-        display: flex;
-        font-size: 20px;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .ProductDesc {
-        text-align: left;
-
-        .head {
-            padding: 0 20px;
-            width: 100%;
-            min-height: 40px;
-            display: flex;
-            align-items: center;
-
-            .fa {
-                margin-right: 20px;
-            }
-        }
-
-        .pro-details {
-            padding: 30px;
-        }
-    }
-
-    .MobileBlock {
-        display: block;
-    }
-
-    .mb-20 {
-        margin-bottom: 20px;
-    }
-
-    .hidden-lg {
-        display: flex;
-    }
-
-    .Product {
-        padding: 5px !important;
-    }
-
-    .CarouselContainer {
-        padding: 0;
-    }
-
-    .HomeSlideImage {
-        min-height: 250px;
-
-    }
-
-    .hidden-xs {
-        display: none !important;
-    }
-
-    .traditionalTitle {
-        margin-bottom: 30px;
-
-    }
-
-    .SideImage {
-        width: 100%;
-    }
-
-    .HomeSignup {
-        padding-top: 0;
-        margin-top: -50px;
-        ;
-
-        .Inner {
-            flex-direction: column;
-
-            width: 100%;
-        }
-
-        .SingupButton {
-            margin-top: 30px;
-            min-width: 100%;
-        }
-    }
-
-    .home-img {
-        margin: 0;
-        padding: 10px;
-    }
-
-    .home-bottom {
-        flex-direction: column-reverse;
-
-
-    }
-
-    .Side-Carousel {
-        justify-content: center;
-
-        button {
-            display: none !important;
-        }
-
-        .Carousel-Items {
-            width: 90%;
-        }
-
-        .slick-slide {}
-    }
-
-    .SearchInp {
-        margin-bottom: 30px;
-
-        // margin-top: 24px;
-        .SearchInput {
-            min-width: 100%;
-        }
-    }
-
-    .navbar-toggler {
-        display: none;
-        border: none;
-    }
-
-    .ProductImage {
-        text-align: center;
-
-        img {
-            width: 90%;
-            margin-bottom: 20px;
-        }
-    }
-
-    .ProductCode {
-        text-align: center;
-    }
-
-    .ProductName {
-        font-size: 24px;
-    }
-
-    .ProductDetails {
-        padding: 0 10px;
-
-        .head {
-            font-size: 14px;
-        }
-
-        .add,
-        .check {
-            margin: 10px 0;
-        }
-    }
-
-    .padding-20 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
+  .padding-20 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 @media only screen and (min-width: 720px) {
-    .Filters {
-        min-width: 400px;
-    }
+  .Filters {
+    min-width: 400px;
+  }
 
-    .BasePage {
-        margin-top: 150px;
-        padding: 30px;
-    }
+  .BasePage {
+    margin-top: 110px;
+    padding: 30px 45px;
+  }
 
-    .home-row {
-        margin-left: 50px;
-        margin-right: 50px;
-        margin-top: 50px;
-    }
+  .home-row {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 50px;
+  }
 
-    .SideImage {
-        height: 260px;
-        width: 208px;
-    }
+  .SideImage {
+    height: 260px;
+    width: 208px;
+  }
 
-
-    .M-Full-Width {
-        display: flex;
-    }
+  .M-Full-Width {
+    display: flex;
+  }
+}
+@media only screen and(min-width : 991px) {
+  .navbar-brand {
+    margin-top: -32px;
+  }
 }
