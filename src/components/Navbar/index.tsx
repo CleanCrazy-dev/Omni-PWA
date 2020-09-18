@@ -10,10 +10,12 @@ import {
 } from "reactstrap";
 import { CurrencySwitch } from "../CurrencySwitch";
 import Logo from "./fabLogo.png";
+import searchIcon from "./search.svg";
 import "./navbar.scss";
 import navConfig from "./config.json";
 import { SignUpPage } from "../AccountPage/SignUpPage";
 import { Login } from "../AccountPage/Login";
+
 
 const treeData = [
   {
@@ -50,8 +52,6 @@ const tree = navConfig.items.map((item) => {
   return obj;
 });
 
-declare const location: any;
-
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenBurger, setIsOpenBurger] = useState(false);
@@ -59,22 +59,17 @@ export const Navbar = () => {
   const [isLogin, isOpenLogin] = useState(false);
   const [isSignUp, isOpenSignUp] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-
-  React.useEffect(
-    () => isOpenLogin(location.href === "http://localhost:3000/#/"),
-    []
-  );
-
+  console.log(">> isLogin", isLogin);
   return (
     <RNav color="light" light fixed="top" expand="md">
-      {/* <Login
+      <Login
         setOpen={(isOpen: boolean) => isOpenLogin(isOpen)}
         isOpen={isLogin}
       />
       <SignUpPage
         setOpen={(isOpen: boolean) => isOpenSignUp(isOpen)}
         isOpen={isSignUp}
-      /> */}
+      />
       <NavbarBrand>
         <i
           className="fa fa-bars hidden-lg"
@@ -111,16 +106,16 @@ export const Navbar = () => {
           </a>
         </div>{" "}
         <div className="AuthButtons">
-          {/* <div style={{ margin: "0px 10px" }} onClick={() => isOpenLogin(true)}>
+          <div style={{ margin: "0px 10px" }} onClick={() => isOpenLogin(true)}>
             Login
-          </div> */}
+          </div>
           &nbsp;&nbsp;
-          {/* <div
+          <div
             style={{ margin: "0px 10px" }}
             onClick={() => isOpenSignUp(true)}
           >
             SignUp
-          </div> */}
+          </div>
         </div>
         <div className="TreeNode hidden-lg">
           <TreeMenu data={tree as any} hasSearch={false} />
@@ -142,17 +137,18 @@ export const Navbar = () => {
                   className="SearchInput"
                   placeholder="Enter your search text here..."
                 />
-                <i className="fa fa-search" aria-hidden="true"></i>
+                {/* <i className="fa fa-search" aria-hidden="true"></i> */}
+                <img className="searchIcon" src={searchIcon} alt="" />
               </div>
             </NavItem>
           </Nav>
-          {/* <div
+          <div
             className="AccountLG"
             style={{ margin: "0px 10px" }}
             onClick={() => isOpenLogin(true)}
           >
             Login
-          </div> */}
+          </div>
           &nbsp;&nbsp;
           {/* <div
             style={{ margin: "0px 10px" }}
@@ -169,15 +165,17 @@ export const Navbar = () => {
 
         <div className="MenuItemContainer hidden-xs ">
           {navConfig.items.map((itemData, index) => {
+            console.log(index);
             return (
               <>
                 <div
                   onMouseEnter={() => setActiveItem(itemData.repositoryId)}
+                  onMouseLeave={() => setActiveItem("")}
                   className="NavItem"
                   key={index}
                 >
                   {itemData.displayName}
-                  <i className="fa fa-chevron-down"></i>
+                  <i className="fa fa-angle-down" style={{marginLeft :"5px"}}></i>
                   {activeItem === itemData.repositoryId && (
                     <div
                       onMouseLeave={() => setActiveItem("")}

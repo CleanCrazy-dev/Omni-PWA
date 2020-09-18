@@ -143,8 +143,8 @@ select.currency-switcher {
     border-bottom: 2px solid #999;
     border-right: 2px solid #999;
     content: "";
-    display: block;
-    height: 5px;
+    // display: block;
+    // height: 5px;
     box-sizing: content-box;
     pointer-events: none;
     position: absolute;
@@ -153,9 +153,23 @@ select.currency-switcher {
     -webkit-transform-origin: 66% 66%;
     transform-origin: 66% 66%;
     -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+    // transform: rotate(45deg);
     transition: all .15s ease-in-out;
-    width: 5px
+    // width: 5px;
+
+    width: 0;
+    height: 0;
+    display: inline-block;
+    padding: 2px;
+    margin-left: 4px;
+    vertical-align: middle;
+    border: solid #000;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    border-width: 0 1px 1px 0;
+    margin-top: 0px;
+
+
 }
 
 .nice-select.open:after {
@@ -164,6 +178,7 @@ select.currency-switcher {
 }
 
 .nice-select.open .list {
+    overflow: auto;
     opacity: 1;
     pointer-events: auto;
     -webkit-transform: scale(1) translateY(0);
@@ -292,7 +307,7 @@ select.currency-switcher {
 }
 
 .nice-select.slim {
-    padding: 0 30px 0 0;
+    padding: 0 20px 0 0;
     height: 20px;
     line-height: 20px;
     border: 0;
@@ -300,12 +315,13 @@ select.currency-switcher {
 }
 
 .nice-select.slim .current .flags {
-    margin-top: 0 !important
+    margin-top: 2px !important;
+    margin-right: -3px !important;
 }
 
 .nice-select.slim:after {
     right: 4px;
-    top: 6px
+    top: 8px
 }
 
 .flags {
@@ -313,17 +329,18 @@ select.currency-switcher {
     background-repeat: no-repeat;
     display: block;
     margin: 10px 4px 0 0 !important;
-    float: left
+    float: left;
+    
 }
 
 .flags-United-States {
     background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png');
-    background-size: cover;
+    background-size: 24px;
 }
 
 .flags-India {
     background-image: url('https://cdn.countryflags.com/thumbs/india/flag-400.png');
-    background-size: cover;
+    background-size: 24px;
 
 }
 
@@ -367,6 +384,7 @@ select.currency-switcher {
 .nice-select .current,
 .nice-select .list .option {
     color: #403F3F;
+    font-size: 10px;
 }
 
 .nice-select .option:hover,
