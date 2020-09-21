@@ -847,3 +847,36 @@ body {
     margin-top: -32px;
   }
 }
+@media only screen and (min-width:768px) and (max-width : 991px) {
+  .BasePage {
+    margin-top: 77px !important;
+  }
+  .Side-Carousel {
+    padding: 30px 5px !important;
+  }
+  .SlideImage {
+    max-width: 240px !important;
+  }
+  .fab-featured-wrapper{
+    left: 0px !important;
+    .fab-featured {
+      span {
+        left: 42px !important;
+      }
+      &::before {
+        font-size: 100px !important;
+        left: 0 !important;
+      }
+      .f_products {
+        bottom: 23px !important;
+        left: 40px !important;
+      }
+    }
+  }
+ .f_products {
+    font-size: 32px !important;
+  }
+  .fab-featured span {
+    font-size: 22px !important;
+  }
+}
