@@ -26,3 +26,20 @@
 .HomeBottom {
     justify-content: center;
 }
+.btn_desc {
+    margin: 25px 100px 20px;
+    float: right;
+    font-size: 30px;
+    color: #000;
+    letter-spacing: .5px;
+    margin-right: 100px;
+    font-family: 'Unna',serif;
+    a {
+        text-decoration: none;
+        color: #000;
+        padding-right: 38px;
+        background: url("../resource/img/right-arrow.svg") left center no-repeat;
+        background-size: 39px 24px;
+        background-position: right 8px;
+    }
+}

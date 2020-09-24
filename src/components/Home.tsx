@@ -22,6 +22,7 @@ import { SignUpPage } from "./AccountPage/SignUpPage";
 import { Carousel } from "./Carousel";
 import { SideCarousel } from "./docs";
 import "./home.scss";
+import { Link } from "react-router-dom";
 const items = [
   {
     src:
@@ -153,6 +154,11 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
               around the corner. Take a look at these curated looks we put
               together just for you!
             </div>
+            <div className="btn_desc d-none d-md-block">
+                <Link to="/">
+                    Explore
+                </Link>
+            </div>
           </Col>
           <Col xs={12} md={6} lg={6}>
             <div className="image">
@@ -186,6 +192,11 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
               soothing pastels and contrasting accents to make it your own. Sit
               back &amp; relax. Get those creative juices flowing..It's time for
               some TLC. #WFM #InThisTogether
+            </div>
+            <div className="btn_desc d-none d-md-block">
+                <Link to="/">
+                    Explore
+                </Link>
             </div>
           </Col>
         </Row>

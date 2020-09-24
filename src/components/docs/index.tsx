@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "./carousel.scss";
 import { isMobile, isIPad } from "../../generalUtils";
 import arrow from "../../resource/img/arrow.svg";
+import { Link } from "react-router-dom";
 export class SideCarousel extends React.Component<{
   onClickSlide: () => void;
   slideImages: any[];
@@ -89,6 +90,12 @@ export class SideCarousel extends React.Component<{
                     <span>Experience the</span>
                     <span className="h1-text">Joy of Gifting</span>
                   </div>
+                  {/* <div className="MiniSlideBottom">
+                      <Link to="/">
+                          <span>Everyday Routine</span>
+                          <span className="arrow_align ">Self Care</span>
+                      </Link>
+                  </div> */}
                 </div>
               );
             })}
