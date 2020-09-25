@@ -750,7 +750,7 @@ body {
   }
 
   .SideImage {
-    width: 100%;
+    width: 93%;
   }
 
   .HomeSignup {
@@ -848,6 +848,11 @@ body {
   }
   .sub_tit {
     right: -100px;
+  }
+  .promo-featured {
+    &::before {
+      left: 22%;
+    }
   }
 }
 
