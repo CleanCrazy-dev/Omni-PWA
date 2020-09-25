@@ -147,7 +147,7 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
               <h1>Malhar Collection</h1>
               <span> Rhythm of life!</span>
             </div>
-            <div>
+            <div className="HomeParagraph">
               Spread the joy with our celebratory wardrobe with splashes of
               colour, natural hues and gentle handcrafted motifs and patterns.
               Discover beautiful hand-woven fabrics perfect for the festivities
@@ -186,7 +186,7 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
               <h1> The Home Edition!</h1>
               <span>It's good to be home</span>
             </div>
-            <div>
+            <div className="HomeParagraph">
               It's good to be home Home is a place for Love and happiness. Make
               it a beautiful space with our home furnishings. Experiment with
               soothing pastels and contrasting accents to make it your own. Sit
@@ -351,7 +351,7 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
         </Row>
         <Row className="HomeBottom" >
           <Col xs={12} md={12} lg={8} className="flex j-center fd-col HomeSignup">
-            <h2 style={{ fontFamily: "Unna,serif"}}>Be the First to know!</h2>
+            <h2>Be the First to know!</h2>
             <p>
               Join our mailing list for exclusive access to the latest fashion
               trends, tips, and more.

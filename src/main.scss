@@ -88,6 +88,28 @@ body {
 .VideoText {
   background: #f9f8f1;
   padding: 20px;
+  text-align: left;
+  h4 {
+    font-family: 'Unna',serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  span {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 0;
+    text-overflow: ellipsis;
+    max-width: 270px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #000;
+    font-weight: 300;
+  }
 }
 
 .VideoRight {
@@ -251,16 +273,33 @@ body {
   font-family: fantasy;
 
   h1 {
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 50px;
+    text-align: center;
+    font-weight: normal;
+    font-family: 'Unna',serif;
   }
 
   span {
     position: absolute;
     font-size: 17px;
     min-width: 167px;
-    bottom: 22px;
+    bottom: 0px;
+    font-family: 'Unna',serif;
+    font-style: italic;
+    font-size: 27px;
+    text-align: right;
+    font-weight: normal;
+    letter-spacing: .2px;
   }
+}
+.HomeParagraph {
+  margin: 27px auto;
+  text-align: center;
+  font-family: 'Muli','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-weight: 200;
+  font-size: 15px;
+  background: transparent;
+  color: #333;
 }
 
 .traditionalTitle {
@@ -321,7 +360,7 @@ body {
 
   .Inner {
     display: flex;
-    width: 75%;
+    width: 83%;
     justify-content: space-between;
     input {
       height: 51px !important;
@@ -330,7 +369,19 @@ body {
   }
 
   .SingupButton {
-    width: 40%;
+    // width: 40%;
+    // text-transform: capitalize;
+    // padding: 18px 5px;
+    // border: 0;
+    // color: #000;
+    // background-color: #e5cc76;
+    // border-radius: 3px;
+    // font-weight: 800;
+    // line-height: 16px;
+    // max-width: 224px;
+    // font-size: 13px;
+
+    width: 36%;
     text-transform: capitalize;
     padding: 18px 5px;
     border: 0;
@@ -338,9 +389,10 @@ body {
     background-color: #e5cc76;
     border-radius: 3px;
     font-weight: 800;
-    line-height: 16px;
-    max-width: 224px;
     font-size: 13px;
+    line-height: 16px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
   }
 
   .SearchInput {
@@ -352,6 +404,12 @@ body {
     // margin-right: 20px;
 
     // background: #f9f8f1;
+    padding: 18px 25px;
+    border: 0;
+    font-size: 13px;
+    line-height: 16px;
+    background: #f9f8f1;
+    font-family: 'Muli','Helvetica Neue',Helvetica,Arial,sans-serif;
   }
 }
 
