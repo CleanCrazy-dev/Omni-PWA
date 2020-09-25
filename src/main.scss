@@ -90,7 +90,7 @@ body {
   padding: 20px;
   text-align: left;
   h4 {
-    font-family: 'Unna',serif;
+    font-family: "Unna", serif;
     font-size: 20px;
     font-weight: 400;
     margin: 0;
@@ -273,10 +273,10 @@ body {
   font-family: fantasy;
 
   h1 {
-    font-size: 50px;
+    font-size: 30px;
     text-align: center;
     font-weight: normal;
-    font-family: 'Unna',serif;
+    font-family: "Unna", serif;
   }
 
   span {
@@ -284,18 +284,17 @@ body {
     font-size: 17px;
     min-width: 167px;
     bottom: 0px;
-    font-family: 'Unna',serif;
+    font-family: "Unna", serif;
     font-style: italic;
-    font-size: 27px;
     text-align: right;
     font-weight: normal;
-    letter-spacing: .2px;
+    letter-spacing: 0.2px;
   }
 }
 .HomeParagraph {
   margin: 27px auto;
   text-align: center;
-  font-family: 'Muli','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 200;
   font-size: 15px;
   background: transparent;
@@ -364,23 +363,11 @@ body {
     justify-content: space-between;
     input {
       height: 51px !important;
-    width: 62% !important;
+      width: 62% !important;
     }
   }
 
   .SingupButton {
-    // width: 40%;
-    // text-transform: capitalize;
-    // padding: 18px 5px;
-    // border: 0;
-    // color: #000;
-    // background-color: #e5cc76;
-    // border-radius: 3px;
-    // font-weight: 800;
-    // line-height: 16px;
-    // max-width: 224px;
-    // font-size: 13px;
-
     width: 36%;
     text-transform: capitalize;
     padding: 18px 5px;
@@ -391,25 +378,16 @@ body {
     font-weight: 800;
     font-size: 13px;
     line-height: 16px;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
   .SearchInput {
-    // width: 100%;
-    // padding: 18px 25px;
-    // border: 0;
-    // font-size: 16px;
-    // line-height: 16px;
-    // margin-right: 20px;
-
-    // background: #f9f8f1;
     padding: 18px 25px;
     border: 0;
     font-size: 13px;
     line-height: 16px;
     background: #f9f8f1;
-    font-family: 'Muli','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 }
 
@@ -702,14 +680,6 @@ body {
   }
 }
 
-//   .slick-prev:before, .slick-next:before {
-//     font-family: "Glyphicons Halflings", "slick", sans-serif;
-//     font-size: 40px;
-// }
-
-// .slick-prev:before { content: "\e257"; }
-// .slick-next:before { content: "\e258"; }
-
 @media only screen and (width: 1024px) {
   @include ipadMixin();
 }
@@ -873,6 +843,12 @@ body {
     align-items: center;
     text-align: center;
   }
+  .SearchInp {
+    display: none;
+  }
+  .sub_tit {
+    right: -100px;
+  }
 }
 
 @media only screen and (min-width: 720px) {
@@ -904,8 +880,16 @@ body {
   .navbar-brand {
     margin-top: -32px;
   }
+  .Hometext {
+    h1 {
+      font-size: 50px;
+    }
+    span {
+      font-size: 17px;
+    }
+  }
 }
-@media only screen and (min-width:768px) and (max-width : 991px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   .BasePage {
     margin-top: 77px !important;
   }
@@ -915,7 +899,7 @@ body {
   .SlideImage {
     max-width: 240px !important;
   }
-  .fab-featured-wrapper{
+  .fab-featured-wrapper {
     left: 0px !important;
     .fab-featured {
       span {
@@ -931,10 +915,15 @@ body {
       }
     }
   }
- .f_products {
+  .f_products {
     font-size: 32px !important;
   }
   .fab-featured span {
     font-size: 22px !important;
+  }
+  .promo-featured {
+    &::before {
+      left: 28%;
+    }
   }
 }

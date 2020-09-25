@@ -22,7 +22,7 @@ export class SideCarousel extends React.Component<{
       dots: isMobile() && true,
       infinite: true,
       speed: 500,
-      slidesToShow: isIPad() ? 2 : isMobile() ? 1 : 3,
+      slidesToShow: isIPad() ? 2 : isMobile() ? 2 : 3,
       slidesToScroll: 1,
     };
     const { slideImages } = this.props;
