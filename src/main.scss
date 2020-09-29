@@ -213,15 +213,19 @@ body {
 }
 
 .row {
-  padding: 30px 0px;
+  padding: 20px 0px;
 }
 
 .home-img {
   margin-top: -55px;
+  max-height: 400px;
+  max-width: -webkit-fill-available;
+  width: auto;
 }
 
 .SliderCol {
   padding: 30px;
+  padding-bottom: 0px;
   margin: auto;
 
   .slick-center {
@@ -348,13 +352,13 @@ body {
 
 .HomeSignup {
   text-align: center;
-  padding: 40px 0px;
+  padding: 15px 0px;
   width: 65%;
 
   .SignupInput {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
   }
 
   .Inner {
@@ -758,8 +762,13 @@ body {
     margin-top: -50px;
     .Inner {
       flex-direction: column;
-
       width: 100%;
+      input {
+        width: 100% !important;
+      }
+      .SingupButton {
+        margin-top: 10px;
+      }
     }
 
     .SingupButton {
@@ -893,6 +902,11 @@ body {
       font-size: 17px;
     }
   }
+  .main {
+    .SearchInp {
+      display: none;
+    }
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .BasePage {
@@ -930,5 +944,36 @@ body {
     &::before {
       left: 28%;
     }
+  }
+  // .Side-Carousel {
+  //   justify-content: center;
+  // }
+}
+
+@media only screen and(width : 800px) {
+  .hidden-lg {
+    display: block;
+  }
+  .MenuItemContainer {
+    display: none;
+  }
+  .AuthButtons {
+    display: flex;
+    font-size: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+  }
+  .main {
+    .SearchInp {
+      display: none;
+    }
+  }
+  .nice-select.slim:after {
+    right: 1px;
+    top: 8px;
+  }
+  .image {
+    margin-top: -10px !important;
   }
 }

@@ -106,7 +106,7 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
     ];
 
     return (
-      <div>
+      <div className="main">
         {/* <SignUpPage /> */}
         {isMobile() && (
           <div className="SearchInp">
@@ -175,6 +175,7 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
           <Col xs={12} md={6} lg={6}>
             <div className="image home-img">
               <img
+                className="home-img"
                 alt=" col-1"
                 width="100%"
                 src="https://www.fabindia.com/file/general/look-front-30-07.jpg"
