@@ -106,17 +106,17 @@ export class ProductListImpl extends React.PureComponent<
             <span>View By:</span>
             <div className="BoxContainer">
               <div
-                className="ViewType"
+                className="ViewType1"
                 onClick={() => this.setState({ colNums: 12 })}
               >
-                <i className="fa fa-square" aria-hidden="true"></i>
+                <div className="sorted-with"></div>
               </div>
               <div
-                className="ViewType"
+                className="ViewType2"
                 onClick={() => this.setState({ colNums: 6 })}
               >
-                <i className="fa fa-square" aria-hidden="true"></i>
-                <i className="fa fa-square" aria-hidden="true"></i>
+                <div className="sorted-with"></div>
+                <div className="sorted-with"></div>
               </div>
             </div>
           </div>
@@ -244,29 +244,29 @@ export class ProductListImpl extends React.PureComponent<
             <div className="ProductTitle">Gifting Ideas </div>
             <div className="FilterContainer">
               <div className="ViewBy">
-                <span>View By:</span>
+                <span className="viewByText">View By:</span>
                 <div className="BoxContainer">
                   <div
-                    className="ViewType"
+                    className="ViewType1"
                     onClick={() => this.setState({ colNums: 4 })}
                   >
-                    <i className="fa fa-square" aria-hidden="true"></i>
-                    <i className="fa fa-square" aria-hidden="true"></i>
-                    <i className="fa fa-square" aria-hidden="true"></i>
+                    <div className="sorted-with"></div>
+                    <div className="sorted-with"></div>
+                    <div className="sorted-with"></div>
                   </div>
                   <div
-                    className="ViewType"
+                    className="ViewType2"
                     onClick={() => this.setState({ colNums: 3 })}
                   >
-                    <i className="fa fa-square" aria-hidden="true"></i>
-                    <i className="fa fa-square" aria-hidden="true"></i>
-                    <i className="fa fa-square" aria-hidden="true"></i>
-                    <i className="fa fa-square" aria-hidden="true"></i>
+                    <div className="sorted-with"></div>
+                    <div className="sorted-with"></div>
+                    <div className="sorted-with"></div>
+                    <div className="sorted-with"></div>
                   </div>
                 </div>
               </div>
               <div className="SortBy">
-                <span>Sort By:</span>
+                <span className="viewByText">Sort By:</span>
                 <div className="BoxContainer">
                   <select className="SortSelect">
                     <option>New to old</option>

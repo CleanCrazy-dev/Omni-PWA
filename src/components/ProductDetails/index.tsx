@@ -254,7 +254,7 @@ export class ProductDetailsImpl extends React.Component<
                     })}
                   </div>
                 </div>
-                <div>
+                <div className="quantity-box">
                   {" "}
                   <div className="Quantity">
                     <i className="fa qty fa-plus" />
@@ -262,7 +262,7 @@ export class ProductDetailsImpl extends React.Component<
                     <i className="fa qty fa-minus" />
                   </div>
                   <div>
-                    <button className="add">ADD TO CART</button>
+                    <button className="add add-to-cart">ADD TO CART</button>
                   </div>
                 </div>
               </div>
@@ -270,7 +270,7 @@ export class ProductDetailsImpl extends React.Component<
                 <div className="head">Check Delivery Service Availability</div>
                 <div className="detail-data pro-details">
                   {" "}
-                  <div>Check Delivery Service Availability</div>
+                  <div className="check-service">Check Delivery Service Availability</div>
                   <input
                     onChange={(e) =>
                       this.setState({ storePinCode: e.target.value })
@@ -336,6 +336,7 @@ export class ProductDetailsImpl extends React.Component<
                   </span>
                 )} */}
               </div>
+              
               <div className="ProductRow padding-20 ProductDesc">
                 <div
                   onClick={() =>

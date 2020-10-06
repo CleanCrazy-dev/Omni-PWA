@@ -1,325 +1,411 @@
 .ProductName {
-    font-size: 30px;
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  margin: 0;
+  line-height: normal;
 }
 
 .ProductDetails {
-    background: #f9f8f1;
-    padding: 27px 0;
+  background: #f9f8f1;
+  padding: 27px 0;
 
-    .Details {
-        text-align: left;
-        padding-top: 50px;
-    }
-
-
+  .Details {
+    text-align: left;
+    padding: 50px 140px 5px 0px;
+  }
 }
 
 .pro-details {
-    min-height: 40px;
+  min-height: 40px;
 }
 
 .ProductImage {
-    text-align: center;
-    padding: 20px;
+  text-align: center;
+  padding: 20px;
 
-    img {
-        min-width: 80%;
-        max-height: 500px;
-    }
+  img {
+    min-width: 80%;
+    max-height: 500px;
+  }
 }
 
 .ColorItems {
-    span {
-        font-weight: bold;
+  span {
+    font-weight: 800;
+    font-size: 13px;
+  }
+
+  .Colors {
+    display: flex;
+    border-top: 1px solid #d4d4d4;
+    // margin-left: -12px;
+
+    .ColorName {
+      margin: 10px;
+
+      div {
+        border-radius: 100%;
+        width: 20px;
+        height: 20px;
+      }
     }
-
-    .Colors {
-        display: flex;
-
-
-        .ColorName {
-            margin: 10px;
-
-            div {
-                border-radius: 100%;
-                width: 20px;
-                height: 20px;
-            }
-        }
-
-    }
+  }
 }
 
 .SizeItems {
-    span {
-        font-weight: bold;
-    }
+  span {
+    font-weight: 800;
+    font-size: 13px;
+  }
 
-    .SizeChart {
-        display: flex;
+  .SizeChart {
+    display: flex;
 
-        .SizeName {
-            border: 1px solid;
-            padding: 5px 20px;
-            margin-bottom: 20px;
-        }
+    .SizeName {
+      border: 1px solid;
+      padding: 5px 20px;
+      margin-bottom: 20px;
+      height: 36px;
     }
+  }
 }
 
 .StoreCheckMain {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0;
+
+  .StoreSelection {
+    min-width: 110px;
     display: flex;
-    flex-direction: row;
-    padding: 20px 0;
+    min-height: 50px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 8px;
+    flex-direction: column;
+    margin-right: 20px;
+    padding: 5px;
 
-    .StoreSelection {
-        min-width: 110px;
-        display: flex;
-        min-height: 50px;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid;
-        border-radius: 8px;
-        flex-direction: column;
-        margin-right: 20px;
-        padding: 5px;
-
-        &:hover {
-            cursor: pointer;
-        }
-
-        .fa {
-            font-size: 30px;
-        }
-
-        span {
-            padding: 6px;
-            font-size: 10px;
-            display: flex;
-            flex-direction: column;
-
-            button {
-                background: #e5cc76;
-                border: none;
-                font-weight: 700;
-                border-radius: 4px;
-            }
-        }
+    &:hover {
+      cursor: pointer;
     }
 
+    .fa {
+      font-size: 30px;
+    }
+
+    span {
+      padding: 6px;
+      font-size: 10px;
+      display: flex;
+      flex-direction: column;
+
+      button {
+        background: #e5cc76;
+        border: none;
+        font-weight: 700;
+        border-radius: 4px;
+      }
+    }
+  }
 }
 
-
 .FeaturedItems {
-    padding: 40px;
-    text-align: center;
+  padding: 40px;
+  text-align: center;
 
-    .ProductConfig {
-        padding: 20px;
-        background: #f9f8f1;
-        width: 80%;
-        margin: auto;
-        height: 85px;
-        overflow: hidden;
+  .ProductConfig {
+    padding: 20px;
+    background: #f9f8f1;
+    width: 80%;
+    margin: auto;
+    height: 85px;
+    overflow: hidden;
 
-        .ProductName {
-            font-size: 12px;
-            text-align: center;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            color: #000;
-            margin: 0 !important;
-            line-height: 14px;
-            text-decoration: underline;
-            font-weight: 300;
-        }
-
-        .ProductPrice {
-            color: #8f2c34;
-            font-size: 18px;
-            padding-top: 10px;
-
-        }
-
-        &:hover {
-            cursor: pointer;
-        }
+    .ProductName {
+      font-size: 12px;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #000;
+      margin: 0 !important;
+      line-height: 14px;
+      text-decoration: underline;
+      font-weight: 300;
     }
 
-    .Featured {
-        font-size: 26px;
-        height: 50px;
+    .ProductPrice {
+      color: #8f2c34;
+      font-size: 18px;
+      padding-top: 10px;
+      font-weight: 600;
     }
 
-    button {
-        display: block !important;
-
-        &::before {
-            color: black;
-        }
-
+    &:hover {
+      cursor: pointer;
     }
+  }
+
+  .Featured {
+    font-size: 26px;
+    height: 50px;
+  }
+
+  button {
+    display: block !important;
+
+    &::before {
+      color: black;
+    }
+  }
 }
 
 .StoreModal {
+  .modal-content {
+    padding: 30px 50px 30px 50px;
+    border-radius: 0;
+    background-color: #f4f2e5;
+    min-width: 600px;
 
-    .modal-content {
-        padding: 30px 50px 30px 50px;
-        border-radius: 0;
-        background-color: #f4f2e5;
-        min-width: 600px;
-
-        .HeadText {
-            font-family: 'Unna', serif;
-            font-size: 28px;
-            font-weight: 500;
-            color: #000;
-            line-height: 30px;
-            font-style: italic;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 4px;
-            margin-bottom: 25px;
-            display: inline-block;
-            text-align: center;
-            width: 100%;
-        }
-
-        .Manager {
-            font-size: 19px;
-            font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            font-weight: 800;
-            margin-right: 5px;
-        }
-
-        .Contact {
-            font-size: 13px;
-            font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            text-transform: capitalize;
-            margin-top: 10px;
-
-            span {
-                font-weight: 700;
-            }
-        }
-
-        h4 {
-            font-size: 14px;
-            font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            text-transform: uppercase;
-            font-weight: 800;
-            margin: 20px 0 10px;
-            border-bottom: 1px solid #ccc;
-            width: 70%;
-        }
-
-        .StoreDetails {
-            text-align: left;
-            padding: 10px;
-            cursor: pointer;
-        }
-
-        .Timing {
-            font-size: 14px;
-            font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        }
+    .HeadText {
+      font-family: "Unna", serif;
+      font-size: 28px;
+      font-weight: 500;
+      color: #000;
+      line-height: 30px;
+      font-style: italic;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 4px;
+      margin-bottom: 25px;
+      display: inline-block;
+      text-align: center;
+      width: 100%;
     }
+
+    .Manager {
+      font-size: 19px;
+      font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      margin-right: 5px;
+    }
+
+    .Contact {
+      font-size: 13px;
+      font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      text-transform: capitalize;
+      margin-top: 10px;
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    h4 {
+      font-size: 14px;
+      font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      text-transform: uppercase;
+      font-weight: 800;
+      margin: 20px 0 10px;
+      border-bottom: 1px solid #ccc;
+      width: 70%;
+    }
+
+    .StoreDetails {
+      text-align: left;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .Timing {
+      font-size: 14px;
+      font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+  }
 }
 
 .qty {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    border-radius: 0;
-    padding: 0;
-    font-size: 12px;
-    border: 0;
-    float: left;
-    width: 46px;
-    text-align: center;
-    background-color: transparent;
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
-    min-height: 29px;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    padding: 4px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  font-size: 12px;
+  border: 0;
+  float: left;
+  width: 46px;
+  height: 36px;
+  text-align: center;
+  background-color: transparent;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  min-height: 29px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding: 4px;
+  cursor: pointer;
 }
 
 .add {
-    padding: 10px;
-    border-radius: 3px;
-    width: 100%;
-    max-width: 170px;
-    font-weight: 800;
-    color: #000;
-    font-size: 13px;
-    background-color: #e5cc76;
-    border: none;
-    margin-left: 30px;
-
+  padding: 11px 10px 9px 10px;
+  border-radius: 3px;
+  font-size: 13px;
+  background-color: #e5cc76;
+  border: none;
+  margin-left: 30px;
+  width: 100%;
+  max-width: 170px;
+  font-weight: 800;
+  color: #000;
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .check {
-    background-color: #000;
-    border-radius: 3px;
-    color: #fff;
-    padding: 8px 35px 10px;
-    width: auto;
-    font-size: 13px;
-    font-weight: 800;
-    line-height: normal;
-    margin-left: 20px;
-    border: 0;
-    height: 34px;
-    min-width: 111px;
+  background-color: #000;
+  border-radius: 10px;
+  color: #fff;
+  padding: 8px 35px 10px;
+  width: auto;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: normal;
+  margin-left: -10px;
+  border: 0;
+  height: 36px;
+  min-width: 111px;
 }
 
 .input {
-    padding: 5px 2px 5px 18px;
-    height: 36px;
-    min-width: 210px;
-    background: transparent;
-    border: 1px solid #000;
-    font-size: 12px;
-    color: #7f7d75;
-    font-weight: 300;
-    border-radius: 3px;
+  padding: 5px 2px 5px 18px;
+  height: 36px;
+  min-width: 210px;
+  background: transparent;
+  border: 1px solid #000;
+  font-size: 12px;
+  color: #7f7d75;
+  font-weight: 300;
+  border-radius: 3px;
 }
 
 .head {
-    font-size: 20px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    font-weight: 600;
-    border-bottom: 1px solid #d4d4d4;
+  font-size: 15px;
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  color: #000;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid #d4d4d4;
 }
 
 .OnModal {
-    padding: 10px;
-    justify-content: center;
-    text-align: left;
+  padding: 10px;
+  justify-content: center;
+  text-align: left;
 }
 
 .ProductPrice {
-    font-size: 30px;
-    padding: 20px 0;
+  font-size: 25px;
+  font-weight: 800;
+  padding: 20px 0;
+}
+.quantity-box {
+  display: flex;
+  align-items: center;
+}
+.check-service {
+  margin: 10px 0px;
+}
+.slick-next::before {
+  border: solid black;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(-45deg);
+  content: "" !important;
+}
+.slick-prev:before {
+  border: solid black;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(135deg);
+  content: "" !important;
 }
 
-@media only screen and (max-width: 720px) {
-    .StoreModal {
-        .modal-content {
-            min-width: 100%;
-            padding: 20px;
-        }
+@media only screen and (max-width: 768px) {
+  .StoreModal {
+    .modal-content {
+      min-width: 100%;
+      padding: 20px;
     }
+  }
 
+  .StoreCheckMain {
+    justify-content: space-evenly;
+  }
+
+  .ProductDetails {
+    .Details {
+      padding: 0px 10px;
+    }
+    .pro-details {
+      .input {
+        margin-right: 8px;
+        height: 32px;
+      }
+    }
+    .ProductName {
+      padding-bottom: 8px;
+      font-weight: 600;
+    }
+    .ProductPrice {
+      font-size: 20px;
+      padding: 8px 0;
+    }
+    .SizeItems .SizeChart .SizeName {
+      margin: 12px 5px;
+    }
+    .quantity-box {
+      display: flex;
+      .Quantity {
+        margin-right: 10px;
+      }
+      .add-to-cart {
+        margin: 0px;
+        padding: 5px 14px;
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .ProductDetails .Details {
+    padding: 0px 30px !important;
+    text-align: center;
+    .ColorItems .Colors {
+      justify-content: center;
+    }
+    .SizeItems .SizeChart {
+      justify-content: center;
+    }
+    .quantity-box {
+      justify-content: center;
+    }
     .StoreCheckMain {
-        justify-content: space-evenly;
-
-        .StoreSelection {
-            margin: 0;
-        }
+      justify-content: center;
     }
+
+    .ProductDesc {
+      text-align: left;
+      padding: 0px 9px;
+    }
+  }
+  .ProductImage div {
+    margin: 0px 40px;
+  }
 }

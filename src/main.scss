@@ -485,8 +485,6 @@ body {
   .StoreCheckMain {
     justify-content: center;
 
-    .StoreSelection {
-    }
   }
 
   .navbar-brand {
@@ -683,6 +681,11 @@ body {
     display: none;
   }
 }
+.ProductCode {
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+}
 
 @media only screen and (width: 1024px) {
   @include ipadMixin();
@@ -795,9 +798,6 @@ body {
 
     .Carousel-Items {
       width: 90%;
-    }
-
-    .slick-slide {
     }
   }
 
