@@ -6,6 +6,8 @@ import { Col, Row } from "reactstrap";
 import { IHistory } from "../../interfaces";
 import { ProductModel } from "../../models/ProductModel";
 import "./productList.scss";
+import onex from "../../resource/img/onex.webp";
+import twox from "../../resource/img/twox.png";
 import { Login } from "../AccountPage/Login";
 import { isMobile } from "../../generalUtils";
 export interface IProductListProps {
@@ -49,87 +51,89 @@ export class ProductListImpl extends React.PureComponent<
     return (
       <div className="ProductListPageContainer M-Full-Width">
         {/* <Login /> */}
-        <div className="ProductPath hidden-lg">Home / Collections</div>
-        <div className="FilterMobileContainer hidden-lg">
-          <div
-            onClick={() =>
-              this.setState({
-                showRef: false,
-                showCate: !this.state.showCate,
-              })
-            }
-            className="Category"
-          >
-            CATEGORY{" "}
-            <i
-              className={`${
-                !this.state.showCate ? "fa fa-plus" : "fa fa-minus"
-              }`}
-            />
+        <div className="productInfodetail">
+          <div className="ProductPath hidden-lg">Home / Collections</div>
+          <div className="FilterMobileContainer hidden-lg">
+            <div
+              onClick={() =>
+                this.setState({
+                  showRef: false,
+                  showCate: !this.state.showCate,
+                })
+              }
+              className="Category"
+            >
+              CATEGORY{" "}
+              <i
+                className={`${
+                  !this.state.showCate ? "fa fa-plus" : "fa fa-minus"
+                }`}
+              />
+            </div>
+            <div
+              onClick={() =>
+                this.setState({
+                  showCate: false,
+                  showRef: !this.state.showRef,
+                })
+              }
+              className="Category"
+            >
+              REFINE BY{" "}
+              <i
+                className={`${
+                  !this.state.showRef ? "fa fa-plus" : "fa fa-minus"
+                }`}
+              />
+            </div>
           </div>
-          <div
-            onClick={() =>
-              this.setState({
-                showCate: false,
-                showRef: !this.state.showRef,
-              })
-            }
-            className="Category"
-          >
-            REFINE BY{" "}
-            <i
-              className={`${
-                !this.state.showRef ? "fa fa-plus" : "fa fa-minus"
-              }`}
-            />
+          <div className={`filterOptions ${this.state.showCate && "pdl-open"}`}>
+            <div>View BY</div>
+            <div>Sort BY</div>
+            <div>Kurta BY</div>
+            <div>Grocceries BY</div>
           </div>
-        </div>
-        <div className={`filterOptions ${this.state.showCate && "pdl-open"}`}>
-          <div>View BY</div>
-          <div>Sort BY</div>
-          <div>Kurta BY</div>
-          <div>Grocceries BY</div>
-        </div>
-        <div className={`filterOptions ${this.state.showRef && "pdl-open"}`}>
-          <div>
-            <i className="fa fa-plus"></i> Price
+          <div className={`filterOptions ${this.state.showRef && "pdl-open"}`}>
+            <div>
+              <i className="fa fa-plus"></i> Price
+            </div>
+            <div>
+              <i className="fa fa-plus"></i> Size
+            </div>
+            <div>
+              <i className="fa fa-plus"></i> Brand
+            </div>
           </div>
-          <div>
-            <i className="fa fa-plus"></i> Size
-          </div>
-          <div>
-            <i className="fa fa-plus"></i> Brand
-          </div>
-        </div>
-        <div className="FilterMobileContainer Views hidden-lg">
-          <div className="ViewBy">
-            <span>View By:</span>
-            <div className="BoxContainer">
-              <div
-                className="ViewType1"
-                onClick={() => this.setState({ colNums: 12 })}
-              >
-                <div className="sorted-with"></div>
+          <div className="FilterMobileContainer Views hidden-lg">
+            <div className="ViewBy">
+              <span>View By:</span>
+              <div className="BoxContainer">
+                <div
+                  className="ViewType1"
+                  onClick={() => this.setState({ colNums: 12 })}
+                >
+                  <img src={onex} alt="onex" />
+                </div>
+                <div
+                  className="ViewType2"
+                  onClick={() => this.setState({ colNums: 6 })}
+                >
+                  {/* <div className="sorted-with"></div>
+                  <div className="sorted-with"></div> */}
+                  <img src={twox} alt="twox" />
+                </div>
               </div>
-              <div
-                className="ViewType2"
-                onClick={() => this.setState({ colNums: 6 })}
-              >
-                <div className="sorted-with"></div>
-                <div className="sorted-with"></div>
+            </div>
+            <div className="SortBy">
+              <span>Sort By:</span>
+              <div className="BoxContainer">
+                <select className="SortSelect">
+                  <option>New to old</option>
+                </select>
               </div>
             </div>
           </div>
-          <div className="SortBy">
-            <span>Sort By:</span>
-            <div className="BoxContainer">
-              <select className="SortSelect">
-                <option>New to old</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div className="ProductFilters hidden-xs">
+          <div className="ProductFilters hidden-xs">
           <div className="FilterOptions">
             <div className="FilterName">Category</div>
             <div className="panel-body">
@@ -238,6 +242,7 @@ export class ProductListImpl extends React.PureComponent<
             </div>
           </div>
         </div>
+        </div>
 
         <div className="DesktopProductListHeader">
           <div className="ProductHeader hidden-xs">
@@ -308,7 +313,7 @@ export class ProductListImpl extends React.PureComponent<
                             `/product-detail/${product.props.id}`
                           )
                         }
-                        className="ProductImage"
+                        style={{width : "100%"}}
                         alt={product.props.name}
                         src={img.url}
                       />
@@ -325,9 +330,7 @@ export class ProductListImpl extends React.PureComponent<
                   >
                     <div className="ProductName">{product.props.name}</div>
                     <div className="ProductPrice">
-                      {product.props.price.currencyIso}
-                      &nbsp;
-                      {product.props.price.value}
+                      {product.props.price.currencyIso + " " + product.props.price.value}
                     </div>
                   </div>
                 </Col>

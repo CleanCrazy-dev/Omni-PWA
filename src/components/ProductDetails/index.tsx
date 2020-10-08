@@ -257,9 +257,9 @@ export class ProductDetailsImpl extends React.Component<
                 <div className="quantity-box">
                   {" "}
                   <div className="Quantity">
-                    <i className="fa qty fa-plus" />
+                    <span className="qty minus-btn">-</span>
                     <span className="qty">10</span>
-                    <i className="fa qty fa-minus" />
+                    <span className="qty plus-btn">+</span>
                   </div>
                   <div>
                     <button className="add add-to-cart">ADD TO CART</button>
@@ -270,7 +270,9 @@ export class ProductDetailsImpl extends React.Component<
                 <div className="head">Check Delivery Service Availability</div>
                 <div className="detail-data pro-details">
                   {" "}
-                  <div className="check-service">Check Delivery Service Availability</div>
+                  <div className="check-service">
+                    Check Delivery Service Availability
+                  </div>
                   <input
                     onChange={(e) =>
                       this.setState({ storePinCode: e.target.value })
@@ -301,12 +303,21 @@ export class ProductDetailsImpl extends React.Component<
                   <i className="fa fa-home"></i>
                   <span>Home Delivery</span>
                 </div>
-                <div onClick={() => this.setState({isOpen: !this.state.isOpen})} className="StoreSelection">
+                <div
+                  onClick={() => this.setState({ isOpen: !this.state.isOpen })}
+                  className="StoreSelection"
+                >
                   <i className="fa fa-truck"></i>
                   {this.state.selectedStore.storeName ? (
                     <span>
                       {this.state.selectedStore.storeName}
-                      <button onClick={() => this.setState({isOpen: !this.state.isOpen})}>Change Store</button>
+                      <button
+                        onClick={() =>
+                          this.setState({ isOpen: !this.state.isOpen })
+                        }
+                      >
+                        Change Store
+                      </button>
                     </span>
                   ) : (
                     <span>Store Pickup</span>
@@ -336,7 +347,7 @@ export class ProductDetailsImpl extends React.Component<
                   </span>
                 )} */}
               </div>
-              
+
               <div className="ProductRow padding-20 ProductDesc">
                 <div
                   onClick={() =>
