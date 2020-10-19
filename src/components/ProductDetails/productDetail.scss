@@ -23,10 +23,15 @@
 .ProductImage {
   text-align: center;
   padding: 20px;
-
+  >div {
+    text-align: -webkit-center;
+    img {
+      width: 80% !important;
+    }
+  }
   img {
     min-width: 80%;
-    max-height: 500px;
+    // max-height: 500px;
   }
 }
 
@@ -354,6 +359,9 @@
       min-width: 100%;
       padding: 20px;
     }
+    .check-service {
+      display: none;
+    }
   }
 
   .ProductImage {
@@ -444,5 +452,13 @@
   .SizeItems span {
     font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 800;
+    color: #000;
+    font-size: 15px;
+  }
+  .check-service{
+    display: none;
+  }
+  .pro-details {
+    margin-top: 10px;
   }
 }

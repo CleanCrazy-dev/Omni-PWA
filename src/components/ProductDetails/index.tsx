@@ -75,7 +75,7 @@ export class ProductDetailsImpl extends React.Component<
         price: "",
         value: "",
       },
-      images: [{ url: "" }],
+      images: [{ url: "https://ccstore-stage-zdva.oracleoutsourcing.com/ccstore/v1/images/?source=/file/v6872059689425792467/products/10629212WH.f.150220.jpg" }],
       description: "",
     },
   };
@@ -84,7 +84,7 @@ export class ProductDetailsImpl extends React.Component<
     const id = this.props.match.params.id;
     const productData = ProductModel.get(id);
     if (!productData) {
-      this.props.history.push("/product-list");
+      // this.props.history.push("/product-list");
       return;
     }
 
@@ -205,7 +205,7 @@ export class ProductDetailsImpl extends React.Component<
                     smallImage: {
                       alt: "Wristwatch by Ted Baker London",
                       isFluidWidth: true,
-                      src: productDetails.images[0].url,
+                      src: productDetails.images[0].url
                     },
                     largeImage: {
                       src: productDetails.images[0].url,
