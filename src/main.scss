@@ -129,7 +129,7 @@ body {
     font-family: "Unna", serif;
     position: relative;
     top: 0;
-    left: -140px;
+    // left: -140px;
   }
 
   h2 {
@@ -960,6 +960,7 @@ body {
 @media only screen and (min-width: 720px) and (max-width: 991px) {
   .BasePage {
     margin-top: 77px !important;
+    width: 130%;
   }
   .Side-Carousel {
     padding: 30px 5px !important;

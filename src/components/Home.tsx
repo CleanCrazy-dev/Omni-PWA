@@ -85,11 +85,11 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
 
   render() {
     console.log("isIpad", isIPad(), "ismobile",isMobile())
-    console.log("users", this.props.users)
+    console.log("this.state.activeBagruSlide", this.state.activeBagruSlide)
     var settings = {
       infinite: true,
       speed: 500,
-      slidesToShow: isIPad() ? 1 : isMobile() ? 1 : 3,
+      slidesToShow: 3,
       slidesToScroll: 1,
     };
     var settingsForPromo = {
@@ -220,33 +220,36 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
           </Col>
           <Col xs={12} md={12} lg={12}>
             <Row className="MobileBlock hidden-ipad">
-              <Col lg={8} md={8} className="mb-20">
-                <img alt="" src={p1} width="90%" height="70%" />
+              <Col lg={8} md={8}>
+                <img alt="" src={p1} width="100%" />
                 <div className="VideoText">
                   <h4>Malhar Collection</h4>
                   <span>
                     {" "}
-                    The rhythm of life, the wonder of colours, the passion of
-                    nature, all embodied in our new Malhar collection!
+                    The rhythm of life, the wonder of colours , the passion of...
+                    {/* nature, all embodied in our new Malhar collection! */}
+                    <img style={{height:"45px", marginTop: '-10px', float: 'right', color: '#000'}}
+                    src = {"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ-c8OALsaw-6erbEldBt0wW848SN4DG8j2nQ&usqp=CAU"}
+                    ></img>
                   </span>
                 </div>
               </Col>
               <Col lg={4} md={4}>
-                <div className="VideoRight">
+                <div>
                   <img alt="" src={p2} width="100%" />
-                  <div className="VideoText">
+                  <div className="VideoText" style={{padding: '12px'}}>
                     <h4>Chikankari Collection</h4>
                     <span>
-                      Chikankari is the fine and intricate embroidery tr
+                      Chikankari is the fine and intricate enbroidery ...
                     </span>
                   </div>
                 </div>
                 <div>
                   <img alt="" src={p3} width="100%" />
-                  <div className="VideoText">
+                  <div className="VideoText" style={{padding: '12px'}}>
                     <h4>Rajwada Collection</h4>
                     <span>
-                      Let the festivities begin with Rajwada: All that is opulen
+                      Let the festivities begin with Rajwada: All...
                     </span>
                   </div>
                 </div>
@@ -329,8 +332,8 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
             </div>
           </Col>
         </Row>
-        <Row>
-          <Col xs={12} md={12} lg={12} style={{display: 'flex', textAlign: 'center', position: 'relative'}}>
+        <Row >
+          <Col xs={12} md={12} lg={12} style={{display: 'flex'}}>
             <div className="traditionalTitle">
               <h2>
                 <span>Traditional Crafts</span>
@@ -339,7 +342,8 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
                 </div>
               </h2>
             </div>
-            <span className="Controls" style={{marginTop: '-10px', marginRight: '-15px'}}>
+            {/* <div className="MobilePromoSlider visible-ipad"> */}
+            <span className="Controls" style={{marginTop: '-10px'}}>
               <div
                 onClick={() => {
                   this.setState({
@@ -351,9 +355,9 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
                   this.carRef1.current.slickPrev();
                 }}
               >
-              <img style={{height:"45px",transform: "rotate(180deg)"}} src={arrow} alt="" />
+              <img style={{height:"42px",transform: "rotate(180deg)"}} src={arrow} alt="" />
               </div>
-              <div style={{minWidth: '50px'}}> {this.state.activeBagruSlide} / 3</div>
+              <div style={{minWidth: '40px'}}> {this.state.activeBagruSlide} / 8</div>
               <div
                 onClick={() => {
                   this.setState({
@@ -365,58 +369,46 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
                   this.carRef1.current.slickNext();
                 }}
               >
-              <img style={{height:"45px"}} src={arrow} alt="" />
+              <img style={{height:"42px"}} src={arrow} alt="" />
               </div>
             </span>
+            {/* </div> */}
           </Col>
-          <Col xs={12} md={12} lg={12}>
-            <Row className="MobileBlock hidden-ipad">
-              <Col lg={4} md={4} className="mb-20">
-                <img alt="" src={tdImg1} width="90%" />
-                <div className="VideoText" >
-                  <h4>Bagru Print</h4>
-                  <span>
-                  The art of traditional hand block printingƒ
-                  </span>
-                </div>
-              </Col>
-              <Col lg={4} md={4}>
-                {/* <div className="VideoRight"> */}
-                  <img alt="" src={tdImg2} width="100%" />
-                  <div className="VideoText">
-                    <h4>Bagru Print</h4>
-                    <span>
-                    The art of traditional hand block printingƒ
-                    </span>
-                  </div>
-                {/* </div> */}
-              </Col>
-              <Col lg={4} md={4} className="mb-20">
-                <div>
-                  <img alt="" src={tdImg3} width="90%" />
-                  <div className="VideoText">
-                    <h4>Bagru Print</h4>
-                    <span>
-                    The art of traditional hand block printingƒ
-                    </span>
-                  </div>
-                </div>
-              </Col>
-            </Row>
-          </Col> 
         </Row>
-        <Row className="MobilePromoSlider visible-ipad">
-          <Col xs={12} md={12} lg={12} className="SliderCol">
+        <Row>
+          <Col xs={12} md={12} lg={12}>
             <Slider 
-            ref={this.carRef1}
-            {...settings}>
+              ref={this.carRef1}
+              {...settings}>
               {[1, 2, 3, 4, 5, 6, 7, 8].map((x, i) => {
+                console.log("x = ", x, "i = ", i)
+                console.log(this.state.activeBagruSlide == i ? "mb-20" : "TradTe")
                 return (
-                  <div key={i} className="TradCarouselSlide">
+                  <div key={i} className="TradCarouselSlide" >
+                    {/* {this.state.activeBagruSlide === 3 ?
+                      <div className="mb-20">
                     <img src={tImages[i]} alt="" className="SlideImageTrad" />
                     <div className="TradText">
                       <span>Bagru Print</span>
                       <p>The art of traditional hand block printingƒ</p>
+                    </div>
+                    </div>
+                    :
+                    <div>
+                    <img src={tImages[i]} alt="" className="SlideImageTrad" />
+                    <div className="TradText">
+                      <span>Bagru Print</span>
+                      <p>The art of traditional hand block printingƒ</p>
+                    </div>
+                    </div>} */}
+                    <div  style={{padding: this.state.activeBagruSlide === i ? "0px" : "15px"}} >
+                      <img alt="" src={tImages[i]} width="100%" />
+                      <div className="VideoText" >
+                        <h4>Bagru Print</h4>
+                        <span>
+                        The art of traditional hand 
+                        </span>
+                      </div>
                     </div>
                   </div>
                 );
