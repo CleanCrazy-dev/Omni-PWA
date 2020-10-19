@@ -9,6 +9,8 @@ export class SideCarousel extends React.Component<{
   onClickSlide: () => void;
   slideImages: any[];
 }> {
+  promoSliderRef: any;
+
   state = {
     activeSlide: 1,
   };
@@ -19,17 +21,17 @@ export class SideCarousel extends React.Component<{
   }
   render() {
     var settings = {
-      dots: isMobile() && true,
-      infinite: true,
+       infinite: true,
       speed: 500,
       slidesToShow: isIPad() ? 2 : isMobile() ? 2 : 3,
       slidesToScroll: 1,
+      dots: isMobile() && true,
     };
     const { slideImages } = this.props;
     return (
       <div className="Side-Carousel">
-        {!isMobile() && (
-          <>
+        {/* {!isMobile() && ( */}
+        <>
           <div className="Controls">
             <div
               onClick={() => {
@@ -44,7 +46,7 @@ export class SideCarousel extends React.Component<{
             >
             <img style={{height:"45px",transform: "rotate(180deg)"}} src={arrow} alt="" />
             </div>
-            <div className="SlideNumber"> {this.state.activeSlide} / 8</div>
+            <div style={{minWidth: '50px',}}> {this.state.activeSlide} / 8</div>
             <div
               onClick={() => {
                 this.setState({
@@ -59,19 +61,22 @@ export class SideCarousel extends React.Component<{
              <img style={{height:"45px"}} src={arrow} alt="" />
             </div>
           </div>
-         <div className="fab-featured-wrapper">
-         <div className="fab-featured">
-          <h2>
-            <span>Featured</span>
-            <div className="f_products">Products</div>
-          </h2>
-        </div>
-         </div>
+          <div className="fab-featured-wrapper">
+            <div className="fab-featured">
+              <h2>
+                <span>Featured</span>
+                <div className="f_products">Products</div>
+              </h2>
+            </div>
+          </div>
        </>
-       )}
+        {/* )}  */}
         
         <div className="Carousel-Items">
-          <Slider ref={this.carRef1} {...settings}>
+          <Slider 
+            // ref={(ref) => (this.promoSliderRef = ref)} 
+            ref={this.carRef1}
+            {...settings}>
             {[1, 2, 3, 4, 5, 6, 7, 8].map((x, i) => {
               return (
                 <div className="SlideImage" onClick={this.props.onClickSlide}>

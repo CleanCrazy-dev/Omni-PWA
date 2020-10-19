@@ -106,15 +106,15 @@ export const Navbar = () => {
           </a>
         </div>{" "}
         <div className="AuthButtons">
-          <div style={{ margin: "0px 10px" }} onClick={() => isOpenLogin(true)}>
-            Login
+          <div style={{ margin: "0px 10px", fontFamily: "Muli,Helvetica Neue,Helvetica,Arial,sans-serif", fontSize: '14px',fontStyle: 'normal', fontWeight: 'normal', lineHeight: '150%', color: '#000' }} 
+            onClick={() => isOpenLogin(true)}>
+            Log In
           </div>
           &nbsp;&nbsp;
-          <div
-            style={{ margin: "0px 10px" }}
+          <div style={{ margin: "0px 10px", fontFamily: "Muli,Helvetica Neue,Helvetica,Arial,sans-serif", fontSize: '14px',fontStyle: 'normal', fontWeight: 'normal', lineHeight: '150%', color: '#000' }} 
             onClick={() => isOpenSignUp(true)}
           >
-            SignUp
+            Sign Up
           </div>
         </div>
         <div className="TreeNode hidden-lg">

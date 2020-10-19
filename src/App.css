@@ -18,10 +18,11 @@ body {
   font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
+  text-transform: capitalize;
+  text-shadow: none;
   line-height: 150%;
   text-align: left;
-  font-family: 'Raleway', sans-serif;
   text-decoration: none;
   font-size: 13px;
 }

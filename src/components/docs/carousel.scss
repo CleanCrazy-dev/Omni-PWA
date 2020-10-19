@@ -16,6 +16,8 @@
     &:hover{
         cursor: pointer;
     }
+    padding: 28px 0 0;
+    position: relative;
 }
 
 .Carousel-Items {
@@ -24,10 +26,12 @@
 
 .Side-Carousel {
     display: flex;
-    padding: 30px;
+    padding: 20px;
     min-height: 250px;
     align-items: center;
     position: relative;
+    margin-top: 35px;
+    margin-bottom: 50px;
 }
 
 .SlideImage {

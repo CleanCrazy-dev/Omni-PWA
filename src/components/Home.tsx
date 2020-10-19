@@ -18,6 +18,7 @@ import slideImg3 from "../resource/img/f3.jpg";
 import p1 from "../resource/img/p1.jpg";
 import p2 from "../resource/img/p2.jpg";
 import p3 from "../resource/img/p3.jpg";
+import arrow from "../resource/img/arrow.svg";
 import { SignUpPage } from "./AccountPage/SignUpPage";
 import { Carousel } from "./Carousel";
 import { SideCarousel } from "./docs";
@@ -54,8 +55,10 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
 
   state = {
     activeSlide: 1,
+    activeBagruSlide: 1
   };
 
+  carRef1: any = React.createRef();
   slides = [1, 2, 3, 4, 5, 6, 7, 8].map((x, i) => {
     const imgs = [img1, img2, img3, img1, img2, img3, img1, img2, img3];
     return (
@@ -81,10 +84,12 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
   
 
   render() {
+    console.log("isIpad", isIPad(), "ismobile",isMobile())
+    console.log("users", this.props.users)
     var settings = {
       infinite: true,
-      speed: 5000,
-      slidesToShow: isIPad() ? 2 : isMobile() ? 1 : 3,
+      speed: 500,
+      slidesToShow: isIPad() ? 1 : isMobile() ? 1 : 3,
       slidesToScroll: 1,
     };
     var settingsForPromo = {
@@ -106,18 +111,19 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
     ];
 
     return (
-      <div className="main">
+      <div>
         {/* <SignUpPage /> */}
-        {isMobile() && (
+        {/* {isMobile() && (
           <div className="SearchInp">
             {" "}
             <input
               className="SearchInput"
+              onChange={(e) => console.log("value",e.target.value)}
               placeholder="Enter your search text here..."
             />
             <i className="fa fa-search" aria-hidden="true"></i>
           </div>
-        )}
+        )} */}
         <div className="CarouselContainer">
           <Carousel items={items} slides={this.slides} />
         </div>
@@ -154,7 +160,7 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
               around the corner. Take a look at these curated looks we put
               together just for you!
             </div>
-            <div className="btn_desc d-none d-md-block">
+            <div className="btn_desc">
                 <Link to="/">
                     Explore
                 </Link>
@@ -165,15 +171,15 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
               <img
                 className="home-img"
                 alt="col-1"
-                width="100%"
+                width="80%"
                 src="https://www.fabindia.com/file/general/look-front-30-07.jpg"
               />
             </div>
           </Col>
         </Row>
-        <Row className="home-row home-bottom">
+        <Row className="home-row">
           <Col xs={12} md={6} lg={6}>
-            <div className="image home-img">
+            <div className="image">
               <img
                 className="home-img"
                 alt=" col-1"
@@ -215,7 +221,7 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
           <Col xs={12} md={12} lg={12}>
             <Row className="MobileBlock hidden-ipad">
               <Col lg={8} md={8} className="mb-20">
-                <img alt="" src={p1} width="100%" height="87%" />
+                <img alt="" src={p1} width="90%" height="70%" />
                 <div className="VideoText">
                   <h4>Malhar Collection</h4>
                   <span>
@@ -324,7 +330,7 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
           </Col>
         </Row>
         <Row>
-          <Col xs={12} md={12} lg={12}>
+          <Col xs={12} md={12} lg={12} style={{display: 'flex', textAlign: 'center', position: 'relative'}}>
             <div className="traditionalTitle">
               <h2>
                 <span>Traditional Crafts</span>
@@ -333,9 +339,77 @@ class HomeImpl extends React.Component<IHomeProps, {}> {
                 </div>
               </h2>
             </div>
+            <span className="Controls" style={{marginTop: '-10px', marginRight: '-15px'}}>
+              <div
+                onClick={() => {
+                  this.setState({
+                    activeBagruSlide:
+                      this.state.activeBagruSlide === 1
+                        ? 8
+                        : this.state.activeBagruSlide - 1,
+                  });
+                  this.carRef1.current.slickPrev();
+                }}
+              >
+              <img style={{height:"45px",transform: "rotate(180deg)"}} src={arrow} alt="" />
+              </div>
+              <div style={{minWidth: '50px'}}> {this.state.activeBagruSlide} / 3</div>
+              <div
+                onClick={() => {
+                  this.setState({
+                    activeBagruSlide:
+                      this.state.activeBagruSlide === 8
+                        ? 1
+                        : this.state.activeBagruSlide + 1,
+                  });
+                  this.carRef1.current.slickNext();
+                }}
+              >
+              <img style={{height:"45px"}} src={arrow} alt="" />
+              </div>
+            </span>
           </Col>
-          <Col xs={12} md={9} lg={10} className="SliderCol">
-            <Slider {...settings}>
+          <Col xs={12} md={12} lg={12}>
+            <Row className="MobileBlock hidden-ipad">
+              <Col lg={4} md={4} className="mb-20">
+                <img alt="" src={tdImg1} width="90%" />
+                <div className="VideoText" >
+                  <h4>Bagru Print</h4>
+                  <span>
+                  The art of traditional hand block printingƒ
+                  </span>
+                </div>
+              </Col>
+              <Col lg={4} md={4}>
+                {/* <div className="VideoRight"> */}
+                  <img alt="" src={tdImg2} width="100%" />
+                  <div className="VideoText">
+                    <h4>Bagru Print</h4>
+                    <span>
+                    The art of traditional hand block printingƒ
+                    </span>
+                  </div>
+                {/* </div> */}
+              </Col>
+              <Col lg={4} md={4} className="mb-20">
+                <div>
+                  <img alt="" src={tdImg3} width="90%" />
+                  <div className="VideoText">
+                    <h4>Bagru Print</h4>
+                    <span>
+                    The art of traditional hand block printingƒ
+                    </span>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+          </Col> 
+        </Row>
+        <Row className="MobilePromoSlider visible-ipad">
+          <Col xs={12} md={12} lg={12} className="SliderCol">
+            <Slider 
+            ref={this.carRef1}
+            {...settings}>
               {[1, 2, 3, 4, 5, 6, 7, 8].map((x, i) => {
                 return (
                   <div key={i} className="TradCarouselSlide">

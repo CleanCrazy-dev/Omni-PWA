@@ -20,13 +20,19 @@ export const Login = (props: any) => {
             <Col xs={12} md={12} lg={12}>
               <div className="InputContainer">
                 <span>Store ID * </span>
-                <input className="FormInput" />
+                <input 
+                  placeholder="Store Id"
+                  className="FormInput" 
+                />
               </div>
             </Col>
             <Col xs={12} md={12} lg={12}>
               <div className="InputContainer">
                 <span>Employee ID * </span>
-                <input className="FormInput" />
+                <input 
+                  placeholder="Employee Id"
+                  className="FormInput" 
+                />
               </div>{" "}
             </Col>
             <Col xs={12} md={12} lg={12}>
