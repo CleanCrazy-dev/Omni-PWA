@@ -22,6 +22,13 @@ const ProductList = React.lazy(() =>
   }))
 );
 
+const CartPage = React.lazy(() =>
+  import("./components/CartPage/CartPage").then(({ CartPage }) => ({
+    default: CartPage,
+  }))
+);
+
+
 const WrappedComponent = (Component: any) => {
   return class Wrapper extends React.Component {
     render() {
@@ -57,6 +64,11 @@ export const Routes = () => {
               exact
               path="/product-detail/:id"
               component={WrappedComponent(ProductDetails)}
+            />
+             <Route
+              exact
+              path="/cart"
+              component={WrappedComponent(CartPage)}
             />
           </React.Fragment>
         </Switch>
