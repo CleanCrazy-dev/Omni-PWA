@@ -10,6 +10,23 @@ import onex from "../../resource/img/onex.webp";
 import twox from "../../resource/img/twox.png";
 import { Login } from "../AccountPage/Login";
 import { isMobile } from "../../generalUtils";
+
+
+let dummyProduct :object = {
+  props: {
+    id: "123",
+    price: { currencyIso: "USD", value: "123" },
+    name: "name here",
+    images: [
+      {
+        url:
+          "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+      }
+    ]
+  }
+}
+
+
 export interface IProductListProps {
   productList: ProductModel[];
   history: IHistory;
@@ -26,7 +43,7 @@ export class ProductListImpl extends React.PureComponent<
   state = {
     colNums: isMobile() ? 6 : 3,
     showRef: false,
-    showCate: false,
+    showCate: false
   };
 
   async componentDidMount() {
@@ -37,8 +54,8 @@ export class ProductListImpl extends React.PureComponent<
           "x-rapidapi-host": "apidojo-hm-hennes-mauritz-v1.p.rapidapi.com",
           "x-rapidapi-key":
             "3320af976bmsh4cfc14f0be3fcccp1ead0bjsn8d7a9dab2022",
-          useQueryString: true,
-        },
+          useQueryString: true
+        }
       }
     );
     response.data.results.forEach((element: any) => {
@@ -47,8 +64,754 @@ export class ProductListImpl extends React.PureComponent<
     });
   }
 
+  productsDummy = [{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  },{
+    props: {
+      id: "123",
+      price: { currencyIso: "USD", value: "123" },
+      name: "name here",
+      images: [
+        {
+          url:
+            "https://www.fabindia.com/ccstore/v1/images/?source=/file/v3480208276982492861/products/10660133BU.f.290920.jpg&height=475&width=475"
+        }
+      ]
+    }
+  }];
+
   render() {
-    console.log("this.props.productList", this.props.productList)
+    console.log("this.props.productList", this.props.productList);
     return (
       <div className="ProductListPageContainer M-Full-Width">
         {/* <Login /> */}
@@ -59,7 +822,7 @@ export class ProductListImpl extends React.PureComponent<
               onClick={() =>
                 this.setState({
                   showRef: false,
-                  showCate: !this.state.showCate,
+                  showCate: !this.state.showCate
                 })
               }
               className="Category"
@@ -75,7 +838,7 @@ export class ProductListImpl extends React.PureComponent<
               onClick={() =>
                 this.setState({
                   showCate: false,
-                  showRef: !this.state.showRef,
+                  showRef: !this.state.showRef
                 })
               }
               className="Category"
@@ -135,114 +898,114 @@ export class ProductListImpl extends React.PureComponent<
             </div>
           </div>
           <div className="ProductFilters hidden-xs">
-          <div className="FilterOptions">
-            <div className="FilterName">Category</div>
-            <div className="panel-body">
-              <li>
-                <a href="/shop/beauty">
-                  <span className="label_txt">Beauty</span>
-                  <span className="count_txt">(115)</span>
-                </a>
-              </li>
+            <div className="FilterOptions">
+              <div className="FilterName">Category</div>
+              <div className="panel-body">
+                <li>
+                  <a href="/shop/beauty">
+                    <span className="label_txt">Beauty</span>
+                    <span className="count_txt">(115)</span>
+                  </a>
+                </li>
 
-              <li>
-                <a href="/collection/gifting-ideas-giftboxes">
-                  <span className="label_txt">Gift Boxes</span>
-                  <span className="count_txt">(21)</span>
-                </a>
-              </li>
+                <li>
+                  <a href="/collection/gifting-ideas-giftboxes">
+                    <span className="label_txt">Gift Boxes</span>
+                    <span className="count_txt">(21)</span>
+                  </a>
+                </li>
 
-              <li>
-                <a href="/collection/gifting-ideas-for-him">
-                  <span className="label_txt">Gifts for Him</span>
-                  <span className="count_txt">(43)</span>
-                </a>
-              </li>
+                <li>
+                  <a href="/collection/gifting-ideas-for-him">
+                    <span className="label_txt">Gifts for Him</span>
+                    <span className="count_txt">(43)</span>
+                  </a>
+                </li>
 
-              <li>
-                <a href="/collection/gifting-ideas-for-kids">
-                  <span className="label_txt">Gifts For Kids</span>
-                  <span className="count_txt">(157)</span>
-                </a>
-              </li>
+                <li>
+                  <a href="/collection/gifting-ideas-for-kids">
+                    <span className="label_txt">Gifts For Kids</span>
+                    <span className="count_txt">(157)</span>
+                  </a>
+                </li>
 
-              <li>
-                <a href="/collection/gifting-ideas-home-decor">
-                  <span className="label_txt">Home Decor</span>
-                  <span className="count_txt">(62)</span>
-                </a>
-              </li>
+                <li>
+                  <a href="/collection/gifting-ideas-home-decor">
+                    <span className="label_txt">Home Decor</span>
+                    <span className="count_txt">(62)</span>
+                  </a>
+                </li>
 
-              <li>
-                <a href="/collection/gifting-ideas-jewellery">
-                  <span className="label_txt">Jewellery</span>
-                  <span className="count_txt">(109)</span>
-                </a>
-              </li>
+                <li>
+                  <a href="/collection/gifting-ideas-jewellery">
+                    <span className="label_txt">Jewellery</span>
+                    <span className="count_txt">(109)</span>
+                  </a>
+                </li>
 
-              <li>
-                <a href="/collection/gifting-ideas-stoles">
-                  <span className="label_txt">Stoles</span>
-                  <span className="count_txt">(216)</span>
-                </a>
-              </li>
+                <li>
+                  <a href="/collection/gifting-ideas-stoles">
+                    <span className="label_txt">Stoles</span>
+                    <span className="count_txt">(216)</span>
+                  </a>
+                </li>
+              </div>
+            </div>
+            <div className="FilterOptions">
+              <div className="FilterName">
+                {" "}
+                <i className="fa fa-plus" /> Price
+              </div>
+            </div>
+            <div className="FilterOptions">
+              <div className="FilterName">
+                {" "}
+                <i className="fa fa-plus" /> Color
+              </div>
+            </div>
+            <div className="FilterOptions">
+              <div className="FilterName">
+                {" "}
+                <i className="fa fa-plus" /> Size
+              </div>
+            </div>
+            <div className="FilterOptions">
+              <div className="FilterName">
+                {" "}
+                <i className="fa fa-plus" /> Material
+              </div>
+            </div>
+            <div className="FilterOptions">
+              <div className="FilterName">
+                {" "}
+                <i className="fa fa-plus" /> Sleeves
+              </div>
+            </div>
+            <div className="FilterOptions">
+              <div className="FilterName">
+                {" "}
+                <i className="fa fa-plus" /> Neck
+              </div>
+            </div>
+            <div className="FilterOptions">
+              <div className="FilterName">
+                {" "}
+                <i className="fa fa-plus" /> Pattern
+              </div>
+            </div>
+            <div className="FilterOptions">
+              <div className="FilterName">
+                {" "}
+                <i className="fa fa-plus" /> Craft
+              </div>
+            </div>
+            <div className="FilterOptions">
+              <div className="FilterName">
+                {" "}
+                <i className="fa fa-plus" /> Style
+              </div>
             </div>
           </div>
-          <div className="FilterOptions">
-            <div className="FilterName">
-              {" "}
-              <i className="fa fa-plus" /> Price
-            </div>
-          </div>
-          <div className="FilterOptions">
-            <div className="FilterName">
-              {" "}
-              <i className="fa fa-plus" /> Color
-            </div>
-          </div>
-          <div className="FilterOptions">
-            <div className="FilterName">
-              {" "}
-              <i className="fa fa-plus" /> Size
-            </div>
-          </div>
-          <div className="FilterOptions">
-            <div className="FilterName">
-              {" "}
-              <i className="fa fa-plus" /> Material
-            </div>
-          </div>
-          <div className="FilterOptions">
-            <div className="FilterName">
-              {" "}
-              <i className="fa fa-plus" /> Sleeves
-            </div>
-          </div>
-          <div className="FilterOptions">
-            <div className="FilterName">
-              {" "}
-              <i className="fa fa-plus" /> Neck
-            </div>
-          </div>
-          <div className="FilterOptions">
-            <div className="FilterName">
-              {" "}
-              <i className="fa fa-plus" /> Pattern
-            </div>
-          </div>
-          <div className="FilterOptions">
-            <div className="FilterName">
-              {" "}
-              <i className="fa fa-plus" /> Craft
-            </div>
-          </div>
-          <div className="FilterOptions">
-            <div className="FilterName">
-              {" "}
-              <i className="fa fa-plus" /> Style
-            </div>
-          </div>
-        </div>
         </div>
 
         <div className="DesktopProductListHeader">
@@ -282,7 +1045,9 @@ export class ProductListImpl extends React.PureComponent<
             </div>
           </div>
           <Row className="ProductListPage">
-            {this.props.productList.map((product, index) => {
+            {/* {this.props.productList.map((product, index) => { */}
+            {this.productsDummy.map((product, index) => {
+
               return (
                 <Col
                   xs={this.state.colNums}
@@ -314,7 +1079,7 @@ export class ProductListImpl extends React.PureComponent<
                             `/product-detail/${product.props.id}`
                           )
                         }
-                        style={{width : "100%"}}
+                        style={{ width: "100%" }}
                         alt={product.props.name}
                         src={img.url}
                       />
@@ -331,7 +1096,9 @@ export class ProductListImpl extends React.PureComponent<
                   >
                     <div className="ProductName">{product.props.name}</div>
                     <div className="ProductPrice">
-                      {product.props.price.currencyIso + " " + product.props.price.value}
+                      {product.props.price.currencyIso +
+                        " " +
+                        product.props.price.value}
                     </div>
                   </div>
                 </Col>
@@ -345,9 +1112,9 @@ export class ProductListImpl extends React.PureComponent<
 }
 export function mapStateToProps(state: any) {
   return {
-    productList: ProductModel.list(state),
+    productList: ProductModel.list(state)
   };
 }
-export const ProductList = withRouter(
-  connect<{}, {}, IProductListProps>(mapStateToProps)(ProductListImpl) as any
-);
+export const ProductList = withRouter(connect<{}, {}, IProductListProps>(
+  mapStateToProps
+)(ProductListImpl) as any);
