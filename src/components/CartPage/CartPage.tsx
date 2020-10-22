@@ -5,6 +5,7 @@ import { Row, Col } from "reactstrap";
 import "./cartPage.scss";
 import { IHistory } from "../../interfaces";
 import removeIcon from "../../resource/img/round-delete-button.svg";
+import SBILogo from "../../resource/img/SBI Logo.png";
 
 export interface ICartPage {
   match: {
@@ -119,38 +120,119 @@ export class CartPageImpl extends React.Component<
                     </div>
                   </div>
                 </div>
+
+                <section className="continue_shop">
+                  <div className="buttons hidden-xs total-cart-padding-top">
+                    <a
+                      id="CC-shoppingCart-continueShopping"
+                      className="cc-button-secondary"
+                      href="/home"
+                    >
+                      <span>Continue Shopping</span>
+                    </a>
+                  </div>
+                </section>
               </div>
             </div>
           </div>
           <div className="col-sm-4">
-            <div className="order_summary">
+            <div className="order_summary col-md-10">
               <div className="summary">
                 <h3 className="order_summary_text">Order Summary</h3>
 
                 <div className="order_summary_info clearfix">
-                  <div className="order_total clearfix">
-                    <div className="cc_total_align clearfix">
-                      <span className="order_summary_text">
-                        Cart Sub Total :
-                      </span>
-                      <span className="ordersumprice cart-sub-total pull-right">
-                        ₹4,470.00
-                      </span>
+                  <div className="order_price_summary clearfix">
+                    <div className="order_subtotal clearfix">
+                      <span className="title">Cart Sub Total :</span>
+                      <span className="sub_price pull-right">₹4,470.00</span>
                     </div>
-                    <div className="cc_total_border">
-                      <div id="CC-orderSummaryLoadingModal"></div>
-                      <div className="cc_total_align clearfix">
-                        <span>Total Cart Amount :</span>
-                        <span className="ordersumprice cc_final_price pull-right">
-                          ₹4,470.00
-                        </span>
-                      </div>
+                    <div className="order_total">
+                      <span className="title">Total Cart Amount :</span>
+                      <span className="price pull-right">₹4,470.00</span>
                     </div>
                   </div>
                 </div>
+
+                <div className="checkout_wrapper clearfix">
+                  {/*                   
+                  <div className="visible-xs pull-left view_details_scroll">
+                    <span
+                      className="ordersumprice cc_final_price"
+                      data-bind="currency: {price: cart().total(), currencyObj: $data.site().selectedPriceListGroup().currency}"
+                    >
+                      ₹4,470.00
+                    </span>
+                    <span>View Details</span>
+                  </div>
+                   */}
+                  <div id="summary-checkout" className="checkout_proceed">
+                    <a
+                      className="cc-button-primary btn-checkout"
+                      aria-label="Checkout"
+                    >
+                      <span className="hidden-xs">Proceed to Checkout</span>
+                      <span className="visible-xs">Checkout</span>
+                    </a>
+                  </div>
+                </div>
+
+                <div className="offer_banner">
+                  <img src={SBILogo} alt="SBI Logo" />
+                  <span>
+                    Get <strong>10% discount</strong> on{" "}
+                    <strong>Rs. 5000/-</strong> or above with your SBI credit
+                    card. T&amp;C apply.
+                  </span>
+                </div>
               </div>
             </div>
-            <div className="coupen"></div>
+            <div className="promotion col-md-10 col-sm-11 ">
+              <h4>
+                <a className="panel-toggle" href="#couponToggle">
+                  Coupon Code
+                </a>
+              </h4>
+
+              <div className="coupen-form-wrapper">
+                <fieldset>
+                  {/* <div className="hidden-xs">
+                      <p
+                        className="text-danger"
+                        id="CC-promotionDetails-promoCode-error"
+                      ></p>
+
+                      <p className="text-danger">
+                        Please enter a valid coupon code
+                      </p>
+                    </div> */}
+                  {/* <div className="visible-xs col-xs-12">
+                      <p className="text-danger"></p>
+
+                      <p className="text-danger">
+                        Please enter a valid coupon code
+                      </p>
+                    </div> */}
+
+                  <div className="coupen-input-group clearfix">
+                    <input
+                      type="text"
+                      className="form-control input-inline"
+                      name="promoCode"
+                      id="CC-promotionDetails-promoCode"
+                    />
+                  </div>
+                  <div className="coupen-input-group">
+                    <a
+                      href="/"
+                      id="CC-promotion-applyCode"
+                      className="cc-button-primary cc_applyBtn"
+                    >
+                      <span id="CC-promotion-applyCodeButton">Apply</span>
+                    </a>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
           </div>
         </div>
       </React.Fragment>
