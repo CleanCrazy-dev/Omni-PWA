@@ -1,3 +1,71 @@
+.cc-button-primary {
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  line-height: 1.42857143;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: #e5cc76;
+  white-space: normal;
+  background-image: linear-gradient(to bottom, #e5cc76, #ddbc4b);
+  background-repeat: repeat-x;
+  border: 1px solid #d9b436;
+  color: #000;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0 none;
+  padding: 12px 0;
+  width: 100%;
+}
+
+.cc-button-secondary {
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #eee;
+  white-space: normal;
+  background-image: -moz-linear-gradient(top, #eee, #d5d5d5);
+  background-image: -webkit-gradient(
+    linear,
+    0 0,
+    0 100%,
+    from(#eee),
+    to(#d5d5d5)
+  );
+  background-image: -webkit-linear-gradient(top, #eee, #d5d5d5);
+  background-image: -o-linear-gradient(top, #eee, #d5d5d5);
+  background-image: linear-gradient(to bottom, #eee, #d5d5d5);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@ButtonBackgroundColor', endColorstr='darken(@ButtonBackgroundColor, 10%)', GradientType=0);
+  border: 1px solid #c8c8c8;
+  color: #3d3d3d;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -184,16 +252,129 @@
 .order_summary {
   margin-top: 20px;
   .summary {
-      .order_summary_text {
-        font-family: "Unna", serif;
+    .order_summary_text {
+      font-family: "Unna", serif;
       font-weight: bold;
       font-size: 18px;
       line-height: 26px;
       padding-bottom: 6px;
-      margin-bottom: 24px;
+      margin: 0;
       color: #000;
       border-bottom: 1px solid #b7b6ae;
       text-align: left;
+    }
+    .order_summary_info {
+      padding: 12px 0;
+      .order_price_summary {
+        .order_subtotal,
+        .order_total {
+          .title {
+            font-size: 12px;
+            font-weight: 800;
+            font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 14px;
+            color: #000;
+          }
+        }
+        .order_subtotal {
+          .sub_price {
+            font-size: 14px;
+            line-height: 16px;
+          }
+        }
+        .order_total {
+          border-top: 1px solid #b7b6ae;
+          padding: 6px 0 0;
+          margin: 8px 0 0;
+          .price {
+            color: #8f2c34;
+            font-size: 14px;
+            line-height: 16px;
+          }
+        }
       }
+    }
+    .checkout_wrapper {
+      margin: 10px 0;
+      .checkout_proceed {
+      }
+    }
+    .offer_banner {
+      padding: 7px 20px;
+      background: #f9f8f1;
+      margin: 0 0 4px;
+      display: table;
+      width: 100%;
+      img {
+        margin-right: 5px;
+        width: 80px;
+        margin-bottom: 6px;
+      }
+      span {
+        font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        strong {
+          font-weight: 800;
+        }
+      }
+    }
+  }
+}
+.promotion {
+  margin-top: 10px;
+  h4 {
+    margin: 0;
+    padding: 12px 0;
+    border-top: 1px solid #b7b6ae;
+    a {
+      display: block;
+      color: #000;
+      font-size: 12px;
+      font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      line-height: 14px;
+    }
+  }
+  .coupen-input-group {
+    margin-bottom: 15px;
+    input {
+      height: 40px;
+    }
+    a {
+      font-size: 12px;
+      font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      border: 0 none;
+      padding: 12px 0;
+      margin-bottom: 8px;
+      width: 100%;
+    }
+  }
+}
+.continue_shop {
+  margin-bottom: 10px;
+  margin-top: -20px;
+  .buttons {
+    padding-top: 6px;
+    margin-bottom: 10px;
+    a {
+      font-size: 12px;
+      font-weight: 700;
+      background: none;
+      font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #000;
+      line-height: 15px;
+      padding: 10px 35px 11px;
+      display: block;
+      max-width: 206px;
+      position: relative;
+      &::after {
+        content: "\203A";
+        font-size: 18px;
+        position: relative;
+        top: 3px;
+        right: -7px;
+      }
+    }
   }
 }
