@@ -38,7 +38,7 @@ export class CartPageImpl extends React.Component<
     return (
       <React.Fragment>
         <div className="row">
-          <div className="col-sm-8">
+          <div className="ccol-sm-12 col-md-8">
             <div className="cart_widget">
               <h2 className="cartHeader">Your Shopping Cart</h2>
               <div className="cart-viewer-pane hidden-xs hidden-sm">
@@ -71,7 +71,7 @@ export class CartPageImpl extends React.Component<
                                   </div>
                                   <div className="cart_item_detail">
                                     <div>
-                                      <p className="hidden-xs">Item</p>
+                                      <p>Item</p>
                                       <a href="/viscose-silk-brocade-nehru-jacket-10602091">
                                         Viscose Silk Brocade Nehru Jacket
                                       </a>
@@ -135,8 +135,8 @@ export class CartPageImpl extends React.Component<
               </div>
             </div>
           </div>
-          <div className="col-sm-4">
-            <div className="order_summary col-md-10">
+          <div className="col-sm-12 col-md-4">
+            <div className="order_summary col-md-12 col-xl-10">
               <div className="summary">
                 <h3 className="order_summary_text">Order Summary</h3>
 
@@ -186,7 +186,7 @@ export class CartPageImpl extends React.Component<
                 </div>
               </div>
             </div>
-            <div className="promotion col-md-10 col-sm-11 ">
+            <div className="promotion col-sm-12 col-md-12 col-xl-10">
               <h4>
                 <a className="panel-toggle" href="#couponToggle">
                   Coupon Code
