@@ -3,31 +3,40 @@ import { HashRouter } from "react-router-dom";
 import React from "react";
 import { BasePage } from "./components/BasePage";
 import { ProductDetails } from "./components/ProductDetails";
+// import  OrderCompletionComp from "./components/OrderCompletion";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Home = React.lazy(() =>
   import("./components/Home").then(({ Home }) => ({
-    default: Home,
+    default: Home
   }))
 );
 const SideCarousel = React.lazy(() =>
   import("./components/docs").then(({ SideCarousel }) => ({
-    default: SideCarousel,
+    default: SideCarousel
   }))
 );
 const ProductList = React.lazy(() =>
   import("./components/ProductList").then(({ ProductList }) => ({
-    default: ProductList,
+    default: ProductList
   }))
 );
 
 const CartPage = React.lazy(() =>
   import("./components/CartPage/CartPage").then(({ CartPage }) => ({
-    default: CartPage,
+    default: CartPage
   }))
 );
 
+const OrderCompletion = React.lazy(() =>
+  import('./components/OrderCompletion/OrderCompletion').then(
+    ({ OrderCompletion }) => ({
+      default: OrderCompletion
+    })
+  )
+);
 
 const WrappedComponent = (Component: any) => {
   return class Wrapper extends React.Component {
@@ -46,7 +55,9 @@ const WrappedComponent = (Component: any) => {
 export const Routes = () => {
   return (
     <HashRouter>
-      <React.Suspense fallback={<div className="loading-bar loading-bar--active"></div>}>
+      <React.Suspense
+        fallback={<div className="loading-bar loading-bar--active"></div>}
+      >
         <Switch>
           <React.Fragment>
             <Route exact path="/" component={WrappedComponent(Home)} />
@@ -65,10 +76,11 @@ export const Routes = () => {
               path="/product-detail/:id"
               component={WrappedComponent(ProductDetails)}
             />
-             <Route
+            <Route exact path="/cart" component={WrappedComponent(CartPage)} />
+            <Route
               exact
-              path="/cart"
-              component={WrappedComponent(CartPage)}
+              path="/order-completed"
+              component={WrappedComponent(OrderCompletion)}
             />
           </React.Fragment>
         </Switch>
