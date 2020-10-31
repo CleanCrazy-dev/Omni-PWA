@@ -11,7 +11,9 @@ body {
 .ImageLarge {
   z-index: 1000;
 }
-
+.no-padding {
+  padding: 0px;
+}
 .loading-bar {
   position: fixed;
   top: 0;
@@ -38,6 +40,41 @@ body {
   -webkit-animation: loadBar 2s cubic-bezier(0.09, 0.89, 0.7, 0.71) infinite;
   -moz-animation: loadBar 2s cubic-bezier(0.09, 0.89, 0.7, 0.71) infinite;
   animation: loadBar 2s cubic-bezier(0.09, 0.89, 0.7, 0.71) infinite;
+}
+
+.cc-button-primary {
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  line-height: 1.42857143;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: #e5cc76;
+  white-space: normal;
+  // background-image: linear-gradient(to bottom, #e5cc76, #ddbc4b);
+  background-image: none;
+  background-repeat: repeat-x;
+  border: 1px solid #d9b436;
+  color: #000;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0 none;
+  padding: 12px 0;
+  width: 100%;
+  &:hover {
+    background-color: #ddbc4b;
+    color: #000;
+    font-style: normal;
+    text-decoration: none;
+  }
 }
 
 @keyframes loadBar {
@@ -301,7 +338,7 @@ body {
 .HomeParagraph {
   margin-top: 20px;
   text-align: center;
-  font-family: "Muli","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 16px;
   max-width: 350;
@@ -418,7 +455,7 @@ body {
 }
 
 .CarouselContainer {
-  background: #F9F8F1;
+  background: #f9f8f1;
   width: 100%;
   .carousel {
     padding: 30px 60px;
@@ -493,7 +530,6 @@ body {
 
   .StoreCheckMain {
     justify-content: center;
-
   }
 
   .navbar-brand {
@@ -933,7 +969,7 @@ body {
   .fab-featured-wrapper {
     left: 0px !important;
     .fab-featured {
-      h2{
+      h2 {
         line-height: 40px;
       }
       span {

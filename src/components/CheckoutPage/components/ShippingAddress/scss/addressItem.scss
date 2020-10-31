@@ -1,0 +1,109 @@
+.shipping-address-view {
+  background: #f6f5ea;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  padding: 25px 54px 65px !important;
+  margin: 0 0 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  button {
+    background: transparent;
+    border: 0 none;
+    opacity: 1;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    span {
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      margin: 0;
+      color: #f6f5ea;
+      background: #b7b6ae;
+      display: block;
+      word-break: break-all;
+      word-wrap: break-word;
+      margin-right: 8px;
+      line-height: 20px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      font-weight: 300;
+    }
+  }
+  .edit-button {
+    right: 20px;
+    left: auto;
+    border: 1px solid #797c7c;
+    padding: 2px 10px;
+    padding-bottom: 0px;
+    font-size: 10px;
+    color: #797c7c;
+    cursor: pointer;
+    font-weight: 700;
+    top: 10px;
+    background: transparent;
+    opacity: 1;
+  }
+  .address-info {
+    margin-bottom: 5px;
+    .address-full-name {
+      display: inline-block;
+      margin-right: 10px;
+      span.address-name {
+        font-size: 14px;
+        color: #000;
+        padding: 0 6px 0 0;
+        line-height: 12px;
+        display: inline-block;
+        font-weight: 700;
+      }
+    }
+    .default_true {
+      position: relative;
+      display: inline-block;
+      top: -1px;
+      span.default-address {
+        text-transform: uppercase;
+        font-size: 9px;
+        color: #797c7c;
+        border: 1px solid #797c7c;
+        border-radius: 2px;
+        padding: 3px 8px 2px;
+        line-height: 12px;
+        display: inline-block;
+        font-weight: bold;
+      }
+    }
+  }
+  span.address-field {
+    font-size: 12px;
+    color: #000;
+    padding: 0 6px 0 0;
+    line-height: 12px;
+    display: inline-block;
+    font-weight: 300;
+  }
+}
+.deliver_here {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 0;
+  span {
+    width: 100%;
+    color: #000;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 44px;
+    height: 42px;
+    border-radius: 0;
+    border: 0 none;
+    display: block;
+    text-align: center;
+    background: #b7b6ae;
+    cursor: pointer;
+  }
+}
