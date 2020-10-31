@@ -1,0 +1,52 @@
+.checkout-registration {
+  margin: 25px 0 0;
+  .checkout_titles {
+    padding: 0 40px 34px 0;
+    border-bottom: 1px solid #aeb0b0;
+    position: relative;
+    h3 {
+      font-family: "Unna", serif;
+      color: #000;
+      font-size: 21px;
+      line-height: 22px;
+      margin: 0;
+      font-weight: 700;
+      float: left;
+    }
+    .user_active {
+      position: absolute;
+      top: 0;
+      left: 130px;
+      text-align: center;
+      span {
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        margin: 0;
+        color: #000;
+        background: #e5cc76;
+        display: block;
+        word-break: break-all;
+        word-wrap: break-word;
+        margin-right: 8px;
+        line-height: 20px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-weight: 300;
+      }
+    }
+    .change_btn {
+      float: right;
+      width: 116px;
+      height: 34px;
+      font-size: 12px;
+      color: #fff;
+      background: #000;
+      border: 0 none;
+      line-height: 12px;
+      font-weight: 700;
+      border-radius: 4px;
+    }
+  }
+}

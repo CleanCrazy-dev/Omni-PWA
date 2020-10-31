@@ -38,6 +38,14 @@ const OrderCompletion = React.lazy(() =>
   )
 );
 
+const CheckoutPage = React.lazy(() =>
+  import('./components/CheckoutPage/CheckOutPage').then(
+    ({ CheckoutPage }) => ({
+      default: CheckoutPage
+    })
+  )
+);
+
 const WrappedComponent = (Component: any) => {
   return class Wrapper extends React.Component {
     render() {
@@ -82,6 +90,13 @@ export const Routes = () => {
               path="/order-completed"
               component={WrappedComponent(OrderCompletion)}
             />
+
+              <Route
+              exact
+              path="/checkout"
+              component={WrappedComponent(CheckoutPage)}
+            />
+
           </React.Fragment>
         </Switch>
       </React.Suspense>
