@@ -1,5 +1,5 @@
 .checkout-cart-summary {
-  margin: 40px 0;
+  margin: 40px 0 0 0;
   padding: 0 0 0 25px;
   h3 {
     font-size: 18px;
@@ -38,7 +38,7 @@
   .checkout-cart-summary-product-price {
     position: absolute;
     bottom: 14px;
-    right: 0;
+    right: 15px;
   }
   .pull-right-text {
     float: right;
@@ -52,8 +52,8 @@
   display: block;
   text-transform: capitalize;
 }
-.orderSummaryLoadingModal {
-    padding: 0 0 0 40px;
-    font-size: 12px;
-    font-weight: 800;
+#orderSummaryLoadingModal {
+  padding: 0 0 0 25px;
+  font-size: 12px;
+  font-weight: 800;
 }

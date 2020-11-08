@@ -1,0 +1,30 @@
+.pay-UPI {
+    .payuUPI-p {
+      font-size: 18px;
+      line-height: 20px;
+      font-family: "Unna", serif;
+      font-weight: 700;
+      margin: 0 0 14px;
+      &.vpa {
+        font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 0.85rem;
+        font-weight: 800;
+      }
+    }
+    input {
+      display: inline-block;
+      border: 1px solid #aeb0b0;
+      border-radius: 3px;
+      max-width: 320px;
+      margin-bottom: 0;
+      font-size: 13px;
+    }
+  }
+  .cc-button-primary {
+    &.upi {
+      width: auto !important;
+      display: block !important;
+      max-width: 320px;
+    }
+  }
+  

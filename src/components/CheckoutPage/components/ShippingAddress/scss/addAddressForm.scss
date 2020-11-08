@@ -1,0 +1,56 @@
+.address-form {
+  padding-bottom: 0px;
+  div:nth-child(odd) {
+    padding-left: 0px;
+  }
+  div:nth-child(even) {
+    padding-right: 0px;
+  }
+  .control {
+    min-height: 90px;
+    label {
+      font-weight: 800;
+      font-size: 12px;
+      color: #000;
+      margin-bottom: 1px;
+      &::after {
+        content: "\2731";
+        font-size: 8px;
+        top: -5px;
+        position: relative;
+        left: 2px;
+      }
+    }
+    select,
+    input.form-control {
+      font-size: 13px;
+      border: 1px solid #ccc;
+      box-shadow: none;
+      border-radius: 2px;
+      font-weight: 300;
+      background: #f9f8f1;
+    }
+  }
+}
+.add-address-form-action {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px;
+  .save_continue_btn {
+    width: 100%;
+    text-align: right;
+    max-width: 210px;
+    // button {
+    //   width: 100%;
+    //   color: #000;
+    //   font-size: 12px;
+    //   font-weight: 700;
+
+    //   height: 42px;
+    //   border-radius: 2px;
+    //   border: 0 none;
+    //   max-width: 210px;
+    //   font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    // }
+  }
+}

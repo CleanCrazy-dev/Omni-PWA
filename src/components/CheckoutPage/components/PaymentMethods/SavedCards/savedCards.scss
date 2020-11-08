@@ -1,0 +1,75 @@
+.payUSavedCards_wrapper {
+  position: relative;
+  border: 1px solid #aeb0b0;
+  border-radius: 3px;
+  padding: 20px 17px 20px 10px;
+  margin-bottom: 25px;
+  .checkbox_card {
+    text-align: left;
+    margin: 15px 0 0;
+    padding: 0;
+    input[type="radio"] {
+      vertical-align: top;
+      margin: 0;
+      background-color: transparent;
+      outline: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      cursor: pointer;
+      position: relative;
+      top: 0;
+    }
+    .checkmarkboxCard {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 15px;
+      width: 15px;
+      background-color: transparent;
+      border: 1px solid #000;
+      border-radius: 50%;
+    }
+  }
+  .payU_bankDetails {
+    width: 46%;
+    padding: 0 8px;
+    margin: 2px 0 0;
+    font-size: 11px;
+    display: block;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    .payU_bankname {
+      text-transform: capitalize;
+      display: block;
+    }
+    .payU_cardNumber {
+      font-size: 13px;
+    }
+  }
+  .payUcardImg {
+    padding: 6px 0 0;
+    text-align: center;
+    width: 18%;
+    img {
+      max-width: 100%;
+      vertical-align: text-top;
+      height: 29px;
+      min-height: 29px;
+    }
+  }
+  .payU_Cvv {
+    border-radius: 3px;
+    padding: 0;
+    input {
+      width: 100%;
+      border-radius: 3px;
+      border: 1px solid #aeb0b0;
+      height: 45px;
+      padding: 10px;
+      text-align: center;
+      background-color: transparent;
+      font-size: 12px;
+    }
+  }
+}

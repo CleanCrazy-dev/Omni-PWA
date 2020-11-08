@@ -30,8 +30,8 @@ export class CheckOutRegistration extends React.Component<
   render() {
     return (
       <React.Fragment>
-        <div className="checkout-registration">
-          <div className="checkout_titles">
+        <div className="row checkout-registration">
+          <div className="col-12 checkout_titles">
             <h3 style={{ display: "contents" }}>Login Details</h3>
 
             <div className="user_active">

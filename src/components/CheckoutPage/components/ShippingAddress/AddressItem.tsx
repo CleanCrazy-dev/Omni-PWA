@@ -25,7 +25,7 @@ export class AddressItemImpl extends React.Component<IAddressItem, {}> {
   render() {
     return (
       <React.Fragment>
-        <address className="shipping-address-view col-md-7 col-sm-7 col-xs-12">
+        <address className="shipping-address-view col-12 col-lg-7">
           <button title="Select Default Address">
             <span className="fa fa-check check_active"></span>
           </button>

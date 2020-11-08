@@ -1,0 +1,76 @@
+.generate_otp {
+  max-width: 370px;
+  span {
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    display: block;
+    line-height: 16px;
+  }
+  .mob_no_cod {
+    margin: 25px 0 16px;
+    span {
+      font-size: 17px;
+      display: inline-block;
+      &:first-child {
+        font-size: 17px;
+        font-weight: 800;
+      }
+    }
+  }
+  .cc-button-primary {
+    height: 38px;
+    span {
+      font-weight: bold;
+    }
+  }
+}
+.payment_code {
+  max-width: 370px;
+  .otp {
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    display: block;
+    line-height: 16px;
+    .otp_success {
+      color: #6bad97;
+      font-weight: 700;
+    }
+
+    .otp-input {
+      font-size: 13px;
+      border: 1px solid #ccc;
+      box-shadow: none;
+    }
+    .otp_code {
+      margin: 10px 0 10px;
+      span {
+        font-size: 17px;
+        display: inline-block;
+        &:first-child {
+          font-size: 17px;
+          font-weight: 800;
+        }
+      }
+    }
+    .resend_otp {
+      margin: 16px 0px;
+      span {
+        display: inline-block;
+        color: #000;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      a {
+        font-size: 12px;
+        font-weight: 300;
+        margin-bottom: 5px;
+        line-height: 14px;
+        color: #8f2c34;
+        margin: 0 0 0 35px;
+        float: right;
+      }
+    }
+  }
+}

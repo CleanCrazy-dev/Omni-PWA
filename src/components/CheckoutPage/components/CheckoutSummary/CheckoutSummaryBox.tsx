@@ -30,17 +30,19 @@ export class CheckOutSumBoxImpl extends React.Component<
     return (
       <React.Fragment>
         <div className="order_sum_box">
-          <div className="row">
-            <div className="col-xs-7 no-padding">
-              <div>Sub Total: </div>
-            </div>
-            <div className="col-xs-5 no-padding">
-              <span
-                id="checkoutOrderSummary-subTotal"
-                className="ordersumprice pull-right no-outline"
-              >
-                ₹590.00
-              </span>
+          <div>
+            <div className="row no-padding">
+              <div className="col-7">
+                <div className="title">Sub Total: </div>
+              </div>
+              <div className="col-5">
+                <span
+                  id="checkoutOrderSummary-subTotal"
+                  className="ordersumprice pull-right no-outline title amount"
+                >
+                  ₹590.00
+                </span>
+              </div>
             </div>
           </div>
         </div>
