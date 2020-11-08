@@ -30,12 +30,12 @@ export class CheckOutImpl extends React.Component<ICheckoutPage, {}> {
     return (
       <React.Fragment>
         <div className="row">
-          <div className="checkout-main-process col-sm-9">
+          <div className="checkout-main-process col-12 col-lg-9">
             <ShippingRegistration />
             <ShippingAddress />
             <CheckoutPayment />
           </div>
-          <div className="col-sm-3">
+          <div className="col-12 col-lg-3">
             <CheckoutSummary />
           </div>
         </div>

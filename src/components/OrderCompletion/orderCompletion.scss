@@ -315,3 +315,8 @@
 .visible-xs {
   display: none !important;
 }
+@media only screen and (max-width: 720px) {
+  .confirmation_wrapper{
+    width: 100%;
+  }
+}

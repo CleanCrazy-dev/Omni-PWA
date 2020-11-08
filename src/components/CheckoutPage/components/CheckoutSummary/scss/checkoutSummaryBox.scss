@@ -1,0 +1,13 @@
+.order_sum_box {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #aeb0b0;
+  margin-bottom: 10px;
+  color: #000;
+  .title {
+    font-weight: 800;
+    font-size: 12px;
+    &.amount {
+      color: #8f2c34;
+    }
+  }
+}

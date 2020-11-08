@@ -25,7 +25,7 @@ export class PayNowBtnImpl extends React.Component<IPayNowBtn, {}> {
   render() {
     return (
       <React.Fragment>
-        <div className="row">
+        <div className="row no-padding">
           <div className="col-md-12 no-padding">
             <a href="#" className="cc-button-primary pay-now-btn">
               <span>Pay Now</span>
