@@ -111,11 +111,11 @@ export const Navbar = () => {
             Log In
           </div>
           &nbsp;&nbsp;
-          <div style={{ margin: "0px 10px", fontFamily: "Muli,Helvetica Neue,Helvetica,Arial,sans-serif", fontSize: '14px',fontStyle: 'normal', fontWeight: 'normal', lineHeight: '150%', color: '#000' }} 
+          {/* <div style={{ margin: "0px 10px", fontFamily: "Muli,Helvetica Neue,Helvetica,Arial,sans-serif", fontSize: '14px',fontStyle: 'normal', fontWeight: 'normal', lineHeight: '150%', color: '#000' }} 
             onClick={() => isOpenSignUp(true)}
           >
             Sign Up
-          </div>
+          </div> */}
         </div>
         <div className="TreeNode hidden-lg">
           <TreeMenu data={tree as any} hasSearch={false} />

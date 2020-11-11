@@ -38,7 +38,7 @@ export class CartPageImpl extends React.Component<
     return (
       <React.Fragment>
         <div className="row">
-          <div className="ccol-sm-12 col-md-8">
+          <div className="col-sm-12 col-lg-8">
             <div className="cart_widget">
               <h2 className="cartHeader">Your Shopping Cart</h2>
               <div className="cart-viewer-pane hidden-xs hidden-sm">
@@ -135,7 +135,7 @@ export class CartPageImpl extends React.Component<
               </div>
             </div>
           </div>
-          <div className="col-sm-12 col-md-4">
+          <div className="col-sm-12 col-lg-4">
             <div className="order_summary col-md-12 col-xl-10">
               <div className="summary">
                 <h3 className="order_summary_text">Order Summary</h3>
