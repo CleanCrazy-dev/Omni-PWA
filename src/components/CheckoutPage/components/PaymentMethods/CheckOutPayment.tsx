@@ -38,7 +38,7 @@ export class CheckOutPayment extends React.Component<
   constructor(props: any) {
     super(props);
     this.state = {
-      activePaymentMethod: this.paymentMetods[4]
+      activePaymentMethod: this.paymentMetods[1]
     };
   }
 

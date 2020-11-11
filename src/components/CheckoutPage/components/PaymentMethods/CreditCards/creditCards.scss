@@ -1,0 +1,26 @@
+#paymentDetails {
+  .row {
+    padding: 0px;
+    .form-group {
+      label {
+        font-weight: 800;
+        font-size: 11px;
+        color: #000;
+        margin-bottom: 1px;
+        line-height: 14px;
+        &:after {
+            content: '*';
+            position: absolute;
+            top: 0;
+            font-size: 15px;
+        }
+      }
+      input {
+        font-size: 12px;
+        border: 1px solid #ccc;
+        box-shadow: none;
+        background-color: transparent;
+      }
+    }
+  }
+}
