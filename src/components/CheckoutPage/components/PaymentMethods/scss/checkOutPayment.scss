@@ -64,7 +64,7 @@
     }
     .activePayment {
       button:before {
-        content: "\276E" !important;
+        content: "\276E";
       }
       button:after {
         content: "";
@@ -106,4 +106,29 @@
     margin-bottom: 20px;
     padding-bottom: 25px !important;
   }
+}
+@media only screen and (min-width: 991px) {
+  .main_payments_wrapper {
+    .payment_desc_md {
+      display: none;
+    }
+  }
+  
+}
+@media only screen and (max-width: 992px) {
+  .main_payments_wrapper {
+    .payment_desc {
+      min-height: auto;
+    }
+    .payment_desc_lg {
+      display: none;
+    }
+    .payment_methods_list{
+      .activePayment {
+        border: 1px solid grey;
+        padding: 0px 8px;
+      }
+    }
+  }
+  
 }

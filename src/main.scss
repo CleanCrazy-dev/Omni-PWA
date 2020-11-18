@@ -75,6 +75,9 @@ body {
     font-style: normal;
     text-decoration: none;
   }
+  &:before {
+    content: "" !important;
+  }
 }
 
 @keyframes loadBar {

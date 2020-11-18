@@ -14,6 +14,10 @@ import { EMI } from "./EMI/EMI";
 import { GiftCards } from "./GiftCards/GiftCards";
 import { LoyaltyPoints } from "./LoyaltyPoints/LoyaltyPoints";
 
+
+
+
+
 export interface ICheckoutPayMethodsState {
   activePaymentMethod?: any;
 }
@@ -130,12 +134,30 @@ export class CheckOutPayment extends React.Component<
                           <button>
                             <span>{method.title}</span>
                           </button>
+                          {activePaymentMethod.id === method.id && (
+                            <div className="payment_desc payment_desc_md">
+                              {activePaymentMethod.id === "0" && <SavedCards />}
+                              {activePaymentMethod.id === "1" && (
+                                <CreditCards />
+                              )}
+                              {activePaymentMethod.id === "2" && <NetBanking />}
+                              {activePaymentMethod.id === "3" && (
+                                <CashOnDelivery />
+                              )}
+                              {activePaymentMethod.id === "4" && <UPI />}
+                              {activePaymentMethod.id === "5" && <GooglePay />}
+                              {activePaymentMethod.id === "6" && <Wallet />}
+                              {activePaymentMethod.id === "7" && <EMI />}
+                              {activePaymentMethod.id === "8" && <GiftCards />}
+                              {/* {activePaymentMethod.id === "9" && <LoyaltyPoints />} */}
+                            </div>
+                          )}
                         </div>
                       ))}
                     </div>
                   </div>
                   <div className="col-12 col-lg-9 payment_desc_col">
-                    <div className="payment_desc">
+                    <div className="payment_desc payment_desc_lg">
                       {activePaymentMethod.id === "0" && <SavedCards />}
                       {activePaymentMethod.id === "1" && <CreditCards />}
                       {activePaymentMethod.id === "2" && <NetBanking />}
